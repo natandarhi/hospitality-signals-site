@@ -3,6 +3,8 @@
   "category": "Opening",
   "date": "20 Oct 2026",
   "date_iso": "2026-10-20",
+  "photo_asset": "9d91aed6c31ca1b7de0e2648ea9388b5",
+  "photo_credit": "Four Seasons Hotels and Resorts (to be confirmed)",
   "sources": [
     {
       "name": "Four Seasons press release",
@@ -12,6 +14,19 @@
   "status": "ready",
   "summary": "Four Seasons has named 13 hotels and resorts for 2027 and beyond. They include The Park Gstaad after a renovation led by Joseph Dirand, Four Seasons Hotel Berlin in the former Hotel de Rome, and the brand's first resort in Japan, in Okinawa, designed by Kengo Kuma and Kuniken.",
   "title": "Four Seasons lists 13 openings for 2027 and beyond",
+  "visual_text": {
+    "kicker": "The list",
+    "lead": "Four Seasons",
+    "rest": "names 13 hotels and resorts opening in 2027 and beyond.",
+    "strap": "Four Seasons Hotels and Resorts · 2027 and beyond"
+  },
+  "visuals": {
+    "linkedin_4x5": "12e8e0bd6c283ca0416ffc0f1eeb189a",
+    "site_16x9": "e024b888f80615db9515c680492f0fa7"
+  },
+  "visuals_made_at": "2026-10-26T21:05:00Z",
+  "visuals_note": "Low resolution (452 px): ask for the HD press photo. Strap kept generic until the property shown is confirmed.",
+  "visuals_status": "done",
   "week": "2026-10-26",
   "why": "A pipeline that blends heritage reopenings and conversions with new destinations."
 }

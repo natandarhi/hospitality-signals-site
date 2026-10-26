@@ -3,6 +3,8 @@
   "category": "Appointment",
   "date": "20 Oct 2026",
   "date_iso": "2026-10-20",
+  "photo_asset": "b3b09292ef6501743e18c016cdd32f7f",
+  "photo_credit": "Rosewood Hotel Group (to be confirmed)",
   "sources": [
     {
       "name": "Hospitality Net",
@@ -16,6 +18,19 @@
   "status": "ready",
   "summary": "Rosewood Hotel Group has appointed Sam Cooper as Vice President, Wellness, Global, based in New York, after leading wellness across 38 Discovery Land Company properties and earlier roles at Canyon Ranch. Gaye Gibson, formerly head of global retail at Maybourne, becomes Vice President, Retail and Partnerships, Global, in Hong Kong. Both report to COO Anthony Ingham.",
   "title": "Rosewood names global vice presidents for wellness and retail",
+  "visual_text": {
+    "kicker": "New appointment",
+    "lead": "Sam Cooper",
+    "rest": "takes charge of wellness worldwide for Rosewood Hotel Group.",
+    "strap": "Rosewood Hotel Group, New York · October 2026"
+  },
+  "visuals": {
+    "linkedin_4x5": "7d68a99a90873693d23bb3b410db3727",
+    "site_16x9": "1480e434b4876bdf76ba9daa0c7b2676"
+  },
+  "visuals_made_at": "2026-10-26T21:05:00Z",
+  "visuals_note": "Low resolution (480 px): ask for the HD press photo.",
+  "visuals_status": "done",
   "week": "2026-10-26",
   "why": "Wellness and retail move to group level as revenue lines, not just amenities."
 }

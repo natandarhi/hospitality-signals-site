@@ -3,6 +3,8 @@
   "category": "Opening",
   "date": "24 Oct 2026",
   "date_iso": "2026-10-24",
+  "photo_asset": "1c93de869577aec39d105da4622cb219",
+  "photo_credit": "Barrière Collection (photographer to be confirmed with Barrière press office)",
   "sources": [
     {
       "name": "La Tribune de l'Hôtellerie",
@@ -16,6 +18,18 @@
   "status": "ready",
   "summary": "Barrière will open Fouquet's Gstaad on 4 December 2026, the sixth Fouquet's address, in a property built as an Ultima flagship. It offers 11 suites and 6 apartments (33 bedrooms), a 1,500 m² private chalet, a spa of more than 800 m² and a Zuma pop-up. Ultima Capital keeps the real estate and Barrière operates.",
   "title": "Fouquet's Gstaad to open on 4 December",
+  "visual_text": {
+    "kicker": "Signal of the week",
+    "lead": "Barrière",
+    "rest": "brings its Fouquet's brand to Gstaad, opening on 4 December.",
+    "strap": "Fouquet's Gstaad, Gstaad · 4 December 2026"
+  },
+  "visuals": {
+    "linkedin_4x5": "55d7953b6051a67a9ea7ca29ff8c596d",
+    "site_16x9": "d104734b3deb4a08eed78c0bb65dec12"
+  },
+  "visuals_made_at": "2026-10-26T21:05:00Z",
+  "visuals_status": "done",
   "week": "2026-10-26",
   "why": "A French luxury brand enters the Swiss Alps through an owner–operator partnership rather than a purchase."
 }
