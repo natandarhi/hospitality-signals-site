@@ -1,0 +1,21 @@
+{
+  "added_at": "2026-10-26",
+  "category": "Platforms",
+  "date": "21 Oct 2026",
+  "date_iso": "2026-10-21",
+  "sources": [
+    {
+      "name": "PhocusWire",
+      "url": "https://www.phocuswire.com/news/online/european-commission-investigating-booking-handling-scams-fraud"
+    },
+    {
+      "name": "TravelDailyNews",
+      "url": "https://traveldailynews.com/associations/hotrec-european-commission-booking-com-dsa-proceedings"
+    }
+  ],
+  "status": "skip",
+  "summary": "The probe covers fake listings, phishing through reservation data and labelling of paid boosted listings. HOTREC welcomed it.",
+  "title": "European Commission opens DSA proceedings against Booking.com",
+  "week": "2026-10-26",
+  "why": "Watch item: guest-messaging phishing hits luxury brands' reputations first."
+}

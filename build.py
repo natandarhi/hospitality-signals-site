@@ -1,0 +1,474 @@
+"""Build hospitality-signals.com as a static site.
+
+Reads content/articles/*.json (exported from The Signals Library) and
+content/images/, writes the finished site to public/. Standard library only,
+so Netlify can run it as the build command: python3 build.py
+"""
+import html
+import json
+import os
+import shutil
+from datetime import date, datetime, timezone
+from email.utils import format_datetime
+
+ROOT = os.path.dirname(os.path.abspath(__file__))
+CONTENT = os.path.join(ROOT, "content")
+SRC = os.path.join(ROOT, "src")
+OUT = os.path.join(ROOT, "public")
+SITE = "https://hospitality-signals.com"
+
+FORMATS = {
+    "signal-of-the-week": {
+        "name": "Signal of the Week", "when": "Mondays",
+        "strap": "Market, platform and rule changes",
+        "desc": "One change in the market, a platform or a rule, and what it means for a hotelier.",
+    },
+    "new-in-post": {
+        "name": "New in Post", "when": "Wednesdays",
+        "strap": "The appointments worth knowing",
+        "desc": "General managers and leaders taking up new roles across luxury hospitality.",
+    },
+    "the-list": {
+        "name": "The List", "when": "As rankings are published",
+        "strap": "Rankings and distinctions, read closely",
+        "desc": "Rankings and distinctions, from the 50 Best to Michelin and Forbes, and what sits behind them.",
+    },
+    "in-conversation": {
+        "name": "In Conversation", "when": "Thursdays or Fridays",
+        "strap": "Leaders, in their own words",
+        "desc": "Interviews with the people who run luxury hotels and groups.",
+    },
+}
+ORDER = ["signal-of-the-week", "new-in-post", "the-list", "in-conversation"]
+PUBLIC_STATUS = {"ready", "published"}
+
+e = lambda s: html.escape(str(s or ""), quote=True)
+
+
+def fmt_of(a):
+    c = (a.get("category") or "").lower()
+    if c == "appointment":
+        return "new-in-post"
+    if c == "ranking":
+        return "the-list"
+    if c == "interview":
+        return "in-conversation"
+    return "signal-of-the-week"
+
+
+def long_date(iso):
+    try:
+        d = date.fromisoformat(iso)
+        return f"{d.day} {d.strftime('%B %Y')}"
+    except Exception:
+        return iso or ""
+
+
+def credit_ok(a):
+    c = (a.get("photo_credit") or "").strip().lower()
+    return bool(c) and "confirm" not in c
+
+
+def image_for(a, kind):
+    """Path of a site image, or None. kind: photo | cover_wide | cover_tall."""
+    if not credit_ok(a):
+        return None
+    key = {"photo": a.get("photo_asset"),
+           "cover_wide": (a.get("visuals") or {}).get("site_16x9"),
+           "cover_tall": (a.get("visuals") or {}).get("linkedin_4x5")}[kind]
+    if key and os.path.exists(os.path.join(CONTENT, "images", key + ".jpg")):
+        return f"/images/{key}.jpg"
+    return None
+
+
+def load():
+    arts = []
+    d = os.path.join(CONTENT, "articles")
+    for f in sorted(os.listdir(d)):
+        if not f.endswith(".json"):
+            continue
+        a = json.load(open(os.path.join(d, f), encoding="utf-8"))
+        if a.get("status") not in PUBLIC_STATUS:
+            continue
+        a["id"] = f[:-5]
+        a["fmt"] = fmt_of(a)
+        a["url"] = f"/{a['fmt']}/{a['id']}/"
+        arts.append(a)
+    posts = {}
+    pd = os.path.join(CONTENT, "posts")
+    if os.path.isdir(pd):
+        for f in os.listdir(pd):
+            if f.endswith(".json"):
+                p = json.load(open(os.path.join(pd, f), encoding="utf-8"))
+                if p.get("article_id"):
+                    posts[p["article_id"]] = p
+    arts.sort(key=lambda a: (a.get("date_iso") or "", a["id"]), reverse=True)
+    return arts, posts
+
+
+# ---------- building blocks ----------
+
+LOGO = ('<span class="logo-kicker">Hospitality</span>'
+        '<span class="logo-word">S<span class="logo-i">ı<span class="logo-dot" aria-hidden="true"></span></span>gnals</span>')
+
+
+def nav(current=None):
+    cur = ' aria-current="page"'
+    links = "".join(
+        f'<a href="/{k}/"{cur if k == current else ""}>{FORMATS[k]["name"]}</a>' for k in ORDER)
+    about = '<a href="/about/" aria-current="page">About</a>' if current == "about" else '<a href="/about/">About</a>'
+    return f'<nav class="nav" aria-label="Formats">\n    {links}\n    {about}\n  </nav>'
+
+
+def minibar(current=None):
+    return f'''<header class="minibar minibar-sticky">
+  <div class="wrap minibar-row">
+  <a class="logo small" href="/" aria-label="Hospitality Signals — home">{LOGO}</a>
+  {nav(current)}</div>
+</header>'''
+
+
+NEWSLETTER = '''<section class="newsletter" id="newsletter">
+    <p class="label">The newsletter</p>
+    <h2 class="caps-title">Signals, by email</h2>
+    <p class="muted">A short letter when there is something worth reading. No advertising.</p>
+    <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="company" action="/thanks/">
+      <input type="hidden" name="form-name" value="newsletter">
+      <p class="hp"><label>Company <input name="company"></label></p>
+      <label class="sr" for="email">Email address</label>
+      <input id="email" type="email" name="email" placeholder="Email address" required autocomplete="email">
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>'''
+
+FOOTER = f'''<footer class="footer">
+  <div class="wrap footer-row">
+    <span>Independent · Dated · Sourced</span>
+    <span><a href="https://www.linkedin.com/company/hospitality-signals">LinkedIn</a> · <a href="/feed.xml">RSS</a> · <a href="mailto:contact@hospitality-signals.com">Contact</a></span>
+  </div>
+  <div class="wrap footer-row footer-small">
+    <span>© {date.today().year} Hospitality Signals</span>
+    <span>hospitality-signals.com</span>
+  </div>
+</footer>'''
+
+
+def page(title, desc, body, path, image=None, kind="website"):
+    full = title if title == "Hospitality Signals" else f"{title} · Hospitality Signals"
+    img = f'<meta property="og:image" content="{SITE}{e(image)}">\n<meta name="twitter:card" content="summary_large_image">' if image else '<meta name="twitter:card" content="summary">'
+    return f'''<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>{e(full)}</title>
+<meta name="description" content="{e(desc)}">
+<link rel="canonical" href="{SITE}{path}">
+<meta property="og:type" content="{kind}">
+<meta property="og:site_name" content="Hospitality Signals">
+<meta property="og:title" content="{e(title)}">
+<meta property="og:description" content="{e(desc)}">
+<meta property="og:url" content="{SITE}{path}">
+{img}
+<link rel="alternate" type="application/rss+xml" title="Hospitality Signals" href="/feed.xml">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+{body}
+<script src="/site.js" defer></script>
+</body>
+</html>
+'''
+
+
+def frame(a, kind, n, cls=""):
+    """A photo frame: the image if cleared, otherwise a quiet typographic panel."""
+    src = image_for(a, kind) if a else None
+    if src:
+        alt = e(a.get("title"))
+        return f'<div class="photo-frame"><img src="{src}" alt="{alt}" loading="lazy" decoding="async"></div>'
+    return f'<div class="photo-frame"><div class="photo-ph ph-{n % 4}" role="img" aria-label=""></div></div>'
+
+
+def meta(a, link_format=False):
+    f = FORMATS[a["fmt"]]
+    fmt = f'<a href="/{a["fmt"]}/">{f["name"]}</a>' if link_format else f'<span class="meta-format">{f["name"]}</span>'
+    return f'<span class="meta">{fmt}<span>{e(long_date(a.get("date_iso")))}</span></span>'
+
+
+def card(a, n):
+    return f'''<li class="card reveal">
+    <a href="{a["url"]}">
+      <figure class="photo card-photo">{frame(a, "photo", n)}</figure>
+      {meta(a)}
+      <span class="card-title">{e(a.get("title"))}</span>
+      <span class="card-summary">{e(a.get("summary"))}</span>
+    </a>
+  </li>'''
+
+
+def body_html(a, post):
+    """Article body. Uses the LinkedIn post text when there is one, minus mentions, hashtags and the closing question."""
+    paras = []
+    if post and post.get("post_text"):
+        for p in post["post_text"].split("\n\n"):
+            p = p.strip()
+            if not p or p.startswith("@") or p.startswith("#"):
+                continue
+            paras.append(p)
+        if paras and paras[-1].endswith("?"):
+            paras.pop()
+        if paras:
+            paras.pop(0)  # the hook is already the standfirst's job
+    out = []
+    if paras:
+        for p in paras:
+            if p.lower().startswith("the signal:"):
+                out.append("<h2>The signal</h2>")
+                out.append(f"<p>{e(p.split(':', 1)[1].strip())}</p>")
+            else:
+                out.append(f"<p>{e(p)}</p>")
+    else:
+        if a.get("why"):
+            out.append("<h2>The signal</h2>")
+            out.append(f"<p>{e(a['why'])}</p>")
+    return "\n".join(out)
+
+
+def sources_html(a):
+    items = []
+    for s in a.get("sources") or []:
+        u = s.get("url") or ""
+        if u.startswith("https://") or u.startswith("http://"):
+            items.append(f'<a href="{e(u)}" rel="noopener">{e(s.get("name") or "Source")}</a>')
+        elif s.get("name"):
+            items.append(e(s["name"]))
+    src = " · ".join(items) or "To be confirmed"
+    credit = f'<p class="muted">Photograph: {e(a["photo_credit"])}</p>' if image_for(a, "photo") or image_for(a, "cover_wide") else ""
+    return f'''<aside class="source">
+      <p class="label">Source</p>
+      <p>{src}</p>
+      {credit}
+    </aside>'''
+
+
+# ---------- pages ----------
+
+def article_page(a, post, n):
+    wide, tall = image_for(a, "cover_wide"), image_for(a, "cover_tall")
+    photo = image_for(a, "photo")
+    if wide and tall:
+        cover = (f'<figure class="photo cover-photo cover-visual"><picture>'
+                 f'<source media="(max-width: 760px)" srcset="{tall}">'
+                 f'<img src="{wide}" alt="{e(a.get("title"))}"></picture></figure>')
+    elif photo:
+        cover = f'<figure class="photo cover-photo">{frame(a, "photo", n)}</figure>'
+    else:
+        cover = ""
+    body = f'''{minibar(a["fmt"])}
+<main>
+  <div class="progress" aria-hidden="true"></div>
+  <article>
+    <header class="article-head wrap">
+      {meta(a, link_format=True)}
+      <h1 class="article-title">{e(a.get("title"))}</h1>
+      <p class="article-standfirst">{e(a.get("summary"))}</p>
+    </header>
+    {cover}
+    <div class="article wrap">
+      <div class="article-body">
+{body_html(a, post)}
+      </div>
+      {sources_html(a)}
+    </div>
+  </article>
+  {NEWSLETTER}
+</main>
+{FOOTER}'''
+    return page(a.get("title"), a.get("summary"), body, a["url"], wide or photo, "article")
+
+
+def format_page(key, arts):
+    f = FORMATS[key]
+    lead = next((a for a in arts if image_for(a, "photo")), None)
+    if arts:
+        lst = "<ol class=\"cards\">" + "".join(card(a, i) for i, a in enumerate(arts)) + "</ol>"
+    else:
+        lst = '<p class="empty">The first pieces are in preparation. <a href="#newsletter">Subscribe</a> to receive them.</p>'
+    body = f'''{minibar(key)}
+<main>
+  <section class="hero hero-format">
+    <figure class="photo hero-photo">{frame(lead, "photo", ORDER.index(key) + 1)}</figure>
+    <div class="hero-text wrap">
+      <span class="meta"><span class="meta-format">{e(f["when"])}</span></span>
+      <h1 class="hero-title hero-title-xl">{e(f["name"])}</h1>
+      <span class="hero-strap">{e(f["strap"])}</span>
+    </div>
+  </section>
+  <section class="section-head wrap">
+    <p class="section-desc reveal">{e(f["desc"])}</p>
+  </section>
+  <section class="wrap">{lst}</section>
+  {NEWSLETTER}
+</main>
+{FOOTER}'''
+    return page(f["name"], f["desc"], body, f"/{key}/")
+
+
+def home_page(arts, by_fmt):
+    hero = next((a for a in arts if image_for(a, "photo")), arts[0] if arts else None)
+    week = max((a.get("week") or "" for a in arts), default="")
+    issue = f"Week of {long_date(week)}" if week else "Issue 01"
+    hero_html = ""
+    if hero:
+        hero_html = f'''<section class="hero">
+    <a class="hero-link" href="{hero["url"]}">
+      <figure class="photo hero-photo">{frame(hero, "photo", 3)}</figure>
+      <div class="hero-text wrap">
+        {meta(hero)}
+        <h1 class="hero-title">{e(hero.get("title"))}</h1>
+        <span class="more">Read</span>
+      </div>
+    </a>
+  </section>'''
+    chapters = []
+    for i, k in enumerate(ORDER):
+        latest = by_fmt[k][0] if by_fmt[k] else None
+        lat = f'<span class="chapter-latest">Latest: {e(latest.get("title"))}</span>' if latest else '<span class="chapter-latest">Coming soon</span>'
+        chapters.append(f'''<section class="chapter">
+        <a class="chapter-link" href="/{k}/">
+          <figure class="photo chapter-photo">{frame(latest, "photo", i)}</figure>
+          <div class="chapter-text wrap">
+            <span class="chapter-num">0{i + 1} / 04</span>
+            <h3 class="chapter-title">{e(FORMATS[k]["name"])}</h3>
+            <span class="chapter-strap">{e(FORMATS[k]["strap"])}</span>
+            {lat}
+          </div>
+        </a>
+      </section>''')
+    recent = [a for a in arts if a is not hero][:6]
+    cities = ["Paris", "Côte d'Azur", "The Alps", "Monaco", "Switzerland", "London", "Dubai", "Hong Kong", "Singapore"]
+    sep = '<span class="sep">·</span>'
+    ribbon = sep.join(cities + cities)
+    body = f'''<div class="minibar minibar-float" aria-hidden="true">
+  <div class="wrap minibar-row">
+  <a class="logo small" href="/" tabindex="-1" aria-label="Hospitality Signals — home">{LOGO}</a><a class="label" href="#newsletter" tabindex="-1">Subscribe</a></div>
+</div>
+<header class="masthead masthead-large">
+  <div class="wrap">
+    <div class="masthead-top"><span>{e(issue)}</span><span>Luxury hospitality</span></div>
+  <a class="logo large" href="/" aria-label="Hospitality Signals — home">{LOGO}</a>
+  {nav()}
+  </div>
+</header>
+<main>
+  {hero_html}
+  <section class="intro">
+    <p class="label wrap">Covering</p>
+    <div class="cities-track" aria-label="{e(', '.join(cities))}">
+      <p class="cities">{ribbon}</p>
+    </div>
+  </section>
+  <section class="contents">
+    <h2 class="contents-title wrap">Contents</h2>
+    <div class="chapters">
+      {"".join(chapters)}
+    </div>
+  </section>
+  <section class="recent wrap">
+    <p class="label">Recent signals</p>
+    <ol class="cards">{"".join(card(a, i) for i, a in enumerate(recent))}</ol>
+  </section>
+  {NEWSLETTER}
+</main>
+{FOOTER}'''
+    return page("Hospitality Signals",
+                "An independent publication about luxury hotels and the people who run them: appointments, openings, deals and rankings, dated and sourced.",
+                body, "/", image_for(hero, "photo") if hero else None)
+
+
+ABOUT = '''<p>The changes that shape luxury hospitality rarely make headlines at first.</p>
+<p>A new general manager in Monaco. A booking platform rewriting its rules. A ranking that reshuffles a city. On their own, they are details. Read together, they show where the industry is heading.</p>
+<p>Hospitality Signals is an independent publication about luxury hotels and the people who run them. Paris, the Côte d'Azur and the Alps. Monaco and Switzerland. London, Dubai, Hong Kong and Singapore. Hotels and groups first, restaurants next.</p>
+<h2>Four formats, one standard</h2>
+<ul><li><strong>Signal of the Week</strong>: a market, platform or rule change, and what it means for a hotelier.</li><li><strong>New in Post</strong>: the appointments worth knowing.</li><li><strong>The List</strong>: rankings and distinctions, read closely.</li><li><strong>In Conversation</strong>: leaders, in their own words.</li></ul>
+<h2>How we work</h2>
+<p>No advertising. No gossip. Every fact is dated and sourced, and the source is named at the end of each piece. When something cannot yet be confirmed, we say so.</p>
+<p>Corrections and tips: contact@hospitality-signals.com</p>'''
+
+
+def simple_page(title, inner, path, current=None, newsletter=True, desc=""):
+    body = f'''{minibar(current)}
+<main>
+  <article class="article wrap">
+    <header class="article-head"><h1 class="page-title">{e(title)}</h1></header>
+    <div class="article-body">{inner}</div>
+  </article>
+  {NEWSLETTER if newsletter else ""}
+</main>
+{FOOTER}'''
+    return page(title, desc or title, body, path)
+
+
+def feed(arts):
+    now = format_datetime(datetime.now(timezone.utc))
+    items = []
+    for a in arts[:30]:
+        try:
+            d = datetime.fromisoformat(a["date_iso"]).replace(tzinfo=timezone.utc)
+        except Exception:
+            d = datetime.now(timezone.utc)
+        items.append(f'''<item><title>{e(a.get("title"))}</title><link>{SITE}{a["url"]}</link><guid>{SITE}{a["url"]}</guid><pubDate>{format_datetime(d)}</pubDate><description>{e(a.get("summary"))}</description></item>''')
+    return f'''<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel><title>Hospitality Signals</title><link>{SITE}/</link><description>Luxury hospitality, dated and sourced.</description><language>en-gb</language><lastBuildDate>{now}</lastBuildDate>
+{"".join(items)}
+</channel></rss>
+'''
+
+
+def write(path, text):
+    full = os.path.join(OUT, path.strip("/"), "index.html") if not path.endswith((".xml", ".txt", ".svg", ".html")) else os.path.join(OUT, path.lstrip("/"))
+    os.makedirs(os.path.dirname(full), exist_ok=True)
+    with open(full, "w", encoding="utf-8") as f:
+        f.write(text)
+
+
+def main():
+    if os.path.exists(OUT):
+        shutil.rmtree(OUT)
+    os.makedirs(OUT)
+    arts, posts = load()
+    by_fmt = {k: [a for a in arts if a["fmt"] == k] for k in ORDER}
+
+    css = open(os.path.join(SRC, "style.css"), encoding="utf-8").read()
+    css += "\n.cover-visual img{width:100%;height:auto;display:block}\n.cover-quiet .photo-frame{height:min(38svh,360px)}\n.photo-frame>img{width:100%;height:100%;object-fit:cover}\n"
+    open(os.path.join(OUT, "style.css"), "w", encoding="utf-8").write(css)
+    shutil.copy(os.path.join(SRC, "site.js"), os.path.join(OUT, "site.js"))
+    shutil.copy(os.path.join(SRC, "favicon.svg"), os.path.join(OUT, "favicon.svg"))
+    img_src = os.path.join(CONTENT, "images")
+    if os.path.isdir(img_src):
+        shutil.copytree(img_src, os.path.join(OUT, "images"))
+
+    write("/", home_page(arts, by_fmt))
+    for k in ORDER:
+        write(f"/{k}/", format_page(k, by_fmt[k]))
+    for i, a in enumerate(arts):
+        write(a["url"], article_page(a, posts.get(a["id"]), i))
+    write("/about/", simple_page("About", ABOUT, "/about/", "about",
+                                 desc="Hospitality Signals is an independent publication about luxury hotels and the people who run them."))
+    write("/thanks/", simple_page("Thank you", '<p>You are on the list. The next signal will reach you by email.</p><p><a href="/">Back to the front page</a></p>', "/thanks/", newsletter=False))
+    write("/404.html", simple_page("Page not found", '<p>This page does not exist, or it has moved.</p><p><a href="/">Back to the front page</a></p>', "/404.html", newsletter=False))
+    write("/feed.xml", feed(arts))
+    urls = ["/", "/about/"] + [f"/{k}/" for k in ORDER] + [a["url"] for a in arts]
+    write("/sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+          + "".join(f"<url><loc>{SITE}{u}</loc></url>" for u in urls) + "</urlset>\n")
+    write("/robots.txt", f"User-agent: *\nAllow: /\nSitemap: {SITE}/sitemap.xml\n")
+    print(f"Built {len(arts)} articles into {OUT}")
+
+
+if __name__ == "__main__":
+    main()
