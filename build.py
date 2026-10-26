@@ -102,7 +102,9 @@ def load():
                 p = json.load(open(os.path.join(pd, f), encoding="utf-8"))
                 if p.get("article_id"):
                     posts[p["article_id"]] = p
-    arts.sort(key=lambda a: (a.get("date_iso") or "", a["id"]), reverse=True)
+    today = date.today().isoformat()
+    # most recent first; upcoming events come after the news of the week
+    arts.sort(key=lambda a: ((a.get("date_iso") or "") <= today, a.get("date_iso") or "", a["id"]), reverse=True)
     return arts, posts
 
 
@@ -319,76 +321,118 @@ def format_page(key, arts):
     return page(f["name"], f["desc"], body, f"/{key}/")
 
 
-def home_page(arts, by_fmt):
-    hero = next((a for a in arts if image_for(a, "photo")), arts[0] if arts else None)
+def tile(a, n):
+    """Image frame for gallery cards: the cleared photo, or a typographic tile."""
+    src = image_for(a, "photo")
+    if src:
+        return f'<div class="tile"><img src="{src}" alt="{e(a.get("title"))}" loading="lazy" decoding="async"></div>'
+    try:
+        d = date.fromisoformat(a.get("date_iso") or "")
+        big = f"{d.day:02d}.{d.month:02d}"
+    except Exception:
+        big = ""
+    return (f'<div class="tile tile-type tone-{n % 3}" aria-hidden="true">'
+            f'<span class="tile-date">{big}</span><span class="tile-fmt">{e(FORMATS[a["fmt"]]["name"])}</span></div>')
+
+
+def home_page(arts, by_fmt, posts):
     week = max((a.get("week") or "" for a in arts), default="")
-    issue = f"Week of {long_date(week)}" if week else "Issue 01"
-    hero_html = ""
-    if hero:
-        hero_html = f'''<section class="hero">
-    <a class="hero-link" href="{hero["url"]}">
-      <figure class="photo hero-photo">{frame(hero, "photo", 3)}</figure>
-      <div class="hero-text wrap">
-        {meta(hero)}
-        <h1 class="hero-title">{e(hero.get("title"))}</h1>
-        <span class="more">Read</span>
+    issue = f"Week of {long_date(week)}" if week else ""
+    # the edition sentence: this week's three posts, else the three latest titles
+    wk = sorted((p for p in posts.values() if p.get("week") == week), key=lambda p: p.get("order", 9))
+    by_id = {a["id"]: a for a in arts}
+    picks = [by_id[p["article_id"]] for p in wk if p.get("article_id") in by_id]
+    lead = next((a for a in picks if image_for(a, "photo")), None) or (picks[0] if picks else None) \
+        or next((a for a in arts if image_for(a, "photo")), arts[0] if arts else None)
+    lines = []
+    for p in wk[:3]:
+        vt = p.get("visual_text") or {}
+        if vt.get("lead") and vt.get("rest"):
+            lines.append(f'{vt["lead"]} {vt["rest"]}'.rstrip("."))
+    if not lines:
+        lines = [a.get("title", "") for a in arts[:3]]
+    statement = "This week. " + ". ".join(lines) + "."
+    words = "".join(f'<span class="w">{e(w)}</span> ' for w in statement.split())
+
+    window = ""
+    if lead:
+        img = image_for(lead, "photo")
+        media = (f'<img src="{img}" alt="" decoding="async">' if img
+                 else '<div class="window-ink" aria-hidden="true"></div>')
+        window = f"""<a class="window" href="{lead["url"]}" aria-label="{e(lead.get("title"))}">
+      {media}
+      <span class="window-dot" aria-hidden="true"></span>
+      <div class="window-text wrap">
+        {meta(lead)}
+        <h2 class="window-title">{e(lead.get("title"))}</h2>
+        <span class="more">Read the signal</span>
       </div>
-    </a>
-  </section>'''
-    chapters = []
-    for i, k in enumerate(ORDER):
-        latest = by_fmt[k][0] if by_fmt[k] else None
-        lat = f'<span class="chapter-latest">Latest: {e(latest.get("title"))}</span>' if latest else '<span class="chapter-latest">Coming soon</span>'
-        chapters.append(f'''<section class="chapter">
-        <a class="chapter-link" href="/{k}/">
-          <figure class="photo chapter-photo">{frame(latest, "photo", i)}</figure>
-          <div class="chapter-text wrap">
-            <span class="chapter-num">0{i + 1} / 04</span>
-            <h3 class="chapter-title">{e(FORMATS[k]["name"])}</h3>
-            <span class="chapter-strap">{e(FORMATS[k]["strap"])}</span>
-            {lat}
-          </div>
+    </a>"""
+
+    reel_items = ([a for a in picks if a is not lead] + [a for a in arts if a is not lead and a not in picks])[:8]
+    reel = "".join(f"""<li class="reel-item">
+        <a href="{a["url"]}">
+          {tile(a, i)}
+          {meta(a)}
+          <span class="reel-title">{e(a.get("title"))}</span>
         </a>
-      </section>''')
-    recent = [a for a in arts if a is not hero][:6]
+      </li>""" for i, a in enumerate(reel_items))
+
+    rows = []
+    for k in ORDER:
+        latest = by_fmt[k][0] if by_fmt[k] else None
+        sub = e(latest.get("title")) if latest else "First interview coming soon"
+        rows.append(f"""<li><a class="index-row" href="/{k}/">
+          <span class="index-name">{e(FORMATS[k]["name"])}</span>
+          <span class="index-latest">{sub}</span>
+        </a></li>""")
+
     cities = ["Paris", "Côte d'Azur", "The Alps", "Monaco", "Switzerland", "London", "Dubai", "Hong Kong", "Singapore"]
-    sep = '<span class="sep">·</span>'
-    ribbon = sep.join(cities + cities)
-    body = f'''<div class="minibar minibar-float" aria-hidden="true">
+    ribbon = '<span class="sep" aria-hidden="true">●</span>'.join(f"<span>{c}</span>" for c in cities + cities)
+
+    body = f"""<header class="sitebar" data-sitebar>
   <div class="wrap minibar-row">
-  <a class="logo small" href="/" tabindex="-1" aria-label="Hospitality Signals — home">{LOGO}</a><a class="label" href="#newsletter" tabindex="-1">Subscribe</a></div>
-</div>
-<header class="masthead masthead-large">
-  <div class="wrap">
-    <div class="masthead-top"><span>{e(issue)}</span><span>Luxury hospitality</span></div>
-  <a class="logo large" href="/" aria-label="Hospitality Signals — home">{LOGO}</a>
-  {nav()}
-  </div>
+  <a class="logo small" href="/" aria-label="Hospitality Signals — home">{LOGO}</a>
+  {nav()}</div>
 </header>
 <main>
-  {hero_html}
-  <section class="intro">
-    <p class="label wrap">Covering</p>
-    <div class="cities-track" aria-label="{e(', '.join(cities))}">
-      <p class="cities">{ribbon}</p>
+  <section class="opening" data-opening>
+    <div class="opening-stage">
+      {window}
+      <div class="opening-mark">
+        <p class="opening-issue"><span>{e(issue)}</span><span>Luxury hospitality</span></p>
+        <h1 class="logo large" aria-label="Hospitality Signals">{LOGO}</h1>
+        <p class="opening-line">The people, places and deals shaping luxury hotels, dated and sourced.</p>
+      </div>
+      <span class="scroll-cue" aria-hidden="true">Scroll</span>
     </div>
   </section>
-  <section class="contents">
-    <h2 class="contents-title wrap">Contents</h2>
-    <div class="chapters">
-      {"".join(chapters)}
+
+  <section class="statement wrap" data-statement>
+    <p class="statement-text">{words}</p>
+  </section>
+
+  <section class="reel" data-reel>
+    <div class="reel-stage">
+      <div class="reel-head wrap"><h2 class="reel-heading">Recent signals</h2></div>
+      <ol class="reel-track">{reel}</ol>
     </div>
   </section>
-  <section class="recent wrap">
-    <p class="label">Recent signals</p>
-    <ol class="cards">{"".join(card(a, i) for i, a in enumerate(recent))}</ol>
+
+  <section class="cities-band" aria-label="{e(', '.join(cities))}">
+    <p class="cities">{ribbon}</p>
+  </section>
+
+  <section class="index wrap" data-index>
+    <h2 class="index-heading">Four formats</h2>
+    <ol class="index-list">{"".join(rows)}</ol>
   </section>
   {NEWSLETTER}
 </main>
-{FOOTER}'''
+{FOOTER}"""
     return page("Hospitality Signals",
                 "An independent publication about luxury hotels and the people who run them: appointments, openings, deals and rankings, dated and sourced.",
-                body, "/", image_for(hero, "photo") if hero else None)
+                body, "/", image_for(lead, "photo") if lead else None)
 
 
 ABOUT = '''<p>The changes that shape luxury hospitality rarely make headlines at first.</p>
@@ -445,6 +489,7 @@ def main():
     by_fmt = {k: [a for a in arts if a["fmt"] == k] for k in ORDER}
 
     css = open(os.path.join(SRC, "style.css"), encoding="utf-8").read()
+    css += "\n" + open(os.path.join(SRC, "motion.css"), encoding="utf-8").read()
     css += "\n.cover-visual img{width:100%;height:auto;display:block}\n.cover-quiet .photo-frame{height:min(38svh,360px)}\n.photo-frame>img{width:100%;height:100%;object-fit:cover}\n"
     open(os.path.join(OUT, "style.css"), "w", encoding="utf-8").write(css)
     shutil.copy(os.path.join(SRC, "site.js"), os.path.join(OUT, "site.js"))
@@ -453,7 +498,7 @@ def main():
     if os.path.isdir(img_src):
         shutil.copytree(img_src, os.path.join(OUT, "images"))
 
-    write("/", home_page(arts, by_fmt))
+    write("/", home_page(arts, by_fmt, posts))
     for k in ORDER:
         write(f"/{k}/", format_page(k, by_fmt[k]))
     for i, a in enumerate(arts):
