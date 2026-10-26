@@ -146,7 +146,7 @@ NEWSLETTER = '''<section class="newsletter" id="newsletter">
 FOOTER = f'''<footer class="footer">
   <div class="wrap footer-row">
     <span>Independent · Dated · Sourced</span>
-    <span><a href="https://www.linkedin.com/company/hospitality-signals">LinkedIn</a> · <a href="/feed.xml">RSS</a> · <a href="mailto:contact@hospitality-signals.com">Contact</a></span>
+    <span><a href="https://www.linkedin.com/company/hospitality-signals">LinkedIn</a> · <a href="/contact/">Contact</a></span>
   </div>
   <div class="wrap footer-row footer-small">
     <span>© {date.today().year} Hospitality Signals</span>
@@ -172,7 +172,6 @@ def page(title, desc, body, path, image=None, kind="website"):
 <meta property="og:description" content="{e(desc)}">
 <meta property="og:url" content="{SITE}{path}">
 {img}
-<link rel="alternate" type="application/rss+xml" title="Hospitality Signals" href="/feed.xml">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -205,7 +204,7 @@ def meta(a, link_format=False):
 def card(a, n):
     return f'''<li class="card reveal">
     <a href="{a["url"]}">
-      <figure class="photo card-photo">{frame(a, "photo", n)}</figure>
+      <figure class="photo card-photo">{tile(a, n)}</figure>
       {meta(a)}
       <span class="card-title">{e(a.get("title"))}</span>
       <span class="card-summary">{e(a.get("summary"))}</span>
@@ -442,7 +441,7 @@ ABOUT = '''<p>The changes that shape luxury hospitality rarely make headlines at
 <ul><li><strong>Signal of the Week</strong>: a market, platform or rule change, and what it means for a hotelier.</li><li><strong>New in Post</strong>: the appointments worth knowing.</li><li><strong>The List</strong>: rankings and distinctions, read closely.</li><li><strong>In Conversation</strong>: leaders, in their own words.</li></ul>
 <h2>How we work</h2>
 <p>No advertising. No gossip. Every fact is dated and sourced, and the source is named at the end of each piece. When something cannot yet be confirmed, we say so.</p>
-<p>Corrections and tips: contact@hospitality-signals.com</p>'''
+<p>Corrections, tips and interview requests: <a href="/contact/">write to us</a>.</p>'''
 
 
 def simple_page(title, inner, path, current=None, newsletter=True, desc=""):
@@ -456,6 +455,57 @@ def simple_page(title, inner, path, current=None, newsletter=True, desc=""):
 </main>
 {FOOTER}'''
     return page(title, desc or title, body, path)
+
+
+CONTACT_FORM = """<form class="contact-form" name="contact" method="POST" action="/contact/sent/"
+      data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="website">
+  <input type="hidden" name="form-name" value="contact">
+  <p class="hp"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></p>
+  <div class="field">
+    <label for="c-first">First name</label>
+    <input id="c-first" name="first_name" type="text" autocomplete="given-name" required>
+  </div>
+  <div class="field">
+    <label for="c-last">Last name</label>
+    <input id="c-last" name="last_name" type="text" autocomplete="family-name" required>
+  </div>
+  <div class="field field-wide">
+    <label for="c-reason">Reason for contact</label>
+    <select id="c-reason" name="reason" required>
+      <option value="">Choose one</option>
+      <option>News or press release</option>
+      <option>Appointment to announce</option>
+      <option>Interview request</option>
+      <option>Correction</option>
+      <option>Partnership</option>
+      <option>Other</option>
+    </select>
+  </div>
+  <div class="field">
+    <label for="c-email">Email</label>
+    <input id="c-email" name="email" type="email" autocomplete="email" required>
+  </div>
+  <div class="field">
+    <label for="c-phone">Phone <span class="opt">(optional)</span></label>
+    <input id="c-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel">
+  </div>
+  <div class="field field-wide">
+    <label for="c-message">Message</label>
+    <textarea id="c-message" name="message" rows="7" required></textarea>
+  </div>
+  <div class="field field-wide captcha" data-netlify-recaptcha="true"></div>
+  <div class="field-wide form-foot">
+    <button type="submit">Send message</button>
+    <p class="muted small">Your details are used only to reply to you.</p>
+  </div>
+</form>"""
+
+
+def contact_page():
+    inner = ('<p>News, an appointment to announce, a correction or an interview request: '
+             'write to us and we reply within a few days.</p>' + CONTACT_FORM)
+    return simple_page("Contact", inner, "/contact/", newsletter=False,
+                       desc="Contact Hospitality Signals: news, appointments, corrections and interview requests.")
 
 
 def feed(arts):
@@ -505,10 +555,11 @@ def main():
         write(a["url"], article_page(a, posts.get(a["id"]), i))
     write("/about/", simple_page("About", ABOUT, "/about/", "about",
                                  desc="Hospitality Signals is an independent publication about luxury hotels and the people who run them."))
+    write("/contact/sent/", simple_page("Message sent", '<p>Thank you. Your message has reached us and we will reply by email.</p><p><a href="/">Back to the front page</a></p>', "/contact/sent/", newsletter=False))
     write("/thanks/", simple_page("Thank you", '<p>You are on the list. The next signal will reach you by email.</p><p><a href="/">Back to the front page</a></p>', "/thanks/", newsletter=False))
     write("/404.html", simple_page("Page not found", '<p>This page does not exist, or it has moved.</p><p><a href="/">Back to the front page</a></p>', "/404.html", newsletter=False))
-    write("/feed.xml", feed(arts))
-    urls = ["/", "/about/"] + [f"/{k}/" for k in ORDER] + [a["url"] for a in arts]
+    write("/contact/", contact_page())
+    urls = ["/", "/about/", "/contact/"] + [f"/{k}/" for k in ORDER] + [a["url"] for a in arts]
     write("/sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
           + "".join(f"<url><loc>{SITE}{u}</loc></url>" for u in urls) + "</urlset>\n")
     write("/robots.txt", f"User-agent: *\nAllow: /\nSitemap: {SITE}/sitemap.xml\n")
