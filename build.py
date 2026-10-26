@@ -386,8 +386,9 @@ def home_page(arts, by_fmt, posts):
           <span class="index-latest">{sub}</span>
         </a></li>""")
 
-    cities = ["Paris", "Côte d'Azur", "The Alps", "Monaco", "Switzerland", "London", "Dubai", "Hong Kong", "Singapore"]
-    ribbon = '<span class="sep" aria-hidden="true">●</span>'.join(f"<span>{c}</span>" for c in cities + cities)
+    cities = ["Paris", "Côte d'Azur", "The Alps", "Monaco", "Switzerland", "Saint-Barthélemy", "London", "Dubai", "Hong Kong", "Singapore"]
+    half = "".join(f'<span class="city">{c}</span><span class="sep" aria-hidden="true">●</span>' for c in cities)
+    ribbon = f'<span class="cities-half">{half}</span><span class="cities-half" aria-hidden="true">{half}</span>'
 
     body = f"""<header class="sitebar" data-sitebar>
   <div class="wrap minibar-row">
@@ -436,7 +437,7 @@ def home_page(arts, by_fmt, posts):
 
 ABOUT = '''<p>The changes that shape luxury hospitality rarely make headlines at first.</p>
 <p>A new general manager in Monaco. A booking platform rewriting its rules. A ranking that reshuffles a city. On their own, they are details. Read together, they show where the industry is heading.</p>
-<p>Hospitality Signals is an independent publication about luxury hotels and the people who run them. Paris, the Côte d'Azur and the Alps. Monaco and Switzerland. London, Dubai, Hong Kong and Singapore. Hotels and groups first, restaurants next.</p>
+<p>Hospitality Signals is an independent publication about luxury hotels and the people who run them. Paris, the Côte d'Azur and the Alps. Monaco, Switzerland and Saint-Barthélemy. London, Dubai, Hong Kong and Singapore. Hotels and groups first, restaurants next.</p>
 <h2>Four formats, one standard</h2>
 <ul><li><strong>Signal of the Week</strong>: a market, platform or rule change, and what it means for a hotelier.</li><li><strong>New in Post</strong>: the appointments worth knowing.</li><li><strong>The List</strong>: rankings and distinctions, read closely.</li><li><strong>In Conversation</strong>: leaders, in their own words.</li></ul>
 <h2>How we work</h2>

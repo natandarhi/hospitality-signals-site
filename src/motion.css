@@ -200,3 +200,12 @@
   .minibar-sticky .nav { gap: 4px 16px; }
   .minibar-sticky .nav a { font-size: 11px; }
 }
+
+/* cities band: a continuous marquee */
+.cities-band .cities { display: flex; width: max-content; gap: 0; padding: 0; animation: marquee 60s linear infinite; animation-timeline: auto; }
+.cities-band:hover .cities { animation-play-state: paused; }
+.cities-half { display: flex; align-items: center; flex: none; }
+.cities-half .city { padding-inline: .45em; white-space: nowrap; }
+.cities-half .sep { padding-inline: .45em; }
+@keyframes marquee { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-50%, 0, 0); } }
+@media (prefers-reduced-motion: reduce) { .cities-band .cities { animation: none; flex-wrap: wrap; width: auto; } .cities-half[aria-hidden] { display: none; } }
