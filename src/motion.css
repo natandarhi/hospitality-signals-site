@@ -236,7 +236,7 @@
 
 /* About: founder portrait beside the text */
 .founder{float:right;width:min(42%,300px);margin:6px 0 24px 40px}
-.founder img{display:block;width:100%;height:auto;aspect-ratio:460/924;object-fit:cover}
+.founder img{display:block;width:100%;height:auto;aspect-ratio:636/1160;object-fit:cover}
 .founder figcaption{margin-top:10px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey,#6B6863)}
 .article-body h2{clear:none}
 @media(max-width:640px){.founder{float:none;width:min(70%,280px);margin:0 0 28px}}

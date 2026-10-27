@@ -461,7 +461,7 @@ ABOUT = '''<p>The changes that shape luxury hospitality rarely make headlines at
 <p>A new general manager in Monaco. A booking platform rewriting its rules. A ranking that reshuffles a city. On their own, they are details. Read together, they show where the industry is heading.</p>
 <p>Hospitality Signals is an independent publication about luxury hotels and the people who run them. Paris, the Côte d'Azur and the Alps. Monaco, Switzerland and Saint-Barthélemy. London, Dubai, Hong Kong and Singapore. Hotels and groups first, restaurants next.</p>
 <h2>A note from the founder</h2>
-<figure class="founder"><img src="/images/founder-natan-darhi.jpg" alt="Natan Darhi, founder of Hospitality Signals" width="460" height="924" loading="lazy"><figcaption>Natan Darhi, founder</figcaption></figure>
+<figure class="founder"><img src="/images/founder-natan-darhi-v2.jpg" alt="Natan Darhi, founder of Hospitality Signals" width="636" height="1160" loading="lazy"><figcaption>Natan Darhi, founder</figcaption></figure>
 <p>I started my career in finance. Hospitality found me later.</p>
 <p>When I founded Répondia, software that helps luxury hotels and restaurants make sure no guest call goes unanswered, I spent my days in dining rooms, front offices and back offices. I met general managers, maîtres d'hôtel, revenue teams and owners. And I fell for this industry: its people, its craft, and how fast it is changing.</p>
 <p>So I started Hospitality Signals.</p>
