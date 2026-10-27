@@ -231,7 +231,7 @@ def body_html(a, post):
     if post and post.get("post_text"):
         for p in post["post_text"].split("\n\n"):
             p = p.strip()
-            if not p or p.startswith("@") or p.startswith("#"):
+            if not p or p.startswith("@") or p.startswith("#") or p.lower().startswith("read the full article"):
                 continue
             paras.append(p)
         if paras and paras[-1].endswith("?"):
@@ -278,8 +278,10 @@ def article_page(a, post, n, related=()):
     pic = tall or photo
     side = ""
     if pic:
+        li = (post or {}).get("linkedin_url") or ""
+        li = li if li.startswith("https://www.linkedin.com/") else "https://www.linkedin.com/company/hospitality-signals"
         cap = ('<p class="article-visual-cap">As published on '
-               '<a href="https://www.linkedin.com/company/hospitality-signals" rel="noopener">LinkedIn</a></p>') if tall else ""
+               f'<a href="{e(li)}" rel="noopener">LinkedIn</a></p>') if tall else ""
         side = f"""<aside class="article-visual">
         <img src="{pic}" alt="{e(a.get("title"))}" decoding="async">
         {cap}
