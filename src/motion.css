@@ -240,3 +240,4 @@
 .founder figcaption{margin-top:10px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey,#6B6863)}
 .article-body h2{clear:none}
 @media(max-width:640px){.founder{float:none;width:min(70%,280px);margin:0 0 28px}}
+.signature{font-family:"Bodoni Moda",serif;font-size:22px;margin-top:8px}

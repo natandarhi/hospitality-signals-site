@@ -460,12 +460,14 @@ def home_page(arts, by_fmt, posts):
 ABOUT = '''<p>The changes that shape luxury hospitality rarely make headlines at first.</p>
 <p>A new general manager in Monaco. A booking platform rewriting its rules. A ranking that reshuffles a city. On their own, they are details. Read together, they show where the industry is heading.</p>
 <p>Hospitality Signals is an independent publication about luxury hotels and the people who run them. Paris, the Côte d'Azur and the Alps. Monaco, Switzerland and Saint-Barthélemy. London, Dubai, Hong Kong and Singapore. Hotels and groups first, restaurants next.</p>
-<h2>Behind the signals</h2>
+<h2>A note from the founder</h2>
 <figure class="founder"><img src="/images/founder-natan-darhi.jpg" alt="Natan Darhi, founder of Hospitality Signals" width="460" height="924" loading="lazy"><figcaption>Natan Darhi, founder</figcaption></figure>
-<p>Hospitality Signals was founded by Natan Darhi, who is also the founder and CEO of Répondia. Répondia is software for hotels and restaurants: it uses AI so that a missed phone call never becomes a lost guest, by answering the caller on WhatsApp, where they can book or ask their question.</p>
-<p>Natan began his career in finance. Building Répondia took him into the restaurants, front offices and back offices of luxury hospitality, and the industry became a passion: its people, its craft, and how quickly it is changing.</p>
-<p>Hospitality Signals grew out of that. What better way to stay up to date, to meet the people who shape the market and to understand it than to be inside it? Each week, the publication shares what Natan follows: who moves where, what opens, what changes, and why it matters.</p>
-<p>Hospitality Signals is run independently of Répondia. Nothing here is sponsored, and nothing is written to sell software.</p>
+<p>I started my career in finance. Hospitality found me later.</p>
+<p>When I founded Répondia, software that helps luxury hotels and restaurants make sure no guest call goes unanswered, I spent my days in dining rooms, front offices and back offices. I met general managers, maîtres d'hôtel, revenue teams and owners. And I fell for this industry: its people, its craft, and how fast it is changing.</p>
+<p>So I started Hospitality Signals.</p>
+<p>The idea is simple. The best way to stay up to date, to meet the people who shape the market and to understand it is to be inside it. Every week, I share the signals I follow across Paris, the Riviera, the Alps, Monaco, Switzerland, Saint-Barth, London, Dubai and Asia.</p>
+<p>Hospitality Signals is run independently of Répondia: nothing here is sponsored, and nothing is written to sell software. If you work in luxury hospitality, I would love to hear from you. <a href="/contact/">Write to me</a>.</p>
+<p class="signature">Natan Darhi</p>
 <h2>Four formats, one standard</h2>
 <ul><li><strong>Signal of the Week</strong>: a market, platform or rule change, and what it means for a hotelier.</li><li><strong>New in Post</strong>: the appointments worth knowing.</li><li><strong>The List</strong>: rankings and distinctions, read closely.</li><li><strong>In Conversation</strong>: leaders, in their own words.</li></ul>
 <h2>How we work</h2>
