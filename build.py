@@ -259,17 +259,29 @@ def sources_html(a):
 
 # ---------- pages ----------
 
-def article_page(a, post, n):
+def article_page(a, post, n, related=()):
     wide, tall = image_for(a, "cover_wide"), image_for(a, "cover_tall")
     photo = image_for(a, "photo")
-    if wide and tall:
-        cover = (f'<figure class="photo cover-photo cover-visual"><picture>'
-                 f'<source media="(max-width: 760px)" srcset="{tall}">'
-                 f'<img src="{wide}" alt="{e(a.get("title"))}"></picture></figure>')
-    elif photo:
-        cover = f'<figure class="photo cover-photo">{frame(a, "photo", n)}</figure>'
+    # cover: the clean photograph, full bleed; the reworked visuals sit beside the text
+    if photo:
+        cover = (f'<figure class="photo cover-photo"><div class="photo-frame">'
+                 f'<img src="{photo}" alt="{e(a.get("title"))}" decoding="async"></div></figure>')
+    elif wide:
+        cover = f'<figure class="photo cover-photo"><div class="photo-frame"><img src="{wide}" alt="{e(a.get("title"))}"></div></figure>'
     else:
         cover = ""
+    side = ""
+    if tall:
+        side = f"""<aside class="article-visual">
+        <img src="{tall}" alt="{e(a.get("title"))}" loading="lazy" decoding="async">
+        <p class="article-visual-cap">As published on <a href="https://www.linkedin.com/company/hospitality-signals" rel="noopener">LinkedIn</a></p>
+      </aside>"""
+    more = ""
+    if related:
+        more = f"""<section class="more-signals wrap">
+      <h2 class="more-heading">More signals</h2>
+      <ol class="cards">{"".join(card(r, i) for i, r in enumerate(related))}</ol>
+    </section>"""
     body = f'''{minibar(a["fmt"])}
 <main>
   <div class="progress" aria-hidden="true"></div>
@@ -280,13 +292,17 @@ def article_page(a, post, n):
       <p class="article-standfirst">{e(a.get("summary"))}</p>
     </header>
     {cover}
-    <div class="article wrap">
-      <div class="article-body">
+    <div class="article wrap{" has-visual" if side else ""}">
+      <div class="article-main">
+        <div class="article-body">
 {body_html(a, post)}
+        </div>
+        {sources_html(a)}
       </div>
-      {sources_html(a)}
+      {side}
     </div>
   </article>
+  {more}
   {NEWSLETTER}
 </main>
 {FOOTER}'''
@@ -553,7 +569,10 @@ def main():
     for k in ORDER:
         write(f"/{k}/", format_page(k, by_fmt[k]))
     for i, a in enumerate(arts):
-        write(a["url"], article_page(a, posts.get(a["id"]), i))
+        same = [r for r in by_fmt[a["fmt"]] if r is not a]
+        others = [r for r in arts if r is not a and r not in same]
+        rel = (sorted(same, key=lambda r: not image_for(r, "photo"))[:3] + sorted(others, key=lambda r: not image_for(r, "photo")))[:3]
+        write(a["url"], article_page(a, posts.get(a["id"]), i, rel))
     write("/about/", simple_page("About", ABOUT, "/about/", "about",
                                  desc="Hospitality Signals is an independent publication about luxury hotels and the people who run them."))
     write("/contact/sent/", simple_page("Message sent", '<p>Thank you. Your message has reached us and we will reply by email.</p><p><a href="/">Back to the front page</a></p>', "/contact/sent/", newsletter=False))
