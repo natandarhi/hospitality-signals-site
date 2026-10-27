@@ -213,7 +213,20 @@ def card(a, n):
 
 
 def body_html(a, post):
-    """Article body. Uses the LinkedIn post text when there is one, minus mentions, hashtags and the closing question."""
+    """Article body: the long site version when there is one, else the LinkedIn post text, else the summary."""
+    if a.get("body_long"):
+        out = []
+        for p in a["body_long"].split("\n\n"):
+            p = p.strip()
+            if not p:
+                continue
+            if p.startswith("## "):
+                out.append(f"<h2>{e(p[3:].strip())}</h2>")
+            elif p.startswith("> "):
+                out.append(f"<blockquote><p>{e(p[2:].strip())}</p></blockquote>")
+            else:
+                out.append(f"<p>{e(p)}</p>")
+        return "\n".join(out)
     paras = []
     if post and post.get("post_text"):
         for p in post["post_text"].split("\n\n"):
@@ -262,19 +275,14 @@ def sources_html(a):
 def article_page(a, post, n, related=()):
     wide, tall = image_for(a, "cover_wide"), image_for(a, "cover_tall")
     photo = image_for(a, "photo")
-    # cover: the clean photograph, full bleed; the reworked visuals sit beside the text
-    if photo:
-        cover = (f'<figure class="photo cover-photo"><div class="photo-frame">'
-                 f'<img src="{photo}" alt="{e(a.get("title"))}" decoding="async"></div></figure>')
-    elif wide:
-        cover = f'<figure class="photo cover-photo"><div class="photo-frame"><img src="{wide}" alt="{e(a.get("title"))}"></div></figure>'
-    else:
-        cover = ""
+    pic = tall or photo
     side = ""
-    if tall:
+    if pic:
+        cap = ('<p class="article-visual-cap">As published on '
+               '<a href="https://www.linkedin.com/company/hospitality-signals" rel="noopener">LinkedIn</a></p>') if tall else ""
         side = f"""<aside class="article-visual">
-        <img src="{tall}" alt="{e(a.get("title"))}" loading="lazy" decoding="async">
-        <p class="article-visual-cap">As published on <a href="https://www.linkedin.com/company/hospitality-signals" rel="noopener">LinkedIn</a></p>
+        <img src="{pic}" alt="{e(a.get("title"))}" decoding="async">
+        {cap}
       </aside>"""
     more = ""
     if related:
@@ -285,22 +293,20 @@ def article_page(a, post, n, related=()):
     body = f'''{minibar(a["fmt"])}
 <main>
   <div class="progress" aria-hidden="true"></div>
-  <article>
-    <header class="article-head wrap">
-      {meta(a, link_format=True)}
-      <h1 class="article-title">{e(a.get("title"))}</h1>
-      <p class="article-standfirst">{e(a.get("summary"))}</p>
-    </header>
-    {cover}
-    <div class="article wrap{" has-visual" if side else ""}">
-      <div class="article-main">
-        <div class="article-body">
+  <article class="story wrap{" has-visual" if side else ""}">
+    <div class="story-main">
+      <header class="story-head">
+        {meta(a, link_format=True)}
+        <h1 class="story-title">{e(a.get("title"))}</h1>
+        <p class="story-standfirst">{e(a.get("summary"))}</p>
+      </header>
+      {side.replace('class="article-visual"', 'class="article-visual is-inline"') if side else ""}
+      <div class="article-body">
 {body_html(a, post)}
-        </div>
-        {sources_html(a)}
       </div>
-      {side}
+      {sources_html(a)}
     </div>
+    {side}
   </article>
   {more}
   {NEWSLETTER}
