@@ -231,5 +231,5 @@
   .story.has-visual { display: block; }
   .story.has-visual .story-main { max-width: 700px; margin-inline: auto; }
   .story > .article-visual { display: none; }
-  .article-visual.is-inline { display: grid; position: static; width: min(100%, 420px); margin: 0 0 40px; }
+  .article-visual.is-inline { display: grid; position: static; width: min(62%, 280px); margin: 0 0 40px; }
 }
