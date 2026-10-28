@@ -1,18 +1,18 @@
 {
- "added_at": "2026-10-26",
- "category": "Event",
- "date": "1 Dec 2026",
- "date_iso": "2026-12-01",
- "sources": [
-  {
-   "name": "Palais des Festivals",
-   "url": "https://en.palaisdesfestivals.com/offers/iltm-cannes-en-3657199/"
-  }
- ],
- "status": "ready",
- "summary": "The International Luxury Travel Market returns to the Palais des Festivals in Cannes from 1 to 3 December 2026.",
- "title": "ILTM Cannes runs from 1 to 3 December",
- "week": "2026-10-26",
- "why": "The main meeting point between luxury hotels and high-end travel advisors.",
- "body_long": "ILTM Cannes, the international luxury travel market, runs from Monday 30 November to Thursday 3 December 2026 at the Palais des Festivals in Cannes.\n\n## How it works\n\nILTM is a professional event, closed to the public. It is built around pre-scheduled one-to-one meetings between luxury travel advisers and agencies on one side, and hotels, resorts, destinations, tourism boards, cruise lines and travel brands on the other. Industry presentations, trend sessions and networking events complete the programme.\n\n## Why it matters\n\nFor luxury hotels, ILTM is one of the most efficient weeks of the year. In four days, sales teams meet the advisers who send high-spending guests to their properties, from Europe, the Americas, the Middle East and Asia. New openings use it to introduce their product to the trade before their first season.\n\nThis year's openings and reopenings make the timing especially relevant: Fouquet's Gstaad opens on 4 December, the St. Regis Dubai, The Palm has just reopened, and several groups, Four Seasons among them, have announced new addresses for 2027.\n\n## The signal\n\nFor the Riviera, ILTM also brings the international trade to Cannes in the low season. Expect many announcements from hotel groups in the days around the event.\n\nWe will cover the key announcements from Cannes."
+  "added_at": "2026-10-26",
+  "body_long": "ILTM Cannes, the international luxury travel market, runs from Monday 30 November to Thursday 3 December 2026 at the Palais des Festivals in Cannes.\n\n## How it works\n\nILTM is a professional event, closed to the public. It is built around pre-scheduled one-to-one meetings between luxury travel advisers and agencies on one side, and hotels, resorts, destinations, tourism boards, cruise lines and travel brands on the other. Industry presentations, trend sessions and networking events complete the programme.\n\n## Why it matters\n\nFor luxury hotels, ILTM is one of the most efficient weeks of the year. In four days, sales teams meet the advisers who send high-spending guests to their properties, from Europe, the Americas, the Middle East and Asia. New openings use it to introduce their product to the trade before their first season.\n\nThis year's openings and reopenings make the timing especially relevant: Fouquet's Gstaad opens on 4 December, the St. Regis Dubai, The Palm has just reopened, and several groups, Four Seasons among them, have announced new addresses for 2027.\n\n## The signal\n\nFor the Riviera, ILTM also brings the international trade to Cannes in the low season. Expect many announcements from hotel groups in the days around the event.\n\nWe will cover the key announcements from Cannes.",
+  "category": "Event",
+  "date": "1 Dec 2026",
+  "date_iso": "2026-12-01",
+  "sources": [
+    {
+      "name": "Palais des Festivals",
+      "url": "https://en.palaisdesfestivals.com/offers/iltm-cannes-en-3657199/"
+    }
+  ],
+  "status": "ready",
+  "summary": "The International Luxury Travel Market returns to the Palais des Festivals in Cannes from 1 to 3 December 2026.",
+  "title": "ILTM Cannes runs from 1 to 3 December",
+  "week": "2026-10-26",
+  "why": "The main meeting point between luxury hotels and high-end travel advisors."
 }

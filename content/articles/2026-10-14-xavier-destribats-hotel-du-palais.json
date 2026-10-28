@@ -1,33 +1,33 @@
 {
- "added_at": "2026-10-26",
- "category": "Appointment",
- "date": "14 Oct 2026",
- "date_iso": "2026-10-14",
- "sources": [
-  {
-   "name": "La Tribune de l'Hôtellerie",
-   "url": "https://latribunedelhotellerie.com/xavier-destribats-directeur-hotel-du-palais-biarritz/"
-  }
- ],
- "status": "ready",
- "summary": "The palace on the Basque coast confirms its new general manager.",
- "title": "Xavier Destribats confirmed as GM of Hôtel du Palais, Biarritz",
- "week": "2026-10-26",
- "why": "Leadership change at one of France's historic palaces.",
- "photo_asset": "6c89f9a31f993271b90852879f1847a1",
- "photo_credit": "© Hôtel du Palais",
- "visuals": {
-  "linkedin_4x5": "1e383aac51c0e4b668ed4881741e46e2",
-  "site_16x9": "f71804e32cf76bb0d05df352507b8d02"
- },
- "visual_text": {
-  "kicker": "New appointment",
-  "lead": "Xavier Destribats",
-  "rest": "takes the helm of Hôtel du Palais in Biarritz.",
-  "strap": "Hôtel du Palais, Biarritz · October 2026"
- },
- "visuals_status": "done",
- "visuals_made_at": "2026-10-26T21:40:00Z",
- "visuals_note": "Low resolution (600 px): ask for the HD press photo.",
- "body_long": "Hôtel du Palais in Biarritz has confirmed Xavier Destribats as its general manager. The appointment gives one of France's most storied seaside palaces a new leader after Vincent Poulingue, who had run the hotel, became general manager of Mandarin Oriental, Paris in May 2026.\n\nBuilt as the summer residence of Empress Eugénie and Napoleon III on the Grande Plage, Hôtel du Palais is today part of Hyatt's The Unbound Collection. It is one of the landmark addresses of the Basque coast and a regular stop for guests travelling between Paris, Spain and the south-west of France.\n\n## An international operator\n\nAccording to his Hospitality ON profile, Xavier Destribats has about 25 years of experience in hospitality, covering hotel operations and asset management. He joined Kempinski in 2011 as senior vice-president of operations, later served as President Europe, and sat on the management board of Kempinski Hotels with responsibility for the Americas, where he oversaw openings and operations including the Gran Hotel Manzana Kempinski La Habana in Cuba and the Cabrits Resort Kempinski in Dominica.\n\nHe holds a bachelor's degree in hotel management from the École hôtelière de Lausanne and has been named a Knight of France's National Order of Agricultural Merit for his contribution to French interests abroad.\n\n## The signal\n\nA palace with a single, historic building and a strong seasonal rhythm needs a leader who can combine operational detail with owner relations and long-term positioning. Bringing in an executive who has sat on the board of an international group, and has opened hotels in demanding markets, suggests Hôtel du Palais is thinking about its next phase, not only its next season.\n\nCongratulations to Xavier Destribats on his appointment."
+  "added_at": "2026-10-26",
+  "body_long": "Hôtel du Palais in Biarritz has confirmed Xavier Destribats as its general manager. The appointment gives one of France's most storied seaside palaces a new leader after Vincent Poulingue, who had run the hotel, became general manager of Mandarin Oriental, Paris in May 2026.\n\nBuilt as the summer residence of Empress Eugénie and Napoleon III on the Grande Plage, Hôtel du Palais is today part of Hyatt's The Unbound Collection. It is one of the landmark addresses of the Basque coast and a regular stop for guests travelling between Paris, Spain and the south-west of France.\n\n## An international operator\n\nAccording to his Hospitality ON profile, Xavier Destribats has about 25 years of experience in hospitality, covering hotel operations and asset management. He joined Kempinski in 2011 as senior vice-president of operations, later served as President Europe, and sat on the management board of Kempinski Hotels with responsibility for the Americas, where he oversaw openings and operations including the Gran Hotel Manzana Kempinski La Habana in Cuba and the Cabrits Resort Kempinski in Dominica.\n\nHe holds a bachelor's degree in hotel management from the École hôtelière de Lausanne and has been named a Knight of France's National Order of Agricultural Merit for his contribution to French interests abroad.\n\n## The signal\n\nA palace with a single, historic building and a strong seasonal rhythm needs a leader who can combine operational detail with owner relations and long-term positioning. Bringing in an executive who has sat on the board of an international group, and has opened hotels in demanding markets, suggests Hôtel du Palais is thinking about its next phase, not only its next season.\n\nCongratulations to Xavier Destribats on his appointment.",
+  "category": "Appointment",
+  "date": "14 Oct 2026",
+  "date_iso": "2026-10-14",
+  "photo_asset": "6c89f9a31f993271b90852879f1847a1",
+  "photo_credit": "© Hôtel du Palais",
+  "sources": [
+    {
+      "name": "La Tribune de l'Hôtellerie",
+      "url": "https://latribunedelhotellerie.com/xavier-destribats-directeur-hotel-du-palais-biarritz/"
+    }
+  ],
+  "status": "ready",
+  "summary": "The palace on the Basque coast confirms its new general manager.",
+  "title": "Xavier Destribats confirmed as GM of Hôtel du Palais, Biarritz",
+  "visual_text": {
+    "kicker": "New appointment",
+    "lead": "Xavier Destribats",
+    "rest": "takes the helm of Hôtel du Palais in Biarritz.",
+    "strap": "Hôtel du Palais, Biarritz · October 2026"
+  },
+  "visuals": {
+    "linkedin_4x5": "1e383aac51c0e4b668ed4881741e46e2",
+    "site_16x9": "f71804e32cf76bb0d05df352507b8d02"
+  },
+  "visuals_made_at": "2026-10-26T21:40:00Z",
+  "visuals_note": "Low resolution (600 px): ask for the HD press photo.",
+  "visuals_status": "done",
+  "week": "2026-10-26",
+  "why": "Leadership change at one of France's historic palaces."
 }

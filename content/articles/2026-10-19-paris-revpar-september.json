@@ -1,18 +1,18 @@
 {
- "added_at": "2026-10-26",
- "category": "Trend",
- "date": "19 Oct 2026",
- "date_iso": "2026-10-19",
- "sources": [
-  {
-   "name": "La Tribune de l'Hôtellerie",
-   "url": "https://latribunedelhotellerie.com/tour-du-monde-actualite-hoteliere-19-octobre-2026-investissements/"
-  }
- ],
- "status": "ready",
- "summary": "According to the EXTENDAM barometer, Paris RevPAR reached €245.8 in September 2026, up 11.2% year on year, against +8.1% for France and +7.5% for Europe. BNP Paribas Real Estate counts €1.9bn invested in French hotels over nine months, 53% of it in Paris.",
- "title": "Paris RevPAR up 11.2% in September",
- "week": "2026-10-26",
- "why": "A strong benchmark for Q4 pricing and 2027 budgets in Paris.",
- "body_long": "September 2026 was an excellent month for hotels in Paris. In the city and its inner suburbs, revenue per available room rose 11.3% year on year to €244.2, according to figures published by Hospitality ON on 21 October.\n\n## Paris and Île-de-France\n\nIn Paris and the inner suburbs, occupancy rose 3 points to 88.2% and the average daily rate rose 7.6% to €277. Across Île-de-France, RevPAR reached €155.2, up 10.8%, with occupancy at 81.8% and an average rate of €189.8. The outer suburbs recorded the largest occupancy gain in France, up 3.7 points to 76.8%.\n\nTwo events drove the month: a series of Céline Dion concerts at the Paris La Défense Arena and the papal visit to the Paris area. Accor also cited trade fairs as a factor in a strong September for France.\n\n## France\n\nAcross France, occupancy rose by nearly 2 points, the average rate by 5.3% to more than €145, and RevPAR by nearly 8% to more than €110. Growth increased with each step up the market: the upscale segment led, with occupancy up 3.1 points to 83.5%, an average rate of €348.5, up 7.4%, and RevPAR up 11.5% to €290.9. Outside Île-de-France, growth was more modest, with occupancy up 1.1 points to 73.4% and rates up 4%.\n\n## The signal\n\nEvents remain the strongest lever for Paris hotels: a few concert dates and a major visit were enough to lift the whole market. For revenue managers, the lesson is to track the events calendar as closely as the trade-fair calendar, and to price the upscale segment accordingly. The gap between luxury and the rest of the market keeps widening, and it is the top end that drives growth."
+  "added_at": "2026-10-26",
+  "body_long": "September 2026 was an excellent month for hotels in Paris. In the city and its inner suburbs, revenue per available room rose 11.3% year on year to €244.2, according to figures published by Hospitality ON on 21 October.\n\n## Paris and Île-de-France\n\nIn Paris and the inner suburbs, occupancy rose 3 points to 88.2% and the average daily rate rose 7.6% to €277. Across Île-de-France, RevPAR reached €155.2, up 10.8%, with occupancy at 81.8% and an average rate of €189.8. The outer suburbs recorded the largest occupancy gain in France, up 3.7 points to 76.8%.\n\nTwo events drove the month: a series of Céline Dion concerts at the Paris La Défense Arena and the papal visit to the Paris area. Accor also cited trade fairs as a factor in a strong September for France.\n\n## France\n\nAcross France, occupancy rose by nearly 2 points, the average rate by 5.3% to more than €145, and RevPAR by nearly 8% to more than €110. Growth increased with each step up the market: the upscale segment led, with occupancy up 3.1 points to 83.5%, an average rate of €348.5, up 7.4%, and RevPAR up 11.5% to €290.9. Outside Île-de-France, growth was more modest, with occupancy up 1.1 points to 73.4% and rates up 4%.\n\n## The signal\n\nEvents remain the strongest lever for Paris hotels: a few concert dates and a major visit were enough to lift the whole market. For revenue managers, the lesson is to track the events calendar as closely as the trade-fair calendar, and to price the upscale segment accordingly. The gap between luxury and the rest of the market keeps widening, and it is the top end that drives growth.",
+  "category": "Trend",
+  "date": "19 Oct 2026",
+  "date_iso": "2026-10-19",
+  "sources": [
+    {
+      "name": "La Tribune de l'Hôtellerie",
+      "url": "https://latribunedelhotellerie.com/tour-du-monde-actualite-hoteliere-19-octobre-2026-investissements/"
+    }
+  ],
+  "status": "ready",
+  "summary": "According to the EXTENDAM barometer, Paris RevPAR reached €245.8 in September 2026, up 11.2% year on year, against +8.1% for France and +7.5% for Europe. BNP Paribas Real Estate counts €1.9bn invested in French hotels over nine months, 53% of it in Paris.",
+  "title": "Paris RevPAR up 11.2% in September",
+  "week": "2026-10-26",
+  "why": "A strong benchmark for Q4 pricing and 2027 budgets in Paris."
 }

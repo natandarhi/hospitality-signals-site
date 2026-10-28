@@ -1,33 +1,33 @@
 {
- "added_at": "2026-10-26",
- "category": "Appointment",
- "date": "9 Oct 2026",
- "date_iso": "2026-10-09",
- "sources": [
-  {
-   "name": "Hospitality ON",
-   "url": "https://hospitality-on.com/fr/nomination/evok-collection-confie-nolinski-paris-benjamin-piat-ancien-directeur-du-pavillon"
-  }
- ],
- "status": "ready",
- "summary": "The former GM of Pavillon Faubourg Saint-Germain has run Evok's founding hotel since 13 July, as the group prepares Gassin and Val d'Isère.",
- "title": "Benjamin Piat leads Nolinski Paris for Evok Collection",
- "week": "2026-10-26",
- "why": "A French independent luxury collection preparing its next openings.",
- "photo_asset": "c7b2adf368211e9369093ef3ccf1894c",
- "photo_credit": "© Evok Collection",
- "visuals": {
-  "linkedin_4x5": "171ac1e1baea4156e0bfbfeb6a5ec87d",
-  "site_16x9": "22805a45d3aeda8748d0ea618814d59f"
- },
- "visual_text": {
-  "kicker": "New appointment",
-  "lead": "Benjamin Piat",
-  "rest": "leads Nolinski Paris, the founding hotel of Evok Collection.",
-  "strap": "Nolinski Paris, Paris · Since July 2026"
- },
- "visuals_status": "done",
- "visuals_made_at": "2026-10-26T21:40:00Z",
- "visuals_note": "Low resolution (599 px): ask for the HD press photo.",
- "body_long": "Evok Collection has entrusted its founding hotel to Benjamin Piat. He has been general manager of Nolinski Paris since 13 July 2026, after running the Pavillon Faubourg Saint-Germain for the Chevalier family.\n\nNolinski Paris opened in 2016 at 16 avenue de l'Opéra, with interiors by Jean-Louis Deniot. It has 45 rooms and suites and is the first address of Evok Collection, the group co-founded in 2014 by Pierre Bastid, Romain Yzerman and Emmanuel Sauvage.\n\n## From London to the Left Bank\n\nBenjamin Piat trained at the Glion hotel school and began his career in London at the Landmark, before moving to COMO and the Metropolitan. From 2016 to 2022 he was front-of-house manager at the Castille Paris, the five-star hotel on rue Cambon operated by Starhotels.\n\nHe then joined Chevalier Paris as deputy general manager of the Pavillon de la Reine on the place des Vosges. In 2023 he was appointed general manager of the Pavillon Faubourg Saint-Germain, a 47-room hotel on rue du Pré-aux-Clercs that reopened in April 2022 after two years of works. Nolinski Paris is his second general manager post and his first outside the Chevalier family group.\n\n## A group renewing its team\n\nThe appointment is part of a wider renewal at Evok Collection. Co-founder Emmanuel Sauvage left the group in November 2025, and Aya Hanova has been director of operations since October 2025, after roles at Rosewood Hôtel de Crillon, Four Seasons George V, Le Royal Monceau and Airelles in Saint-Tropez.\n\nThe group has strong backing. Famille C Participations, the holding company of the Courtin-Clarins family, invested €130 million in February 2024, while Zaka Investments, Pierre Bastid's property company, holds the real estate for the group's projects.\n\n## The signal\n\nEvok is preparing the next chapter of its Nolinski brand, with new addresses planned in Gassin, near Saint-Tropez, and in Val d'Isère. Placing a general manager shaped by intimate, design-led Paris hotels at the head of the flagship is a clear choice: the brand's identity will be defined in Paris before it travels to the coast and the Alps.\n\nCongratulations to Benjamin Piat on this appointment."
+  "added_at": "2026-10-26",
+  "body_long": "Evok Collection has entrusted its founding hotel to Benjamin Piat. He has been general manager of Nolinski Paris since 13 July 2026, after running the Pavillon Faubourg Saint-Germain for the Chevalier family.\n\nNolinski Paris opened in 2016 at 16 avenue de l'Opéra, with interiors by Jean-Louis Deniot. It has 45 rooms and suites and is the first address of Evok Collection, the group co-founded in 2014 by Pierre Bastid, Romain Yzerman and Emmanuel Sauvage.\n\n## From London to the Left Bank\n\nBenjamin Piat trained at the Glion hotel school and began his career in London at the Landmark, before moving to COMO and the Metropolitan. From 2016 to 2022 he was front-of-house manager at the Castille Paris, the five-star hotel on rue Cambon operated by Starhotels.\n\nHe then joined Chevalier Paris as deputy general manager of the Pavillon de la Reine on the place des Vosges. In 2023 he was appointed general manager of the Pavillon Faubourg Saint-Germain, a 47-room hotel on rue du Pré-aux-Clercs that reopened in April 2022 after two years of works. Nolinski Paris is his second general manager post and his first outside the Chevalier family group.\n\n## A group renewing its team\n\nThe appointment is part of a wider renewal at Evok Collection. Co-founder Emmanuel Sauvage left the group in November 2025, and Aya Hanova has been director of operations since October 2025, after roles at Rosewood Hôtel de Crillon, Four Seasons George V, Le Royal Monceau and Airelles in Saint-Tropez.\n\nThe group has strong backing. Famille C Participations, the holding company of the Courtin-Clarins family, invested €130 million in February 2024, while Zaka Investments, Pierre Bastid's property company, holds the real estate for the group's projects.\n\n## The signal\n\nEvok is preparing the next chapter of its Nolinski brand, with new addresses planned in Gassin, near Saint-Tropez, and in Val d'Isère. Placing a general manager shaped by intimate, design-led Paris hotels at the head of the flagship is a clear choice: the brand's identity will be defined in Paris before it travels to the coast and the Alps.\n\nCongratulations to Benjamin Piat on this appointment.",
+  "category": "Appointment",
+  "date": "9 Oct 2026",
+  "date_iso": "2026-10-09",
+  "photo_asset": "c7b2adf368211e9369093ef3ccf1894c",
+  "photo_credit": "© Evok Collection",
+  "sources": [
+    {
+      "name": "Hospitality ON",
+      "url": "https://hospitality-on.com/fr/nomination/evok-collection-confie-nolinski-paris-benjamin-piat-ancien-directeur-du-pavillon"
+    }
+  ],
+  "status": "ready",
+  "summary": "The former GM of Pavillon Faubourg Saint-Germain has run Evok's founding hotel since 13 July, as the group prepares Gassin and Val d'Isère.",
+  "title": "Benjamin Piat leads Nolinski Paris for Evok Collection",
+  "visual_text": {
+    "kicker": "New appointment",
+    "lead": "Benjamin Piat",
+    "rest": "leads Nolinski Paris, the founding hotel of Evok Collection.",
+    "strap": "Nolinski Paris, Paris · Since July 2026"
+  },
+  "visuals": {
+    "linkedin_4x5": "171ac1e1baea4156e0bfbfeb6a5ec87d",
+    "site_16x9": "22805a45d3aeda8748d0ea618814d59f"
+  },
+  "visuals_made_at": "2026-10-26T21:40:00Z",
+  "visuals_note": "Low resolution (599 px): ask for the HD press photo.",
+  "visuals_status": "done",
+  "week": "2026-10-26",
+  "why": "A French independent luxury collection preparing its next openings."
 }

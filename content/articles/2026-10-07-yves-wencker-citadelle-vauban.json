@@ -1,33 +1,33 @@
 {
- "added_at": "2026-10-26",
- "category": "Appointment",
- "date": "7 Oct 2026",
- "date_iso": "2026-10-07",
- "sources": [
-  {
-   "name": "Hospitality ON",
-   "url": "https://hospitality-on.com/fr/hotellerie/yves-wencker-prend-la-direction-de-la-citadelle-vauban-premiere-adresse-francaise"
-  }
- ],
- "status": "published",
- "summary": "The former GM of the Westminster Paris leads La Citadelle Vauban on Belle-Île-en-Mer, opening in summer 2027 with more than 100 permanent staff.",
- "title": "Yves Wencker to open Accor's first Emblems address in France",
- "week": "2026-10-26",
- "why": "Accor's Emblems Collection arrives in France with a heritage fortress.",
- "photo_asset": "9780b422523c1b0186e8d4fb1c58ad47",
- "photo_credit": "© Accor",
- "visuals": {
-  "linkedin_4x5": "7b50380fef2d913360f8f50a35c0a334",
-  "site_16x9": "b8db06a4baea018da5bde3d4f545f922"
- },
- "visual_text": {
-  "kicker": "New appointment",
-  "lead": "Yves Wencker",
-  "rest": "will open Accor's first Emblems address in France.",
-  "strap": "La Citadelle Vauban, Belle-Île-en-Mer · Summer 2027"
- },
- "visuals_status": "done",
- "visuals_made_at": "2026-10-26T21:40:00Z",
- "visuals_note": "Low resolution (406 px): ask for the HD press photo.",
- "body_long": "Accor's Emblems Collection has chosen its general manager for its first address in France. Yves Wencker will lead La Citadelle Vauban on Belle-Île-en-Mer, the fortress overlooking the harbour of Le Palais, which is being converted into a hotel due to open in summer 2027.\n\nHe has been in place since September 2026, running the pre-opening: shaping the guest experience and building the team from scratch. The scale of that task is unusual for an island hotel. Accor expects the property to employ more than 100 permanent staff and nearly 70 seasonal workers, which would make it the largest private employer on Belle-Île.\n\n## A career built on openings\n\nYves Wencker graduated from the Strasbourg hotel school in 1991 and spent most of his career outside France. He worked at sea on the Hanseatic and Seabourn cruise ships, ran The Cotton House on Mustique, and moved through some of hospitality's most demanding kitchens and dining rooms: Alain Ducasse's restaurant in New York, then the Ritz in London, where he ran the restaurants.\n\nHe went on to lead Commune by the Great Wall, a Kempinski-managed property near Beijing, then Heritage Le Telfair in Mauritius. In Marrakech he handled the pre-opening of the Selman and the opening of the Taj Palace.\n\nBack in France, he was multi-site director at Wilburys Hotel Investment, then led accommodation for Disneyland Paris and its seven hotels from 2016 to 2019. He later headed the Hôtel Raphael in Paris, ran the site of La Maison Sanofi, the pharmaceutical group's global headquarters, and led the hospitality arm of the ARTEA group and its Storia brand, whose projects include Château d'Artigny. At the end of 2024 he became general manager of the Westminster Paris, which gained its five-star rating in June 2025.\n\n## The signal\n\nA heritage fortress on an Atlantic island is not an ordinary hotel project. It needs someone who can open a property, recruit a large team in a small community and give a historic site a credible luxury product from day one. Wencker's recent career reads as a series of launches and repositionings, and that is exactly the profile Accor has picked for its first Emblems address in France.\n\nFor the French market, the project also confirms a trend: global groups are turning protected historic buildings into small luxury hotels, often outside the usual destinations, with a strong local footprint.\n\nCongratulations to Yves Wencker on this new opening."
+  "added_at": "2026-10-26",
+  "body_long": "Accor's Emblems Collection has chosen its general manager for its first address in France. Yves Wencker will lead La Citadelle Vauban on Belle-Île-en-Mer, the fortress overlooking the harbour of Le Palais, which is being converted into a hotel due to open in summer 2027.\n\nHe has been in place since September 2026, running the pre-opening: shaping the guest experience and building the team from scratch. The scale of that task is unusual for an island hotel. Accor expects the property to employ more than 100 permanent staff and nearly 70 seasonal workers, which would make it the largest private employer on Belle-Île.\n\n## A career built on openings\n\nYves Wencker graduated from the Strasbourg hotel school in 1991 and spent most of his career outside France. He worked at sea on the Hanseatic and Seabourn cruise ships, ran The Cotton House on Mustique, and moved through some of hospitality's most demanding kitchens and dining rooms: Alain Ducasse's restaurant in New York, then the Ritz in London, where he ran the restaurants.\n\nHe went on to lead Commune by the Great Wall, a Kempinski-managed property near Beijing, then Heritage Le Telfair in Mauritius. In Marrakech he handled the pre-opening of the Selman and the opening of the Taj Palace.\n\nBack in France, he was multi-site director at Wilburys Hotel Investment, then led accommodation for Disneyland Paris and its seven hotels from 2016 to 2019. He later headed the Hôtel Raphael in Paris, ran the site of La Maison Sanofi, the pharmaceutical group's global headquarters, and led the hospitality arm of the ARTEA group and its Storia brand, whose projects include Château d'Artigny. At the end of 2024 he became general manager of the Westminster Paris, which gained its five-star rating in June 2025.\n\n## The signal\n\nA heritage fortress on an Atlantic island is not an ordinary hotel project. It needs someone who can open a property, recruit a large team in a small community and give a historic site a credible luxury product from day one. Wencker's recent career reads as a series of launches and repositionings, and that is exactly the profile Accor has picked for its first Emblems address in France.\n\nFor the French market, the project also confirms a trend: global groups are turning protected historic buildings into small luxury hotels, often outside the usual destinations, with a strong local footprint.\n\nCongratulations to Yves Wencker on this new opening.",
+  "category": "Appointment",
+  "date": "7 Oct 2026",
+  "date_iso": "2026-10-07",
+  "photo_asset": "9780b422523c1b0186e8d4fb1c58ad47",
+  "photo_credit": "© Accor",
+  "sources": [
+    {
+      "name": "Hospitality ON",
+      "url": "https://hospitality-on.com/fr/hotellerie/yves-wencker-prend-la-direction-de-la-citadelle-vauban-premiere-adresse-francaise"
+    }
+  ],
+  "status": "published",
+  "summary": "The former GM of the Westminster Paris leads La Citadelle Vauban on Belle-Île-en-Mer, opening in summer 2027 with more than 100 permanent staff.",
+  "title": "Yves Wencker to open Accor's first Emblems address in France",
+  "visual_text": {
+    "kicker": "New appointment",
+    "lead": "Yves Wencker",
+    "rest": "will open Accor's first Emblems address in France.",
+    "strap": "La Citadelle Vauban, Belle-Île-en-Mer · Summer 2027"
+  },
+  "visuals": {
+    "linkedin_4x5": "7b50380fef2d913360f8f50a35c0a334",
+    "site_16x9": "b8db06a4baea018da5bde3d4f545f922"
+  },
+  "visuals_made_at": "2026-10-26T21:40:00Z",
+  "visuals_note": "Low resolution (406 px): ask for the HD press photo.",
+  "visuals_status": "done",
+  "week": "2026-10-26",
+  "why": "Accor's Emblems Collection arrives in France with a heritage fortress."
 }

@@ -1,0 +1,24 @@
+{
+  "added_at": "2026-10-28",
+  "body_long": "HOTREC, the European association of hotels, restaurants and cafés, published the seventh edition of its European Hotel Distribution Study on 15 September 2026. The study was led by Professor Roland Schegg of HES-SO Valais-Wallis with HOTREC and national hotel associations.\n\n## The sample\n\nThe study covers the 2025 financial year. It draws on 2,713 establishments in 28 countries: 1,882 independent hotels and aggregated data on 831 chain properties. It has been run every two years since 2013.\n\n## The figures\n\nBooking Holdings and Expedia Group together account for 85.4% of hotel bookings made through online travel agencies in Europe. Booking Holdings alone holds 68.8%, against about 60% in 2013, and Booking.com 66.1%.\n\nDirect bookings represent 51.3% of all bookings, six points less than in 2013. Online travel agencies now account for 29.9% of the total, against 19.7% in 2013.\n\nPrice undercutting is rising: 51% of hotels say an online agency has frequently or occasionally sold their rooms below their own rate, against 43% in 2023. Of those hotels, 80% had not agreed to the lower rate. The study also finds that 26% of hotels use artificial intelligence.\n\n## The signal\n\nConcentration keeps growing even as European rules on large platforms tighten. For luxury hotels, the direct channel is not a habit to keep but a margin to defend, through rate parity monitoring, loyalty and the quality of their own booking path.",
+  "category": "Distribution",
+  "date": "15 Sep 2026",
+  "date_iso": "2026-09-15",
+  "sources": [
+    {
+      "name": "HOTREC",
+      "url": "https://www.hotrec.eu/en/news_booking-holdings-and-expedia-group-account-for-85-of-europe_E2_80_99s-ota-market-hotrec-study-finds.html"
+    },
+    {
+      "name": "La Tribune de l'Hôtellerie",
+      "url": "https://latribunedelhotellerie.com/hotrec-booking-expedia-85-pourcent-marche-ota-europe/"
+    }
+  ],
+  "status": "ready",
+  "summary": "HOTREC's 2026 European Hotel Distribution Study puts Booking Holdings at 68.8% of OTA bookings and direct bookings at 51.3% of the total.",
+  "title": "Booking and Expedia hold 85% of Europe's OTA market",
+  "visuals_made_at": "2026-10-28T21:10:00Z",
+  "visuals_status": "none",
+  "week": "2026-11-02",
+  "why": "Platform concentration keeps rising while direct bookings slip."
+}

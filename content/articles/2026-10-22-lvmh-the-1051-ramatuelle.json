@@ -1,33 +1,33 @@
 {
- "added_at": "2026-10-26",
- "category": "Deal",
- "date": "22 Oct 2026",
- "date_iso": "2026-10-22",
- "photo_credit": "© Le 1051",
- "sources": [
-  {
-   "name": "CFNEWS IMMO",
-   "url": "https://www.cfnewsimmo.net/L-actualite/Transactions/A-Ramatuelle-LVMH-pose-son-transat-au-1051-507663"
-  }
- ],
- "status": "ready",
- "summary": "LVMH Hotel Management has acquired both the walls and the business of The 1051 in Ramatuelle, a restaurant, bar and private beach founded in 2018 by Maxime Lamon. The price was not disclosed.",
- "title": "LVMH takes a seat on Pampelonne with The 1051",
- "week": "2026-10-26",
- "why": "Luxury groups now treat the beach club as part of the destination experience; LVMH already runs Cheval Blanc St-Tropez nearby.",
- "photo_asset": "24e037affa4f356625f7f606712600ba",
- "visuals": {
-  "linkedin_4x5": "47fbe7903f468d1f102c1e54c3dc9ec7",
-  "site_16x9": "3071b2c984f58c47c6b78922947fd4e0"
- },
- "visual_text": {
-  "kicker": "Signal of the week",
-  "lead": "LVMH",
-  "rest": "acquires The 1051, the restaurant and private beach on Pampelonne.",
-  "strap": "The 1051, Ramatuelle · 22 October 2026"
- },
- "visuals_status": "done",
- "visuals_made_at": "2026-10-26T21:40:00Z",
- "visuals_note": "Low resolution (950 px): ask for the HD press photo.",
- "body_long": "LVMH has taken a seat on Pampelonne. LVMH Hotel Management has acquired both the walls and the business of The 1051 in Ramatuelle, a restaurant, bar and private beach on one of the most famous stretches of sand on the Riviera, CFNEWS IMMO reported on 22 October 2026. The price was not disclosed.\n\n## A family address\n\nThe 1051 was founded in 2018 by Maxime Lamon, on land his family has held for seven generations. A graduate of the Vatel hotel school in 2017, he took over his parents' beach hut after working in other establishments and turned it into a calm, discreet address where the kitchen is at the centre of the project. Gault&Millau describes cooking built on carefully sourced, well-executed products: grilled whole fish, beef tagliata, linguine with clams and summer tomatoes, served right on the beach.\n\n## Part of a Saint-Tropez cluster\n\nThe acquisition sits close to LVMH's existing presence in the area. The group already runs Cheval Blanc St-Tropez, which readers of Condé Nast Traveler voted the best hotel in the South of France and Monaco in this year's Readers' Choice Awards, and the 10th best hotel in the world.\n\n## The signal\n\nFor luxury groups, the beach club is no longer a side business. It is part of the destination experience, and owning the best spots on the sand is a way to shape that experience end to end, from the room to the lunch table. Expect more groups to look at beach and food and beverage assets around their resorts on the Riviera, where the number of available sites is limited.\n\nCongratulations to Maxime Lamon and the LVMH Hotel Management team."
+  "added_at": "2026-10-26",
+  "body_long": "LVMH has taken a seat on Pampelonne. LVMH Hotel Management has acquired both the walls and the business of The 1051 in Ramatuelle, a restaurant, bar and private beach on one of the most famous stretches of sand on the Riviera, CFNEWS IMMO reported on 22 October 2026. The price was not disclosed.\n\n## A family address\n\nThe 1051 was founded in 2018 by Maxime Lamon, on land his family has held for seven generations. A graduate of the Vatel hotel school in 2017, he took over his parents' beach hut after working in other establishments and turned it into a calm, discreet address where the kitchen is at the centre of the project. Gault&Millau describes cooking built on carefully sourced, well-executed products: grilled whole fish, beef tagliata, linguine with clams and summer tomatoes, served right on the beach.\n\n## Part of a Saint-Tropez cluster\n\nThe acquisition sits close to LVMH's existing presence in the area. The group already runs Cheval Blanc St-Tropez, which readers of Condé Nast Traveler voted the best hotel in the South of France and Monaco in this year's Readers' Choice Awards, and the 10th best hotel in the world.\n\n## The signal\n\nFor luxury groups, the beach club is no longer a side business. It is part of the destination experience, and owning the best spots on the sand is a way to shape that experience end to end, from the room to the lunch table. Expect more groups to look at beach and food and beverage assets around their resorts on the Riviera, where the number of available sites is limited.\n\nCongratulations to Maxime Lamon and the LVMH Hotel Management team.",
+  "category": "Deal",
+  "date": "22 Oct 2026",
+  "date_iso": "2026-10-22",
+  "photo_asset": "24e037affa4f356625f7f606712600ba",
+  "photo_credit": "© Le 1051",
+  "sources": [
+    {
+      "name": "CFNEWS IMMO",
+      "url": "https://www.cfnewsimmo.net/L-actualite/Transactions/A-Ramatuelle-LVMH-pose-son-transat-au-1051-507663"
+    }
+  ],
+  "status": "ready",
+  "summary": "LVMH Hotel Management has acquired both the walls and the business of The 1051 in Ramatuelle, a restaurant, bar and private beach founded in 2018 by Maxime Lamon. The price was not disclosed.",
+  "title": "LVMH takes a seat on Pampelonne with The 1051",
+  "visual_text": {
+    "kicker": "Signal of the week",
+    "lead": "LVMH",
+    "rest": "acquires The 1051, the restaurant and private beach on Pampelonne.",
+    "strap": "The 1051, Ramatuelle · 22 October 2026"
+  },
+  "visuals": {
+    "linkedin_4x5": "47fbe7903f468d1f102c1e54c3dc9ec7",
+    "site_16x9": "3071b2c984f58c47c6b78922947fd4e0"
+  },
+  "visuals_made_at": "2026-10-26T21:40:00Z",
+  "visuals_note": "Low resolution (950 px): ask for the HD press photo.",
+  "visuals_status": "done",
+  "week": "2026-10-26",
+  "why": "Luxury groups now treat the beach club as part of the destination experience; LVMH already runs Cheval Blanc St-Tropez nearby."
 }

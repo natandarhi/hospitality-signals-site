@@ -1,18 +1,33 @@
 {
- "added_at": "2026-10-26",
- "category": "Results",
- "date": "2 Nov 2026",
- "date_iso": "2026-11-02",
- "sources": [
-  {
-   "name": "Yahoo Finance",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/marriott-international-announces-release-date-123000535.html"
-  }
- ],
- "status": "ready",
- "summary": "Marriott International publishes its third-quarter 2026 results on 2 November at about 7am ET, with a call led by CEO Anthony Capuano and CFO Jennifer Mason.",
- "title": "Marriott reports Q3 2026 results",
- "week": "2026-10-26",
- "why": "Pipeline and luxury RevPAR trends from the largest group.",
- "body_long": "Marriott International publishes its third-quarter 2026 results on Monday 2 November, at around 7 a.m. Eastern time, with a conference call at 8 a.m.\n\n## Where Marriott stood after the second quarter\n\nIn August, Marriott reported worldwide RevPAR up 3.4% for the second quarter. The United States and Canada grew 5%, the strongest quarterly gain in 13 quarters, and luxury RevPAR in the region rose more than 9%. Europe grew more than 4% and Asia-Pacific more than 5%, while the Middle East fell 43% because of the regional conflict.\n\nThe group raised its full-year guidance at the time, to global RevPAR growth of 3% to 3.5% and adjusted EBITDA of $5.97 billion to $6.03 billion. Its development pipeline stood at about 629,000 rooms at the end of June, up nearly 7% year on year.\n\n## What to watch\n\nMarriott runs the largest luxury portfolio in the industry, with Ritz-Carlton, St. Regis, Bulgari, EDITION and The Luxury Collection. Its figures are the best read on the luxury cycle going into 2027. The recovery in the Middle East, already visible at Accor in the third quarter, will be the other key point.\n\n## The signal\n\nAfter Accor, IHG and Hilton, Marriott closes the third-quarter season for the major groups. We will publish the key figures once the results are out."
+  "added_at": "2026-10-26",
+  "body_long": "Marriott International publishes its third-quarter 2026 results on Monday 2 November, at around 7 a.m. Eastern time, with a conference call at 8 a.m.\n\n## Where Marriott stood after the second quarter\n\nIn August, Marriott reported worldwide RevPAR up 3.4% for the second quarter. The United States and Canada grew 5%, the strongest quarterly gain in 13 quarters, and luxury RevPAR in the region rose more than 9%. Europe grew more than 4% and Asia-Pacific more than 5%, while the Middle East fell 43% because of the regional conflict.\n\nThe group raised its full-year guidance at the time, to global RevPAR growth of 3% to 3.5% and adjusted EBITDA of $5.97 billion to $6.03 billion. Its development pipeline stood at about 629,000 rooms at the end of June, up nearly 7% year on year.\n\n## What to watch\n\nMarriott runs the largest luxury portfolio in the industry, with Ritz-Carlton, St. Regis, Bulgari, EDITION and The Luxury Collection. Its figures are the best read on the luxury cycle going into 2027. The recovery in the Middle East, already visible at Accor in the third quarter, will be the other key point.\n\n## The signal\n\nAfter Accor, IHG and Hilton, Marriott closes the third-quarter season for the major groups. We will publish the key figures once the results are out.",
+  "category": "Results",
+  "date": "2 Nov 2026",
+  "date_iso": "2026-11-02",
+  "photo_asset": "5c9115486cffceebf0675933b957d18d",
+  "photo_credit": "© Marriott International (to be confirmed)",
+  "sources": [
+    {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/marriott-international-announces-release-date-123000535.html"
+    }
+  ],
+  "status": "ready",
+  "summary": "Marriott International publishes its third-quarter 2026 results on 2 November at about 7am ET, with a call led by CEO Anthony Capuano and CFO Jennifer Mason.",
+  "title": "Marriott reports Q3 2026 results",
+  "visual_text": {
+    "kicker": "Signal of the week",
+    "lead": "Marriott International",
+    "rest": "reports its third-quarter 2026 results.",
+    "strap": "Marriott International · 2 November 2026"
+  },
+  "visuals": {
+    "linkedin_4x5": "a53f962c77405337d454defb396bc800",
+    "site_16x9": "ba190e8565add37bfaf23d64c81e6fd6"
+  },
+  "visuals_made_at": "2026-10-28T21:10:00Z",
+  "visuals_note": "Photo of The St. Regis Rome, low resolution (520 px): ask for the HD press photo.",
+  "visuals_status": "done",
+  "week": "2026-10-26",
+  "why": "Pipeline and luxury RevPAR trends from the largest group."
 }

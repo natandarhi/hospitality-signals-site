@@ -1,31 +1,33 @@
 {
- "added_at": "2026-10-26",
- "category": "Results",
- "date": "22 Oct 2026",
- "date_iso": "2026-10-22",
- "sources": [
-  {
-   "name": "IHG trading update",
-   "url": "https://www.ihgplc.com/en/news-and-media/news-releases/2026/third-quarter-trading-update-to-30-september-2026"
-  }
- ],
- "status": "ready",
- "summary": "Global RevPAR rose 5.3% and EMEAA 5.0%, while Greater China fell 3.3% and the Middle East was broadly flat.",
- "title": "IHG Q3: Europe holds while Greater China softens",
- "week": "2026-10-26",
- "why": "Relevant for operators in Hong Kong and Singapore planning the year ahead.",
- "body_long": "IHG Hotels & Resorts reported global RevPAR up 5.3% in the third quarter of 2026, an acceleration on the first half, in a trading update published on 22 October.\n\n## Regions\n\nThe Americas led with RevPAR up 6.8%, driven by very strong performance in the United States across all brands. EMEAA, which covers Europe, the Middle East, Africa and Asia, grew 5.0%, led by Continental Europe and East Asia and the Pacific, including higher travel from China. The Middle East was broadly flat. Greater China was the only region to decline, with RevPAR down 3.3%, which IHG attributed to adverse weather and changes in public holiday timing. Year to date, global RevPAR is up 4.6%.\n\nAcross comparable hotels, group business grew 10%, leisure 5% and business travel 4%. Average daily rate rose 3.9% and occupancy 0.9 points.\n\n## Development\n\nIHG opened 92 hotels with 12,900 rooms in the quarter and signed 164 hotels with 21,100 rooms. Its system now counts 7,186 hotels and 1.06 million rooms, and its pipeline stands at 2,426 hotels and 353,000 rooms, equal to a third of the current system. Net system growth reached 4.9%. Chief executive Elie Maalouf said development is split roughly evenly between new builds and conversions, and expects another record year.\n\nThe group has completed $707 million of its $950 million share buyback for 2026 and expects to meet consensus expectations for the year.\n\n## The signal\n\nTwo trends stand out for our audience. Europe holds, and travellers from China are returning to European and Asian destinations even as the Chinese domestic market softens. For hotels in Paris, London or Switzerland that count on Asian clientele, that is good news heading into 2027.",
- "photo_asset": "26c9407e657d161266d241c5d20dd6d2",
- "photo_credit": "© IHG Hotels & Resorts",
- "visuals": {
-  "linkedin_4x5": "98573e4f94a903f6737140ac7843e0d7",
-  "site_16x9": "7c7cd0cc2585808d0c5dcbe66f6a9530"
- },
- "visual_text": {
-  "kicker": "Signal of the week",
-  "lead": "IHG Hotels & Resorts",
-  "rest": "grows global RevPAR 5.3% in the third quarter.",
-  "strap": "InterContinental New York Barclay · Q3 2026"
- },
- "visuals_status": "done"
+  "added_at": "2026-10-26",
+  "body_long": "IHG Hotels & Resorts reported global RevPAR up 5.3% in the third quarter of 2026, an acceleration on the first half, in a trading update published on 22 October.\n\n## Regions\n\nThe Americas led with RevPAR up 6.8%, driven by very strong performance in the United States across all brands. EMEAA, which covers Europe, the Middle East, Africa and Asia, grew 5.0%, led by Continental Europe and East Asia and the Pacific, including higher travel from China. The Middle East was broadly flat. Greater China was the only region to decline, with RevPAR down 3.3%, which IHG attributed to adverse weather and changes in public holiday timing. Year to date, global RevPAR is up 4.6%.\n\nAcross comparable hotels, group business grew 10%, leisure 5% and business travel 4%. Average daily rate rose 3.9% and occupancy 0.9 points.\n\n## Development\n\nIHG opened 92 hotels with 12,900 rooms in the quarter and signed 164 hotels with 21,100 rooms. Its system now counts 7,186 hotels and 1.06 million rooms, and its pipeline stands at 2,426 hotels and 353,000 rooms, equal to a third of the current system. Net system growth reached 4.9%. Chief executive Elie Maalouf said development is split roughly evenly between new builds and conversions, and expects another record year.\n\nThe group has completed $707 million of its $950 million share buyback for 2026 and expects to meet consensus expectations for the year.\n\n## The signal\n\nTwo trends stand out for our audience. Europe holds, and travellers from China are returning to European and Asian destinations even as the Chinese domestic market softens. For hotels in Paris, London or Switzerland that count on Asian clientele, that is good news heading into 2027.",
+  "category": "Results",
+  "date": "22 Oct 2026",
+  "date_iso": "2026-10-22",
+  "photo_asset": "26c9407e657d161266d241c5d20dd6d2",
+  "photo_credit": "© IHG Hotels & Resorts",
+  "sources": [
+    {
+      "name": "IHG trading update",
+      "url": "https://www.ihgplc.com/en/news-and-media/news-releases/2026/third-quarter-trading-update-to-30-september-2026"
+    }
+  ],
+  "status": "ready",
+  "summary": "Global RevPAR rose 5.3% and EMEAA 5.0%, while Greater China fell 3.3% and the Middle East was broadly flat.",
+  "title": "IHG Q3: Europe holds while Greater China softens",
+  "visual_text": {
+    "kicker": "Signal of the week",
+    "lead": "IHG Hotels & Resorts",
+    "rest": "grows global RevPAR 5.3% in the third quarter.",
+    "strap": "InterContinental New York Barclay · Q3 2026"
+  },
+  "visuals": {
+    "linkedin_4x5": "98573e4f94a903f6737140ac7843e0d7",
+    "site_16x9": "7c7cd0cc2585808d0c5dcbe66f6a9530"
+  },
+  "visuals_made_at": "2026-10-27T07:00:00Z",
+  "visuals_note": "Low resolution (738 px): ask for the HD press image",
+  "visuals_status": "done",
+  "week": "2026-10-26",
+  "why": "Relevant for operators in Hong Kong and Singapore planning the year ahead."
 }

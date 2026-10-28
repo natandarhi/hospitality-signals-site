@@ -1,18 +1,18 @@
 {
- "added_at": "2026-10-26",
- "category": "Event",
- "date": "23 Nov 2026",
- "date_iso": "2026-11-23",
- "sources": [
-  {
-   "name": "Hospitality ON",
-   "url": "https://hospitality-on.com/en/event/hospitality-awards-2026"
-  }
- ],
- "status": "ready",
- "summary": "The Hospitality Awards ceremony is held on 23 November at the InterContinental Paris Le Grand, honouring winners across three main categories and special prizes.",
- "title": "Hospitality Awards 2026 in Paris",
- "week": "2026-10-26",
- "why": "A key industry evening for French and European hotel groups.",
- "body_long": "The Hospitality Awards return on Monday 23 November 2026 at the InterContinental Paris Le Grand. Organised by Hospitality ON, the awards recognise initiatives by hotel groups and brands, and celebrate innovation in the industry.\n\nHospitality ON, the trade media behind the event, has covered the hotel industry for more than three decades through the HTR magazine, founded in 1994, and its successors.\n\n## Why it matters\n\nUnlike guides and readers' rankings, which judge individual hotels, the Hospitality Awards focus on groups and brands: new concepts, development strategies, service innovations and people initiatives. The ceremony also gathers a large part of the French hotel industry's leadership in one room, a few days before ILTM Cannes.\n\n## The signal\n\nThe end of November is the industry's busiest moment for recognition and networking in France: the Hospitality Awards in Paris on 23 November, then ILTM Cannes from 30 November. For hotel executives, it is the right window to present projects and meet partners before the year-end.\n\nWe will publish the winners after the ceremony."
+  "added_at": "2026-10-26",
+  "body_long": "The Hospitality Awards return on Monday 23 November 2026 at the InterContinental Paris Le Grand. Organised by Hospitality ON, the awards recognise initiatives by hotel groups and brands, and celebrate innovation in the industry.\n\nHospitality ON, the trade media behind the event, has covered the hotel industry for more than three decades through the HTR magazine, founded in 1994, and its successors.\n\n## Why it matters\n\nUnlike guides and readers' rankings, which judge individual hotels, the Hospitality Awards focus on groups and brands: new concepts, development strategies, service innovations and people initiatives. The ceremony also gathers a large part of the French hotel industry's leadership in one room, a few days before ILTM Cannes.\n\n## The signal\n\nThe end of November is the industry's busiest moment for recognition and networking in France: the Hospitality Awards in Paris on 23 November, then ILTM Cannes from 30 November. For hotel executives, it is the right window to present projects and meet partners before the year-end.\n\nWe will publish the winners after the ceremony.",
+  "category": "Event",
+  "date": "23 Nov 2026",
+  "date_iso": "2026-11-23",
+  "sources": [
+    {
+      "name": "Hospitality ON",
+      "url": "https://hospitality-on.com/en/event/hospitality-awards-2026"
+    }
+  ],
+  "status": "ready",
+  "summary": "The Hospitality Awards ceremony is held on 23 November at the InterContinental Paris Le Grand, honouring winners across three main categories and special prizes.",
+  "title": "Hospitality Awards 2026 in Paris",
+  "week": "2026-10-26",
+  "why": "A key industry evening for French and European hotel groups."
 }

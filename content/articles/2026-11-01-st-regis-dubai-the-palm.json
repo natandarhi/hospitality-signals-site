@@ -1,25 +1,32 @@
 {
- "added_at": "2026-10-26",
- "category": "Opening",
- "date": "1 Nov 2026",
- "date_iso": "2026-11-01",
- "sources": [
-  {
-   "name": "Hotel & Catering",
-   "url": "https://hotelandcatering.com/news/the-st-regis-dubai-the-palm-announces-its-return-on-1st-november-2026"
-  }
- ],
- "status": "ready",
- "summary": "The resort returns on 1 November with a redesigned St. Regis Bar.",
- "title": "The St. Regis Dubai, The Palm reopens after a six-month refurbishment",
- "week": "2026-10-26",
- "why": "Dubai inventory comes back ahead of the high season.",
- "photo_asset": "e9ff641cf6bff6d824fbba5dd28058fe",
- "photo_credit": "© Marriott International",
- "visuals": {
-  "linkedin_4x5": "febf5cdc500a9d6e47bf4cd9e6df9b17",
-  "site_16x9": "430d14bba9dd402f31e3f71412eb1b35"
- },
- "visuals_status": "done",
- "body_long": "The St. Regis Dubai, The Palm reopens on 1 November 2026 after a six-month refurbishment. St. Regis Hotels & Resorts announced the date on 23 October.\n\nThe hotel closed for major works in mid-April. Guest rooms, the spa and other key services closed from 12 April, while the lobby lounge and the St. Regis Bar stayed open.\n\n## What guests will find\n\nThe reimagined St. Regis Bar is at the heart of the reopening. Its new design includes photographic frames inspired by Manhattan, a nod to the brand's origins at The St. Regis New York, and a cocktail list mixing signature serves and new creations. A pianist plays four evenings a week.\n\nThe St. Regis Spa returns, along with Cordelia for all-day dining, RÜYA and its Turkish-inspired cuisine, and the KYMA Beach Club. On the rooftop, St. Regis Gardens brings together a collection of restaurants that includes Michelin-starred concepts and chef-led venues.\n\n## Timing\n\nThe reopening comes as hotels across the United Arab Emirates prepare for the winter season after a quieter summer linked to the regional conflict. Accor reported UAE RevPAR down about 20% in the third quarter, though improving on the second quarter.\n\n## The signal\n\nReopening a refreshed product just before the high season is the right moment to recapture demand. Dubai inventory is coming back to market with renewed rooms and food and beverage offers, and competition for the winter clientele on Palm Jumeirah will be strong.\n\nCongratulations to the team on the reopening."
+  "added_at": "2026-10-26",
+  "body_long": "The St. Regis Dubai, The Palm reopens on 1 November 2026 after a six-month refurbishment. St. Regis Hotels & Resorts announced the date on 23 October.\n\nThe hotel closed for major works in mid-April. Guest rooms, the spa and other key services closed from 12 April, while the lobby lounge and the St. Regis Bar stayed open.\n\n## What guests will find\n\nThe reimagined St. Regis Bar is at the heart of the reopening. Its new design includes photographic frames inspired by Manhattan, a nod to the brand's origins at The St. Regis New York, and a cocktail list mixing signature serves and new creations. A pianist plays four evenings a week.\n\nThe St. Regis Spa returns, along with Cordelia for all-day dining, RÜYA and its Turkish-inspired cuisine, and the KYMA Beach Club. On the rooftop, St. Regis Gardens brings together a collection of restaurants that includes Michelin-starred concepts and chef-led venues.\n\n## Timing\n\nThe reopening comes as hotels across the United Arab Emirates prepare for the winter season after a quieter summer linked to the regional conflict. Accor reported UAE RevPAR down about 20% in the third quarter, though improving on the second quarter.\n\n## The signal\n\nReopening a refreshed product just before the high season is the right moment to recapture demand. Dubai inventory is coming back to market with renewed rooms and food and beverage offers, and competition for the winter clientele on Palm Jumeirah will be strong.\n\nCongratulations to the team on the reopening.",
+  "category": "Opening",
+  "date": "1 Nov 2026",
+  "date_iso": "2026-11-01",
+  "photo_asset": "e9ff641cf6bff6d824fbba5dd28058fe",
+  "photo_credit": "© Marriott International",
+  "sources": [
+    {
+      "name": "Hotel & Catering",
+      "url": "https://hotelandcatering.com/news/the-st-regis-dubai-the-palm-announces-its-return-on-1st-november-2026"
+    }
+  ],
+  "status": "ready",
+  "summary": "The resort returns on 1 November with a redesigned St. Regis Bar.",
+  "title": "The St. Regis Dubai, The Palm reopens after a six-month refurbishment",
+  "visual_text": {
+    "kicker": "Signal of the week",
+    "lead": "The St. Regis Dubai, The Palm",
+    "rest": "reopens on 1 November after a six-month refurbishment.",
+    "strap": "The St. Regis Dubai, The Palm · 1 November 2026"
+  },
+  "visuals": {
+    "linkedin_4x5": "febf5cdc500a9d6e47bf4cd9e6df9b17",
+    "site_16x9": "430d14bba9dd402f31e3f71412eb1b35"
+  },
+  "visuals_made_at": "2026-10-27T06:00:00Z",
+  "visuals_status": "done",
+  "week": "2026-10-26",
+  "why": "Dubai inventory comes back ahead of the high season."
 }
