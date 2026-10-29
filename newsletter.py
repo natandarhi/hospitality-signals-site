@@ -5,6 +5,9 @@
     python3 newsletter.py draft  [YYYY-MM-DD]     -> same, then a Brevo campaign DRAFT
                                                      and a test email; nothing is sent
                                                      to subscribers.
+    python3 newsletter.py draft-welcome           -> the welcome email as a Brevo campaign
+                                                     DRAFT for the whole list (for the
+                                                     subscribers imported by hand).
 
 build.py also calls write_public() so that /email/welcome.html and
 /email/logo.png are online: the Netlify function that greets each new
@@ -309,12 +312,12 @@ def brevo(path, payload):
         return json.loads(body) if body else {}
 
 
-def draft(monday, subject, html_out):
+def draft(name, subject, html_out):
     """A campaign draft in Brevo plus a test email to NEWSLETTER_TEST_TO.
     Subscribers get nothing until Natan presses Send (or schedules it) in Brevo."""
     env = os.environ
     camp = brevo("/emailCampaigns", {
-        "name": f"Week ahead {monday.isoformat()}",
+        "name": name,
         "subject": subject,
         "sender": {"name": "Hospitality Signals", "email": env["NEWSLETTER_FROM"]},
         "replyTo": env.get("NEWSLETTER_REPLY_TO") or env["NEWSLETTER_FROM"],
@@ -330,9 +333,14 @@ def draft(monday, subject, html_out):
 
 def main(argv):
     cmd = argv[1] if len(argv) > 1 else "weekly"
-    if cmd == "welcome":
-        _, h, t = welcome()
+    if cmd in ("welcome", "draft-welcome"):
+        subject, h, t = welcome()
         save("welcome", h, t)
+        if cmd == "draft-welcome":
+            # as a campaign, it carries Brevo's unsubscribe link like the Monday letter
+            h = h.replace("Every Monday letter carries a one-click unsubscribe link.",
+                          f'<a href="{{{{ unsubscribe }}}}" style="color:{GREY};">Unsubscribe</a>.')
+            draft(f"Welcome {date.today().isoformat()}", subject, h)
         return
     monday = date.fromisoformat(argv[2]) if len(argv) > 2 else next_monday()
     monday, _ = week_of(monday)
@@ -343,7 +351,7 @@ def main(argv):
     print(subject)
     save(f"week-{monday.isoformat()}", h, t)
     if cmd == "draft":
-        draft(monday, subject, h)
+        draft(f"Week ahead {monday.isoformat()}", subject, h)
 
 
 if __name__ == "__main__":
