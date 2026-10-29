@@ -17,8 +17,13 @@ on:
     - cron: "0 17 * * 0"
   workflow_dispatch:
     inputs:
+      letter:
+        description: "Which letter to draft in Brevo"
+        type: choice
+        options: [weekly, welcome]
+        default: weekly
       monday:
-        description: "Monday of the week to draft (YYYY-MM-DD); empty = next Monday"
+        description: "Weekly only: Monday of the week (YYYY-MM-DD); empty = next Monday"
         required: false
 
 jobs:
@@ -48,7 +53,12 @@ jobs:
           NEWSLETTER_FROM: ${{ secrets.NEWSLETTER_FROM }}
           NEWSLETTER_REPLY_TO: ${{ secrets.NEWSLETTER_REPLY_TO }}
           NEWSLETTER_TEST_TO: ${{ secrets.NEWSLETTER_TEST_TO }}
-        run: python3 newsletter.py draft ${{ github.event.inputs.monday }}
+        run: |
+          if [ "${{ github.event.inputs.letter }}" = "welcome" ]; then
+            python3 newsletter.py draft-welcome
+          else
+            python3 newsletter.py draft ${{ github.event.inputs.monday }}
+          fi
       - uses: actions/upload-artifact@v4
         with:
           name: letter
