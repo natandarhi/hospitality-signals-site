@@ -594,7 +594,9 @@ def main():
     urls = ["/", "/about/", "/contact/"] + [f"/{k}/" for k in ORDER] + [a["url"] for a in arts]
     write("/sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
           + "".join(f"<url><loc>{SITE}{u}</loc></url>" for u in urls) + "</urlset>\n")
-    write("/robots.txt", f"User-agent: *\nAllow: /\nSitemap: {SITE}/sitemap.xml\n")
+    write("/robots.txt", f"User-agent: *\nAllow: /\nDisallow: /email/\nSitemap: {SITE}/sitemap.xml\n")
+    import newsletter
+    newsletter.write_public(OUT)
     print(f"Built {len(arts)} articles into {OUT}")
 
 
