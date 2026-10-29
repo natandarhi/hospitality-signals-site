@@ -337,6 +337,9 @@ def main(argv):
         subject, h, t = welcome()
         save("welcome", h, t)
         if cmd == "draft-welcome":
+            # as a campaign, it carries Brevo's unsubscribe link like the Monday letter
+            h = h.replace("Every Monday letter carries a one-click unsubscribe link.",
+                          f'<a href="{{{{ unsubscribe }}}}" style="color:{GREY};">Unsubscribe</a>.')
             draft(f"Welcome {date.today().isoformat()}", subject, h)
         return
     monday = date.fromisoformat(argv[2]) if len(argv) > 2 else next_monday()
