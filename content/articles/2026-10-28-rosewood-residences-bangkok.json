@@ -1,11 +1,11 @@
 {
-  "week": "2026-10-26",
+  "added_at": "2026-10-28",
+  "body_long": "Rosewood Hotel Group and the Thai developer SC Asset announced on 28 October the launch of Rosewood Residences Bangkok. It is the first residential development for the Rosewood brand in Southeast Asia.\n\n## 85 homes above Lumphini Park\n\nThe project sits on Rama 4 Road and overlooks Lumphini Park, the large green space at the heart of the city. It will count 85 private residences across 37 floors.\n\nSC Asset is developing the building with Tokyo Tatemono Thailand, the Thai subsidiary of the Japanese real estate group Tokyo Tatemono. Owners will be served by a dedicated Rosewood residential team and will have access to experiences across Rosewood's hotels and resorts around the world, as members of the brand's global residential community.\n\nSonia Cheng, Chief Executive Officer of Rosewood Hotel Group, presented the project as an address \"intended to be valued for generations to come\". For Nuttaphong Kunakornwong, Chief Executive Officer of SC Asset, the building is meant to last for generations as well.\n\nThe architects, interior designers, prices, unit sizes and completion date have not been disclosed.\n\n## A large market\n\nAccording to the Asia Branded Residences Market Review 2026 by C9 Hotelworks, quoted in the announcement, branded residences in Thailand are worth 205.3 billion baht, about US$6.4 billion.\n\n## The signal\n\nFor luxury hotel brands, residences have become a business of their own, with a long relationship with owners rather than a few nights with guests. With Bangkok, Rosewood brings that model to Southeast Asia for the first time. Congratulations to the Rosewood and SC Asset teams on the launch.",
+  "category": "Opening",
   "date": "28 Oct 2026",
   "date_iso": "2026-10-28",
-  "category": "Opening",
-  "title": "Rosewood Residences Bangkok: Rosewood's first homes in Southeast Asia",
-  "summary": "Rosewood Hotel Group and SC Asset have announced Rosewood Residences Bangkok, 85 private residences across 37 floors overlooking Lumphini Park. It is Rosewood's first residential project in Southeast Asia.",
-  "why": "Branded residences are now a growth line of their own for luxury hotel brands, and Thailand is one of Asia's busiest markets for them.",
+  "photo_asset": "40aad5967aad19fb63dc18770c371511",
+  "photo_credit": "© Rosewood Hotel Group",
   "sources": [
     {
       "name": "Hotel News Resource, 28 Oct 2026",
@@ -13,21 +13,21 @@
     }
   ],
   "status": "ready",
-  "added_at": "2026-10-28",
+  "summary": "Rosewood Hotel Group and SC Asset have announced Rosewood Residences Bangkok, 85 private residences across 37 floors overlooking Lumphini Park. It is Rosewood's first residential project in Southeast Asia.",
+  "title": "Rosewood Residences Bangkok: Rosewood's first homes in Southeast Asia",
   "visual_text": {
     "kicker": "Signal of the week",
     "lead": "Rosewood",
     "rest": "brings its first branded residences in Southeast Asia to Bangkok.",
     "strap": "Pictured: Rosewood Bangkok · October 2026"
   },
-  "body_long": "Rosewood Hotel Group and the Thai developer SC Asset announced on 28 October the launch of Rosewood Residences Bangkok. It is the first residential development for the Rosewood brand in Southeast Asia.\n\n## 85 homes above Lumphini Park\n\nThe project sits on Rama 4 Road and overlooks Lumphini Park, the large green space at the heart of the city. It will count 85 private residences across 37 floors.\n\nSC Asset is developing the building with Tokyo Tatemono Thailand, the Thai subsidiary of the Japanese real estate group Tokyo Tatemono. Owners will be served by a dedicated Rosewood residential team and will have access to experiences across Rosewood's hotels and resorts around the world, as members of the brand's global residential community.\n\nSonia Cheng, Chief Executive Officer of Rosewood Hotel Group, presented the project as an address \"intended to be valued for generations to come\". For Nuttaphong Kunakornwong, Chief Executive Officer of SC Asset, the building is meant to last for generations as well.\n\nThe architects, interior designers, prices, unit sizes and completion date have not been disclosed.\n\n## A large market\n\nAccording to the Asia Branded Residences Market Review 2026 by C9 Hotelworks, quoted in the announcement, branded residences in Thailand are worth 205.3 billion baht, about US$6.4 billion.\n\n## The signal\n\nFor luxury hotel brands, residences have become a business of their own, with a long relationship with owners rather than a few nights with guests. With Bangkok, Rosewood brings that model to Southeast Asia for the first time. Congratulations to the Rosewood and SC Asset teams on the launch.",
-  "photo_asset": "40aad5967aad19fb63dc18770c371511",
-  "photo_credit": "© Rosewood Hotel Group",
   "visuals": {
     "linkedin_4x5": "6bdab774536c987851efe9c6852549d7",
     "site_16x9": "8959cfb2b7014db4550d748a7450ce51"
   },
-  "visuals_status": "done",
   "visuals_made_at": "2026-10-28T22:05:00Z",
-  "visuals_note": "HD photo (2335x3500) sent by Natan 28 Oct. Photo shows the existing Rosewood Bangkok hotel, not the residences project."
+  "visuals_note": "HD photo (2335x3500) sent by Natan 28 Oct. Photo shows the existing Rosewood Bangkok hotel, not the residences project.",
+  "visuals_status": "done",
+  "week": "2026-10-26",
+  "why": "Branded residences are now a growth line of their own for luxury hotel brands, and Thailand is one of Asia's busiest markets for them."
 }

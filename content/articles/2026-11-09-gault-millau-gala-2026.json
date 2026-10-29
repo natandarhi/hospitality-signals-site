@@ -4,13 +4,14 @@
   "category": "Event",
   "date": "9 Nov 2026",
   "date_iso": "2026-11-09",
+  "skip_reason": "Off editorial line, unpublished 2026-10-29 with Natan's ok",
   "sources": [
     {
       "name": "Gault&Millau",
       "url": "https://fr.gaultmillau.com/en/news/gala-2026-gault-millau"
     }
   ],
-  "status": "ready",
+  "status": "skip",
   "summary": "The Gault&Millau Gala takes place on 9 November at the Carrousel du Louvre in Paris, with 28 nominees across seven national awards, including Chef and Sommelier of the Year.",
   "title": "Gault&Millau Gala at the Carrousel du Louvre",
   "week": "2026-10-26",

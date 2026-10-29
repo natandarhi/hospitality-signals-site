@@ -6,13 +6,14 @@
   "date_iso": "2026-10-18",
   "photo_asset": "3f155f0eb95405eabbc76ccfb76e4e80",
   "photo_credit": "© Cheval Blanc",
+  "skip_reason": "Off editorial line, unpublished 2026-10-29 with Natan's ok",
   "sources": [
     {
       "name": "La Tribune de l'Hôtellerie",
       "url": "https://latribunedelhotellerie.com/palaces-france-2026-liste-33-hotels-six-nouveaux/"
     }
   ],
-  "status": "ready",
+  "status": "skip",
   "summary": "Bvlgari Hotel Paris, Cheval Blanc Paris, Fouquet's Paris, Four Seasons Megève, the Martinez and Royal Champagne joined the list unveiled on 2 June.",
   "title": "France's 33 Palaces, with six new names in 2026",
   "visual_text": {

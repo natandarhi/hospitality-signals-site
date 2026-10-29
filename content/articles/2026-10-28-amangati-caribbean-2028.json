@@ -1,11 +1,11 @@
 {
-  "week": "2026-10-26",
+  "added_at": "2026-10-28",
+  "body_long": "Aman at Sea has added twelve Caribbean cruises to the programme of Amangati, the first yacht to carry the Aman name. The new sailings, reported on 28 October, run from 2 January to 20 March 2028 and last five to eight nights.\n\n## The yacht\n\nAmangati was floated out in July 2026 at the T. Mariotti shipyard in Genoa and is now being fitted out. Designed by Sinot Yacht Architecture & Design and flagged in Malta, it measures 180 metres over nine decks, with 47 suites for up to 94 guests and a crew of 207. The yacht is operated by Positive Ocean OpCo Ltd under licence from Aman, and Jonathan Wilson is President and CEO of Aman at Sea.\n\nIts maiden voyage leaves Palma de Mallorca on 7 May 2027. The Caribbean season opens on 21 November 2027 from Saint John's, Antigua.\n\n## Ports, suites and prices\n\nThe new itineraries add calls in Samaná, Cap Cana and La Romana in the Dominican Republic, Saint-Pierre in Martinique, Marie-Galante in Guadeloupe and Bequia in the Grenadines. One cruise sails from Philipsburg to La Romana on 7 to 14 January 2028; the last one, of five nights, runs from 15 to 20 March 2028 and calls at Gustavia, St Barts.\n\nSuites range from the Deluxe Suite, 65 to 68 square metres, to the Aman Suite of 354 square metres. The five-night March cruise starts at €27,100 per suite, taxes and fees included, and the seven-night Philipsburg to La Romana sailing ranges from €37,900 to €173,300.\n\nOn board are restaurants including Akari, an omakase counter, Hiori for teppanyaki, Aman Grill and Alira, plus a jazz club, a cigar lounge and a two-level spa with a Japanese garden, a banya and a hammam.\n\n## The signal\n\nUltra-luxury hotel brands now treat the sea as one more address. By opening a Caribbean winter before the maiden voyage, Aman shows that its guests book the name first and the destination second.",
+  "category": "Opening",
   "date": "28 Oct 2026",
   "date_iso": "2026-10-28",
-  "category": "Opening",
-  "title": "Aman's yacht Amangati adds twelve Caribbean cruises for 2028",
-  "summary": "Aman at Sea has added twelve Caribbean cruises of five to eight nights to Amangati's programme, from 2 January to 20 March 2028. The 47-suite yacht makes its maiden voyage from Palma de Mallorca on 7 May 2027.",
-  "why": "An ultra-luxury hotel brand is selling a winter season at sea before its first ship has sailed, a sign of demand for brand experiences beyond the hotel.",
+  "photo_asset": "9010d8250c945d8c78cdf9cc3e71a586",
+  "photo_credit": "© Aman at Sea",
   "sources": [
     {
       "name": "La Revue des Hôtels, 28 Oct 2026",
@@ -17,21 +17,21 @@
     }
   ],
   "status": "ready",
-  "added_at": "2026-10-28",
+  "summary": "Aman at Sea has added twelve Caribbean cruises of five to eight nights to Amangati's programme, from 2 January to 20 March 2028. The 47-suite yacht makes its maiden voyage from Palma de Mallorca on 7 May 2027.",
+  "title": "Aman's yacht Amangati adds twelve Caribbean cruises for 2028",
   "visual_text": {
     "kicker": "Signal of the week",
     "lead": "Amangati",
     "rest": "adds twelve Caribbean cruises for winter 2028.",
     "strap": "Aman at Sea · From 2 January 2028"
   },
-  "body_long": "Aman at Sea has added twelve Caribbean cruises to the programme of Amangati, the first yacht to carry the Aman name. The new sailings, reported on 28 October, run from 2 January to 20 March 2028 and last five to eight nights.\n\n## The yacht\n\nAmangati was floated out in July 2026 at the T. Mariotti shipyard in Genoa and is now being fitted out. Designed by Sinot Yacht Architecture & Design and flagged in Malta, it measures 180 metres over nine decks, with 47 suites for up to 94 guests and a crew of 207. The yacht is operated by Positive Ocean OpCo Ltd under licence from Aman, and Jonathan Wilson is President and CEO of Aman at Sea.\n\nIts maiden voyage leaves Palma de Mallorca on 7 May 2027. The Caribbean season opens on 21 November 2027 from Saint John's, Antigua.\n\n## Ports, suites and prices\n\nThe new itineraries add calls in Samaná, Cap Cana and La Romana in the Dominican Republic, Saint-Pierre in Martinique, Marie-Galante in Guadeloupe and Bequia in the Grenadines. One cruise sails from Philipsburg to La Romana on 7 to 14 January 2028; the last one, of five nights, runs from 15 to 20 March 2028 and calls at Gustavia, St Barts.\n\nSuites range from the Deluxe Suite, 65 to 68 square metres, to the Aman Suite of 354 square metres. The five-night March cruise starts at €27,100 per suite, taxes and fees included, and the seven-night Philipsburg to La Romana sailing ranges from €37,900 to €173,300.\n\nOn board are restaurants including Akari, an omakase counter, Hiori for teppanyaki, Aman Grill and Alira, plus a jazz club, a cigar lounge and a two-level spa with a Japanese garden, a banya and a hammam.\n\n## The signal\n\nUltra-luxury hotel brands now treat the sea as one more address. By opening a Caribbean winter before the maiden voyage, Aman shows that its guests book the name first and the destination second.",
-  "photo_asset": "9010d8250c945d8c78cdf9cc3e71a586",
-  "photo_credit": "© Aman at Sea",
   "visuals": {
     "linkedin_4x5": "09a1428744ead99c3a47f08efdefbf40",
     "site_16x9": "cf22f134edf814c7748c900a4753d0b8"
   },
-  "visuals_status": "done",
   "visuals_made_at": "2026-10-28T21:52:00Z",
-  "visuals_note": ""
+  "visuals_note": "",
+  "visuals_status": "done",
+  "week": "2026-10-26",
+  "why": "An ultra-luxury hotel brand is selling a winter season at sea before its first ship has sailed, a sign of demand for brand experiences beyond the hotel."
 }

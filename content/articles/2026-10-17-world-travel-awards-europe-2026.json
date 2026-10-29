@@ -6,13 +6,14 @@
   "date_iso": "2026-10-17",
   "photo_asset": "ae9daa71269a055de3e4b8e186b74c19",
   "photo_credit": "© The Peninsula Hotels",
+  "skip_reason": "Off editorial line, unpublished 2026-10-29 with Natan's ok",
   "sources": [
     {
       "name": "La Revue des Hôtels",
       "url": "https://larevuedeshotels.com/en/world-travel-awards-europe-2026-winners-hotels"
     }
   ],
-  "status": "ready",
+  "status": "skip",
   "summary": "At the 33rd European edition in Kotor, Paris kept several city-hotel titles and The Chancery Rosewood was named Europe's best new hotel.",
   "title": "World Travel Awards Europe 2026: The Peninsula Paris named best luxury city hotel",
   "visual_text": {

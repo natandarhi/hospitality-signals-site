@@ -90,6 +90,9 @@ def load():
         a = json.load(open(os.path.join(d, f), encoding="utf-8"))
         if a.get("status") not in PUBLIC_STATUS:
             continue
+        # no article before its date, and none without a cleared photo
+        if (a.get("date_iso") or "") > date.today().isoformat() or not image_for(a, "photo"):
+            continue
         a["id"] = f[:-5]
         a["fmt"] = fmt_of(a)
         a["url"] = f"/{a['fmt']}/{a['id']}/"
@@ -102,9 +105,8 @@ def load():
                 p = json.load(open(os.path.join(pd, f), encoding="utf-8"))
                 if p.get("article_id"):
                     posts[p["article_id"]] = p
-    today = date.today().isoformat()
-    # most recent first; upcoming events come after the news of the week
-    arts.sort(key=lambda a: ((a.get("date_iso") or "") <= today, a.get("date_iso") or "", a["id"]), reverse=True)
+    # most recent first, everywhere
+    arts.sort(key=lambda a: (a.get("date_iso") or "", a["id"]), reverse=True)
     return arts, posts
 
 
@@ -357,22 +359,18 @@ def tile(a, n):
 
 
 def home_page(arts, by_fmt, posts):
-    week = max((a.get("week") or "" for a in arts), default="")
-    issue = f"Week of {long_date(week)}" if week else ""
-    # the edition sentence: this week's three posts, else the three latest titles
-    wk = sorted((p for p in posts.values() if p.get("week") == week), key=lambda p: p.get("order", 9))
-    by_id = {a["id"]: a for a in arts}
-    picks = [by_id[p["article_id"]] for p in wk if p.get("article_id") in by_id]
-    lead = next((a for a in picks if image_for(a, "photo")), None) or (picks[0] if picks else None) \
-        or next((a for a in arts if image_for(a, "photo")), arts[0] if arts else None)
+    # the edition: the three most recent stories, newest first
+    latest = arts[0].get("date_iso") if arts else ""
+    issue = f"Updated {long_date(latest)}" if latest else ""
+    lead = arts[0] if arts else None
     lines = []
-    for p in wk[:3]:
-        vt = p.get("visual_text") or {}
+    for a in arts[:3]:
+        vt = a.get("visual_text") or {}
         if vt.get("lead") and vt.get("rest"):
             lines.append(f'{vt["lead"]} {vt["rest"]}'.rstrip("."))
-    if not lines:
-        lines = [a.get("title", "") for a in arts[:3]]
-    statement = "This week. " + ". ".join(lines) + "."
+        else:
+            lines.append((a.get("title") or "").rstrip("."))
+    statement = "Latest. " + ". ".join(lines) + "."
     words = "".join(f'<span class="w">{e(w)}</span> ' for w in statement.split())
 
     window = ""
@@ -390,7 +388,7 @@ def home_page(arts, by_fmt, posts):
       </div>
     </a>"""
 
-    reel_items = ([a for a in picks if a is not lead] + [a for a in arts if a is not lead and a not in picks])[:8]
+    reel_items = arts[1:9]
     reel = "".join(f"""<li class="reel-item">
         <a href="{a["url"]}">
           {tile(a, i)}

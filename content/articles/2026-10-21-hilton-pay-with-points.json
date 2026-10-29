@@ -6,13 +6,14 @@
   "date_iso": "2026-10-21",
   "photo_asset": "419b45de080fdec62a9f87afd5d79820",
   "photo_credit": "© Hilton",
+  "skip_reason": "Off editorial line, unpublished 2026-10-29 with Natan's ok",
   "sources": [
     {
       "name": "HOTELS magazine",
       "url": "https://hotelsmag.com/news/hilton-now-lets-guests-pay-their-bill-with-points/"
     }
   ],
-  "status": "ready",
+  "status": "skip",
   "summary": "Silver members and above can use Hilton Honors points for eligible charges at digital check-out, in 150 US hotels first and more than 6,000 by early 2027.",
   "title": "Hilton lets members pay their hotel bill with points",
   "visual_text": {

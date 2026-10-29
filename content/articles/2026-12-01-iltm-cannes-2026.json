@@ -4,13 +4,14 @@
   "category": "Event",
   "date": "1 Dec 2026",
   "date_iso": "2026-12-01",
+  "skip_reason": "Off editorial line, unpublished 2026-10-29 with Natan's ok",
   "sources": [
     {
       "name": "Palais des Festivals",
       "url": "https://en.palaisdesfestivals.com/offers/iltm-cannes-en-3657199/"
     }
   ],
-  "status": "ready",
+  "status": "skip",
   "summary": "The International Luxury Travel Market returns to the Palais des Festivals in Cannes from 1 to 3 December 2026.",
   "title": "ILTM Cannes runs from 1 to 3 December",
   "week": "2026-10-26",

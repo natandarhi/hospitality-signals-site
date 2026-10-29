@@ -4,6 +4,7 @@
   "category": "Distribution",
   "date": "15 Sep 2026",
   "date_iso": "2026-09-15",
+  "skip_reason": "Off editorial line, unpublished 2026-10-29 with Natan's ok",
   "sources": [
     {
       "name": "HOTREC",
@@ -14,7 +15,7 @@
       "url": "https://latribunedelhotellerie.com/hotrec-booking-expedia-85-pourcent-marche-ota-europe/"
     }
   ],
-  "status": "ready",
+  "status": "skip",
   "summary": "HOTREC's 2026 European Hotel Distribution Study puts Booking Holdings at 68.8% of OTA bookings and direct bookings at 51.3% of the total.",
   "title": "Booking and Expedia hold 85% of Europe's OTA market",
   "visuals_made_at": "2026-10-28T21:10:00Z",

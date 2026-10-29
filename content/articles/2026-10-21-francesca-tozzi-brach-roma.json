@@ -6,6 +6,7 @@
   "date_iso": "2026-10-21",
   "photo_asset": "cd259ccd772fbf26eed5f3c080a95523",
   "photo_credit": "© Evok Collection",
+  "skip_reason": "Off editorial line, unpublished 2026-10-29 with Natan's ok",
   "sources": [
     {
       "name": "Journal des Palaces",
@@ -16,7 +17,7 @@
       "url": "https://www.evokcollection.com/press/brach-roma-opening-2027/"
     }
   ],
-  "status": "ready",
+  "status": "skip",
   "summary": "In post since 1 October, she leads the pre-opening of the 58-room hotel near Piazza del Popolo, due in the first quarter of 2027.",
   "title": "Francesca Tozzi will open Brach Roma for Evok Collection",
   "visual_text": {

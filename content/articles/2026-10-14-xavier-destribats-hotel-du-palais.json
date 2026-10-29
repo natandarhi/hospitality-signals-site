@@ -6,13 +6,14 @@
   "date_iso": "2026-10-14",
   "photo_asset": "6c89f9a31f993271b90852879f1847a1",
   "photo_credit": "© Hôtel du Palais",
+  "skip_reason": "Off editorial line, unpublished 2026-10-29 with Natan's ok",
   "sources": [
     {
       "name": "La Tribune de l'Hôtellerie",
       "url": "https://latribunedelhotellerie.com/xavier-destribats-directeur-hotel-du-palais-biarritz/"
     }
   ],
-  "status": "ready",
+  "status": "skip",
   "summary": "The palace on the Basque coast confirms its new general manager.",
   "title": "Xavier Destribats confirmed as GM of Hôtel du Palais, Biarritz",
   "visual_text": {

@@ -6,13 +6,14 @@
   "date_iso": "2026-10-13",
   "photo_asset": "b140a26cf44358d2812961ed4721b002",
   "photo_credit": "© UMIH",
+  "skip_reason": "Off editorial line, unpublished 2026-10-29 with Natan's ok",
   "sources": [
     {
       "name": "Hospitality ON",
       "url": "https://hospitality-on.com/fr/nomination/franck-chaumes-succede-thierry-marx-la-presidence-de-lumih"
     }
   ],
-  "status": "ready",
+  "status": "skip",
   "summary": "He succeeds Thierry Marx as confederal president of France's main hospitality trade union.",
   "title": "Franck Chaumès elected president of UMIH",
   "visual_text": {

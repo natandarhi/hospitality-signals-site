@@ -6,13 +6,14 @@
   "date_iso": "2026-10-27",
   "photo_asset": "c7cb58db970e51e5bdad9de3eb691fd7",
   "photo_credit": "© WorldHotels",
+  "skip_reason": "Off editorial line, unpublished 2026-10-29 with Natan's ok",
   "sources": [
     {
       "name": "La Tribune de l'Hôtellerie",
       "url": "https://latribunedelhotellerie.com/bwh-hotels-devient-worldhotels-strategie-fidelite-2027/"
     }
   ],
-  "status": "ready",
+  "status": "skip",
   "summary": "The parent of Best Western takes the name of its independent collection and will launch a single WorldHotels Rewards programme on 5 January 2027.",
   "title": "BWH Hotels becomes WorldHotels",
   "visual_text": {

@@ -6,13 +6,14 @@
   "date_iso": "2026-10-16",
   "photo_asset": "bc8aface7acf4e8f45cb53cee8346cc9",
   "photo_credit": "© Hilton",
+  "skip_reason": "Off editorial line, unpublished 2026-10-29 with Natan's ok",
   "sources": [
     {
       "name": "Hospitality Net",
       "url": "https://www.hospitalitynet.org/appointment/79032951/conor-hadlington"
     }
   ],
-  "status": "ready",
+  "status": "skip",
   "summary": "With about 18 years in luxury hotels across Asia, the US and the Middle East, he has led the 513-room hotel above Pacific Place since 28 September.",
   "title": "Conor Hadlington takes charge of Conrad Hong Kong",
   "visual_text": {
