@@ -1,0 +1,55 @@
+# Two schedules for the newsletter.
+#
+# 1. Every day at 04:30 UTC: rebuild the site through a Netlify build hook, so an
+#    article dated today goes online in the morning even without a push. The
+#    Monday letter promises "online Wednesday": this keeps the promise.
+# 2. Every Sunday at 17:00 UTC: write next week's letter and create it in Brevo
+#    as a DRAFT, with a test email to Natan. Nothing reaches subscribers until
+#    Natan presses Send (or schedules it) in Brevo.
+#
+# Repository secrets: NETLIFY_BUILD_HOOK, BREVO_API_KEY, BREVO_LIST_ID,
+# NEWSLETTER_FROM, NEWSLETTER_REPLY_TO, NEWSLETTER_TEST_TO.
+name: Newsletter
+
+on:
+  schedule:
+    - cron: "30 4 * * *"
+    - cron: "0 17 * * 0"
+  workflow_dispatch:
+    inputs:
+      monday:
+        description: "Monday of the week to draft (YYYY-MM-DD); empty = next Monday"
+        required: false
+
+jobs:
+  rebuild:
+    if: github.event.schedule == '30 4 * * *'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Netlify build
+        env:
+          HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then echo "NETLIFY_BUILD_HOOK not set"; exit 0; fi
+          curl -fsS -X POST -d '{}' "$HOOK"
+
+  weekly-draft:
+    if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 17 * * 0'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Draft the Monday letter in Brevo
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_LIST_ID: ${{ secrets.BREVO_LIST_ID }}
+          NEWSLETTER_FROM: ${{ secrets.NEWSLETTER_FROM }}
+          NEWSLETTER_REPLY_TO: ${{ secrets.NEWSLETTER_REPLY_TO }}
+          NEWSLETTER_TEST_TO: ${{ secrets.NEWSLETTER_TEST_TO }}
+        run: python3 newsletter.py draft ${{ github.event.inputs.monday }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: letter
+          path: emails/
