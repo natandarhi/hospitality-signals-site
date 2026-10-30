@@ -1,19 +1,49 @@
 {
-  "article_id": "2026-10-16-conor-hadlington-conrad-hong-kong",
+  "article_id": "2026-10-29-janu-al-marjan-island-residences",
   "day": "Saturday",
-  "dropped_note": "Removed 2026-10-28: not fresh or not top-tier (Natan)",
-  "first_comment": "Source: Hospitality Net, 16 Oct 2026 — https://www.hospitalitynet.org/appointment/79032951/conor-hadlington",
-  "format": "New in Post",
+  "first_comment": "Source: La Revue des Hôtels, 29 Oct 2026 — https://larevuedeshotels.com/janu-residences-al-marjan-island-penthouse-ras-al-khaimah",
+  "format": "Signal of the Week",
   "order": 8,
-  "post_text": "@Conor Hadlington is the new general manager of Conrad Hong Kong, the 513-room hotel above Pacific Place in Admiralty.\n\nHe took up the role on 28 September. Originally from the UK, he brings about 18 years in luxury hotels across Asia, the United States and the Middle East, with Mandarin Oriental, InterContinental and Shangri-La.\n\nHe started in food and beverage before moving into commercial and hotel-wide leadership. For @Conrad Hotels & Resorts, he now oversees operations, commercial strategy and brand standards in Admiralty.\n\nThe signal: @Hilton has chosen a GM with a commercial background for one of its large city hotels in Asia, where rooms, events and dining must all perform at once.\n\nCongratulations, Conor, on this new role.\n\nWhat matters most for a Hong Kong business hotel today: events, corporate rates or leisure stays?\n\nRead the full article: https://hospitality-signals.com/new-in-post/2026-10-16-conor-hadlington-conrad-hong-kong/\n\n#LuxuryHospitality #HotelLeadership #HongKong",
+  "photo_brief": {
+    "credit": "Aman Group / Janu",
+    "what": "Official rendering of Janu Al Marjan Island (residential tower or beach)",
+    "where_url": "https://www.janu.com/janu-al-marjan-island/"
+  },
+  "post_text": "Janu Al Marjan Island will stack 73 private homes in a 29-storey tower, crowned by a 1,761 m² penthouse.\n\nOn 29 October, La Revue des Hôtels detailed the residential side of the Janu project in Ras Al Khaimah, about 70 km from Dubai. The homes range from one to five bedrooms and from 197 to 1,096 m². They have been on sale off-plan since October, with prices on request only.\n\nThe tower stands beside a 132-room Janu hotel designed by SCDA Architects, with a 265-metre private beach, a 2,496 m² spa and six restaurants and bars. Owners get their own entrance and a 24-hour private office with priority at Janu and Aman hotels.\n\nThe site belongs to @Marjan, whose Group CEO @Abdulla Al Abdouli broke ground in July alongside Wynn Resorts. @Vlad Doronin, Chairman and CEO of @Aman, called the island \"a natural home for the brand\". Marjan points to a 2029 opening.\n\nThe signal: Janu, the sister brand Aman created in 2020, is adopting the Aman playbook. Sell the homes first, years before the first guest arrives, and let residences help finance the hotel.\n\nWould you buy a branded home off-plan, years before the hotel opens?\n\nRead the full article: https://hospitality-signals.com/signal-of-the-week/2026-10-29-janu-al-marjan-island-residences/\n\n#LuxuryHospitality #BrandedResidences #RasAlKhaimah",
   "publish_date": "2026-10-31",
   "slot": "evening",
-  "status": "dropped",
+  "status": "ready",
+  "tags": [
+    {
+      "linkedin_url": "https://www.linkedin.com/in/vladislavdoronin/",
+      "name": "Vlad Doronin",
+      "role": "Chairman and CEO, Aman Group",
+      "source_url": "https://marjan.ae/press-releases/janu-al-marjan-island"
+    },
+    {
+      "linkedin_url": "https://www.linkedin.com/in/abdulla-al-abdouli-46378937/",
+      "name": "Abdulla Al Abdouli",
+      "role": "Group Chief Executive Officer, Marjan",
+      "source_url": "https://marjan.ae/press-releases/janu-al-marjan-island"
+    },
+    {
+      "linkedin_url": "https://www.linkedin.com/company/marjan/",
+      "name": "Marjan",
+      "role": "Company page",
+      "source_url": "https://marjan.ae/press-releases/janu-al-marjan-island"
+    },
+    {
+      "linkedin_url": "https://www.linkedin.com/company/amanresorts",
+      "name": "Aman",
+      "role": "Company page",
+      "source_url": "https://larevuedeshotels.com/janu-residences-al-marjan-island-penthouse-ras-al-khaimah"
+    }
+  ],
   "visual_text": {
-    "kicker": "New appointment",
-    "lead": "Conor Hadlington",
-    "rest": "takes charge of Conrad Hong Kong.",
-    "strap": "Conrad Hong Kong, Pacific Place · September 2026"
+    "kicker": "Signal of the week",
+    "lead": "Janu Al Marjan Island",
+    "rest": "puts 73 Aman-family homes on sale in Ras Al Khaimah.",
+    "strap": "Aman Group · Penthouse of 1,761 sq m"
   },
   "visuals_ready": true,
   "week": "2026-10-26"

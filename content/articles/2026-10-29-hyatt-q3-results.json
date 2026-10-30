@@ -1,11 +1,11 @@
 {
-  "week": "2026-10-26",
+  "added_at": "2026-10-29",
+  "body_long": "Hyatt Hotels Corporation published its third-quarter 2026 results on 29 October. System-wide hotel RevPAR rose 7.2% compared with the same quarter of 2025, and the group said its luxury hotels led that growth.\n\n## The quarter in figures\n\nIn the United States, RevPAR grew 8.2%, helped in part by the FIFA World Cup and by the timing of the Jewish holidays. Gross fees reached $327 million, up 15.2%, and Adjusted EBITDA came to $295 million, up 6.2%. Net income attributable to Hyatt was $58 million, or $122 million on an adjusted basis.\n\nThe one softer line was all-inclusive: net package RevPAR slipped 2.5%, mainly because of weaker demand for some destinations in Mexico, partly offset by the Caribbean and Europe.\n\n## Growth and outlook\n\nHyatt's net rooms grew 3.8% over twelve months, and its pipeline now counts about 158,000 rooms, up 12.1%. Openings in the quarter included Hyatt Vivid Punta Cana, the brand's first address in the Dominican Republic, and Thompson Seville in the lifestyle portfolio.\n\nThe group raised its full-year outlook for system-wide RevPAR growth to 5.0–5.5% and expects net rooms growth of about 6%. It also lifted planned capital returns to shareholders to $375–425 million.\n\nMark S. Hoplamazian, Chairman, President and CEO, linked the results to a growing preference for Hyatt's brands among guests, owners and developers.\n\n## The signal\n\nFor the large listed groups, luxury is now the engine of the quarter, not a niche. A raised outlook from Hyatt, home of Park Hyatt, Alila and Thompson, is a positive read for owners of high-end hotels going into 2027.",
+  "category": "Results",
   "date": "29 Oct 2026",
   "date_iso": "2026-10-29",
-  "category": "Results",
-  "title": "Hyatt's third quarter: RevPAR up 7.2%, with luxury in the lead",
-  "summary": "Hyatt reported on 29 October a 7.2% rise in system-wide RevPAR for the third quarter of 2026, with luxury leading the growth. The group raised its full-year RevPAR outlook to 5.0–5.5% and its pipeline reached about 158,000 rooms.",
-  "why": "Luxury keeps driving growth at the big listed groups, and Hyatt's raised outlook gives owners a positive read on demand into 2027.",
+  "photo_asset": "98bcfb90c96b5f34aec307ac54d51e52",
+  "photo_credit": "© Hyatt",
   "sources": [
     {
       "name": "Hyatt press release, 29 Oct 2026",
@@ -13,21 +13,21 @@
     }
   ],
   "status": "ready",
-  "added_at": "2026-10-29",
-  "photo_asset": "98bcfb90c96b5f34aec307ac54d51e52",
-  "photo_credit": "© Hyatt",
+  "summary": "Hyatt reported on 29 October a 7.2% rise in system-wide RevPAR for the third quarter of 2026, with luxury leading the growth. The group raised its full-year RevPAR outlook to 5.0–5.5% and its pipeline reached about 158,000 rooms.",
+  "title": "Hyatt's third quarter: RevPAR up 7.2%, with luxury in the lead",
   "visual_text": {
     "kicker": "Signal of the week",
     "lead": "Hyatt",
     "rest": "grows RevPAR 7.2% in the third quarter, led by luxury.",
     "strap": "Park Hyatt Paris-Vendôme · Q3 2026 results"
   },
-  "visuals_status": "done",
-  "visuals_made_at": "2026-10-29T15:00:00Z",
-  "visuals_note": "",
-  "body_long": "Hyatt Hotels Corporation published its third-quarter 2026 results on 29 October. System-wide hotel RevPAR rose 7.2% compared with the same quarter of 2025, and the group said its luxury hotels led that growth.\n\n## The quarter in figures\n\nIn the United States, RevPAR grew 8.2%, helped in part by the FIFA World Cup and by the timing of the Jewish holidays. Gross fees reached $327 million, up 15.2%, and Adjusted EBITDA came to $295 million, up 6.2%. Net income attributable to Hyatt was $58 million, or $122 million on an adjusted basis.\n\nThe one softer line was all-inclusive: net package RevPAR slipped 2.5%, mainly because of weaker demand for some destinations in Mexico, partly offset by the Caribbean and Europe.\n\n## Growth and outlook\n\nHyatt's net rooms grew 3.8% over twelve months, and its pipeline now counts about 158,000 rooms, up 12.1%. Openings in the quarter included Hyatt Vivid Punta Cana, the brand's first address in the Dominican Republic, and Thompson Seville in the lifestyle portfolio.\n\nThe group raised its full-year outlook for system-wide RevPAR growth to 5.0–5.5% and expects net rooms growth of about 6%. It also lifted planned capital returns to shareholders to $375–425 million.\n\nMark S. Hoplamazian, Chairman, President and CEO, linked the results to a growing preference for Hyatt's brands among guests, owners and developers.\n\n## The signal\n\nFor the large listed groups, luxury is now the engine of the quarter, not a niche. A raised outlook from Hyatt, home of Park Hyatt, Alila and Thompson, is a positive read for owners of high-end hotels going into 2027.",
   "visuals": {
     "linkedin_4x5": "311a17b2c1c4691e031bf922366e289a",
     "site_16x9": "8c8c8de6af4e1b55fb00c2e6f03b37a7"
-  }
+  },
+  "visuals_made_at": "2026-10-29T15:00:00Z",
+  "visuals_note": "",
+  "visuals_status": "done",
+  "week": "2026-10-26",
+  "why": "Luxury keeps driving growth at the big listed groups, and Hyatt's raised outlook gives owners a positive read on demand into 2027."
 }

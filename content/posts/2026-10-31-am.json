@@ -1,19 +1,26 @@
 {
-  "article_id": "2026-10-17-world-travel-awards-europe-2026",
+  "article_id": "2026-10-29-hyatt-q3-results",
   "day": "Saturday",
-  "dropped_note": "Removed 2026-10-28: not fresh or not top-tier (Natan)",
-  "first_comment": "Source: La Revue des Hôtels, 19 Oct 2026 — https://larevuedeshotels.com/en/world-travel-awards-europe-2026-winners-hotels",
-  "format": "The List",
-  "order": 7,
-  "post_text": "@The Peninsula Paris was named Europe's best luxury city hotel at the 2026 World Travel Awards Europe, held on 17 October in Kotor, Montenegro.\n\nAmong the winners for our readers' markets:\n\n– Europe's best new hotel: The Chancery Rosewood, London\n– France's best luxury hotel: InterContinental Paris Le Grand\n– France's best heritage hotel: @Hôtel de Crillon, A Rosewood Hotel\n– France's best resort: Hôtel du Palais, Biarritz\n– Monaco's best hotel: Hôtel de Paris Monte-Carlo\n– Switzerland's best hotel: Beau-Rivage Palace, Lausanne\n– England's best luxury hotel: The Langham, London\n\nIt was the 33rd European edition of the awards founded by @Graham Cooke.\n\nThe signal: Paris keeps several of Europe's top city-hotel titles, while London's newcomers are already winning.\n\nWhich of these winners would you have chosen?\n\nRead the full article: https://hospitality-signals.com/the-list/2026-10-17-world-travel-awards-europe-2026/\n\n#LuxuryHospitality #HotelAwards #Europe",
+  "first_comment": "Source: Hyatt press release, 29 Oct 2026 — https://newsroom.hyatt.com/Q3-2026-Earnings-Results",
+  "format": "Signal of the Week",
+  "order": 5,
+  "post_text": "@Hyatt grew system-wide RevPAR by 7.2% in the third quarter of 2026, and its luxury hotels led the way.\n\nThe results, published on 29 October, show RevPAR up 8.2% in the United States, gross fees up 15.2% to $327 million and Adjusted EBITDA of $295 million.\n\nThe pipeline now holds about 158,000 rooms, up 12.1%. Openings in the quarter included Thompson Seville and Hyatt Vivid Punta Cana, the brand's first address in the Dominican Republic.\n\n@Mark Hoplamazian, Chairman, President and CEO, linked the quarter to a growing preference for Hyatt's brands among guests, owners and developers. The group raised its full-year RevPAR outlook to 5.0–5.5%.\n\nThe one softer line: all-inclusive, where net package RevPAR slipped 2.5% on weaker demand in parts of Mexico.\n\nThe signal: at the big listed groups, luxury has become the engine of the quarter. For owners of high-end hotels, a raised outlook from the home of Park Hyatt and Alila is a good read on demand going into 2027.\n\nWhich luxury brand do you think is gaining the most ground right now?\n\nRead the full article: https://hospitality-signals.com/signal-of-the-week/2026-10-29-hyatt-q3-results/\n\n#LuxuryHospitality #HotelResults #Hyatt",
   "publish_date": "2026-10-31",
   "slot": "morning",
-  "status": "dropped",
+  "status": "ready",
+  "tags": [
+    {
+      "linkedin_url": "https://www.linkedin.com/in/mark-hoplamazian-96446b43",
+      "name": "Mark Hoplamazian",
+      "role": "Chairman, President and CEO, Hyatt",
+      "source_url": "https://newsroom.hyatt.com/Q3-2026-Earnings-Results"
+    }
+  ],
   "visual_text": {
-    "kicker": "The list",
-    "lead": "The Peninsula Paris",
-    "rest": "leads France's winners at the World Travel Awards Europe.",
-    "strap": "Kotor, Montenegro · 17 October 2026"
+    "kicker": "Signal of the week",
+    "lead": "Hyatt",
+    "rest": "grows RevPAR 7.2% in the third quarter, led by luxury.",
+    "strap": "Park Hyatt Paris-Vendôme · Q3 2026 results"
   },
   "visuals_ready": true,
   "week": "2026-10-26"
