@@ -1,9 +1,9 @@
 {
   "added_at": "2026-10-28",
-  "body_long": "Three new luxury hotels are due to open in the Alps in December 2026, ahead of the winter season.\n\n## The openings\n\n- The First Cortina, Cortina d'Ampezzo: 76 rooms and suites, operated by Pavilions Hotels and Resorts, opening on 4 December according to the operator's announcement of 2 September.\n- Saint Roch, Courchevel 1850: 37 keys on the Bellecôte piste, by Maisons Pariente, opening on 18 December.\n- Bourbon Hotel, Courchevel 1850: 31 rooms, opening on 18 December. Its operator is to be confirmed.\n\n## Saint Roch\n\nSaint Roch is the fifth Maisons Pariente address in France and the group's second in the Alps, after Le Coucou in Méribel. The family group also runs Lou Pinet in Saint-Tropez, Crillon le Brave in Provence and Le Grand Mazarin in Paris.\n\nThe interiors are by the studio Friedmann & Versace, founded by Virginie Friedmann and Delphine Versace, drawing on the imagery of the Russian dacha. The restaurant is run by Prunier, the Parisian caviar house, with an all-day menu of French caviar, seafood and classic French dishes.\n\n## The signal\n\nThe newest luxury beds in the Alps are small, between 31 and 76 rooms. Family groups and independents, not only the large brands, are betting on short, high-yield winter seasons, with dining as a key part of the offer.\n\nDates for The First Cortina and the Bourbon Hotel come from secondary sources and remain to be confirmed with the operators.",
+  "body_long": "Six new luxury hotels are due to open in the Alps in December 2026, ahead of the winter season.\n\n## The openings\n\n- Fouquet's Gstaad, by Barrière: 33 rooms, including 11 suites and 6 apartments, opening on 4 December.\n- The First Cortina, Cortina d'Ampezzo: 76 rooms and suites, operated by The Pavilions group and designed by Studio Marincola Architects, opening on 4 December.\n- Bârma, Courchevel La Tania: 75 rooms and suites for La French Collection, with a spa by Susanne Kaufmann, opening on 5 December.\n- Le Graal Cortina: 30 rooms including 13 suites, interiors by Achille Salvagni and cuisine by chef Giovanni Guarneri, bookable from 8 December.\n- Saint Roch, Courchevel 1850: 37 rooms and suites on the Bellecôte piste, by Maisons Pariente, opening on 18 December.\n- Bourbon Hotel, Courchevel 1850: 31 rooms including 3 suites, by Chapitre Six, with chef Simone Zanoni, first night bookable on 18 December.\n\n## Saint Roch\n\nSaint Roch is the fifth Maisons Pariente address in France and the group's second in the Alps, after Le Coucou in Méribel. The interiors are by the studio Friedmann & Versace, founded by Virginie Friedmann and Delphine Versace, drawing on the imagery of the Russian dacha. The restaurant is run by Prunier, the Parisian caviar house.\n\n## The signal\n\nThe newest luxury addresses in the Alps are small, between 30 and 76 rooms. Family groups and independents, not only the large brands, are betting on short, high-yield winter seasons, with dining and wellness as key parts of the offer.",
   "category": "Ranking",
-  "date": "4 Nov 2026",
-  "date_iso": "2026-11-04",
+  "date": "2 Nov 2026",
+  "date_iso": "2026-11-02",
   "photo_asset": "5a0965bcd04d7385837fdeca95c4d403",
   "photo_credit": "© Maisons Pariente",
   "sources": [
@@ -18,11 +18,15 @@
     {
       "name": "Luxury.it",
       "url": "https://luxury.it/new-luxury-hotels-europe-opening-dates-2026-2027/"
+    },
+    {
+      "name": "La Revue des Hôtels, 26 Oct 2026",
+      "url": "https://larevuedeshotels.com/en/new-luxury-ski-hotels-winter-2026-2027-9-openings-alps-dolomites"
     }
   ],
   "status": "ready",
-  "summary": "The First Cortina opens on 4 December, Saint Roch and the Bourbon Hotel in Courchevel 1850 on 18 December.",
-  "title": "Three new luxury hotels open in the Alps this December",
+  "summary": "Fouquet's Gstaad and The First Cortina open on 4 December, Bârma in Courchevel La Tania on 5 December, Le Graal Cortina from 8 December, and Saint Roch and the Bourbon Hotel in Courchevel 1850 on 18 December.",
+  "title": "Six new luxury hotels open in the Alps this December",
   "visual_text": {
     "kicker": "The list",
     "lead": "Three new hotels",
