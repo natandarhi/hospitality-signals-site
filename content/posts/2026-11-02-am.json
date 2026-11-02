@@ -1,15 +1,62 @@
 {
-  "article_id": "2026-09-15-hotrec-distribution-study",
+  "article_id": "2026-10-30-waldorf-astoria-kuala-lumpur",
   "day": "Monday",
-  "dropped_note": "Removed 2026-10-28: not fresh or not top-tier (Natan)",
-  "first_comment": "Source: HOTREC, 15 Sep 2026 — https://www.hotrec.eu/en/news_booking-holdings-and-expedia-group-account-for-85-of-europe_E2_80_99s-ota-market-hotrec-study-finds.html",
+  "first_comment": "Source: La Revue des Hôtels, 31 Oct 2026 — https://larevuedeshotels.com/en/waldorf-astoria-kuala-lumpur-open-30-october-268-suites-2-275-sqm-spa",
   "format": "Signal of the Week",
-  "order": 1,
-  "post_text": "Booking Holdings and Expedia Group now take 85.4% of hotel bookings made through online travel agencies in Europe.\n\nThe figure comes from the European Hotel Distribution Study by @HOTREC, published on 15 September. It covers 2025 and draws on 2,713 hotels in 28 countries.\n\nBooking Holdings alone holds 68.8%, against about 60% in 2013. Direct bookings now account for 51.3% of hotel bookings, six points less than in 2013. OTAs reach 29.9% of the total.\n\nPrice undercutting is also rising: 51% of hotels say an OTA has sold their rooms below their own rate, against 43% in 2023.\n\nThe signal: concentration keeps growing even as Brussels tightens rules on large platforms. For luxury hotels, the direct channel is less a habit than a margin to defend.\n\nWhat share of your bookings comes direct today?\n\nRead the full article: https://hospitality-signals.com/signal-of-the-week/2026-09-15-hotrec-distribution-study/\n\n#LuxuryHospitality #HotelDistribution #RevenueManagement",
+  "order": 11,
+  "photo_brief": {
+    "credit": "Hilton / Waldorf Astoria Kuala Lumpur",
+    "what": "Official image of Waldorf Astoria Kuala Lumpur: tower exterior or a signature suite (landscape, high resolution, from the Hilton Stories media gallery).",
+    "where_url": "https://stories.hilton.com/apac/releases/waldorf-astoria-kuala-lumpur-opens-for-reservations"
+  },
+  "post_text": "Waldorf Astoria opened its first hotel in Malaysia on 30 October: 268 suites in Kuala Lumpur's Golden Triangle, and not one standard room.\n\nThe smallest suite measures 80 m². The Waldorf Astoria Suite reaches 745 m². Interiors are by Deboss Collective, and the art was curated with the Islamic Arts Museum Malaysia.\n\nGeneral manager @Etienne Dalançon, formerly at the helm of Waldorf Astoria Maldives Ithaafushi, leads the opening. Within Hilton, the region is run by @Alan Watts, President, Asia Pacific.\n\nDining is a draw in its own right. Three of the seven restaurants and bars are concepts by Jean-Georges Vongerichten of @Jean-Georges Management, and Yaari was created with Garima Arora, the chef of Gaa in Bangkok. The spa covers 2,275 m² over two floors.\n\nLa Revue des Hôtels found mid-November rates from RM 3,489, about €770, taxes included.\n\nThe signal: Kuala Lumpur has long been one of Asia's most affordable luxury capitals. An all-suite hotel lets @Waldorf Astoria Hotels & Resorts sell space rather than a room category, and test a new price ceiling for the city.\n\nWould you pay a premium for a suite-only hotel in a city known for value?\n\nRead the full article: https://hospitality-signals.com/signal-of-the-week/2026-10-30-waldorf-astoria-kuala-lumpur/\n\n#LuxuryHospitality #HotelOpenings #KualaLumpur",
   "publish_date": "2026-11-02",
   "slot": "morning",
-  "status": "dropped",
-  "visual_text": {},
+  "status": "ready",
+  "tags": [
+    {
+      "linkedin_url": "https://www.linkedin.com/in/etienne-dalancon-37642712/",
+      "name": "Etienne Dalançon",
+      "role": "General Manager, Waldorf Astoria Kuala Lumpur",
+      "source_url": "https://stories.hilton.com/apac/releases/waldorf-astoria-kuala-lumpur-opens-for-reservations"
+    },
+    {
+      "linkedin_url": "https://www.linkedin.com/in/alan-watts/",
+      "name": "Alan Watts",
+      "role": "President, Asia Pacific, Hilton",
+      "source_url": "https://larevuedeshotels.com/en/waldorf-astoria-kuala-lumpur-open-30-october-268-suites-2-275-sqm-spa"
+    },
+    {
+      "linkedin_url": "",
+      "name": "Jean-Georges Vongerichten",
+      "role": "Chef (concepts JG KL, abc kitchens KL, The Bar by JG)",
+      "source_url": "https://www.hotelnewsresource.com/article143563.html"
+    },
+    {
+      "linkedin_url": "",
+      "name": "Garima Arora",
+      "role": "Chef, Gaa Bangkok (Yaari)",
+      "source_url": "https://larevuedeshotels.com/en/waldorf-astoria-kuala-lumpur-open-30-october-268-suites-2-275-sqm-spa"
+    },
+    {
+      "linkedin_url": "https://www.linkedin.com/company/jean-georges-management",
+      "name": "Jean-Georges Management",
+      "role": "Company page",
+      "source_url": "https://www.hotelnewsresource.com/article143563.html"
+    },
+    {
+      "linkedin_url": "https://www.linkedin.com/company/waldorf-astoria",
+      "name": "Waldorf Astoria Hotels & Resorts",
+      "role": "Company page",
+      "source_url": "https://www.hotelnewsresource.com/article143563.html"
+    }
+  ],
+  "visual_text": {
+    "kicker": "Signal of the week",
+    "lead": "Waldorf Astoria Kuala Lumpur",
+    "rest": "opens with 268 suites, the brand's first hotel in Malaysia.",
+    "strap": "Golden Triangle, Kuala Lumpur · 30 October 2026"
+  },
   "visuals_ready": false,
   "week": "2026-11-02"
 }

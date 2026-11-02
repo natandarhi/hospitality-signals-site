@@ -12,7 +12,7 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/marriott-international-announces-release-date-123000535.html"
     }
   ],
-  "status": "ready",
+  "status": "draft",
   "summary": "Marriott International publishes its third-quarter 2026 results on 2 November at about 7am ET, with a call led by CEO Anthony Capuano and CFO Jennifer Mason.",
   "title": "Marriott reports Q3 2026 results",
   "visual_text": {
@@ -29,5 +29,6 @@
   "visuals_note": "Photo of The St. Regis Rome, low resolution (520 px): ask for the HD press photo.",
   "visuals_status": "done",
   "week": "2026-10-26",
-  "why": "Pipeline and luxury RevPAR trends from the largest group."
+  "why": "Pipeline and luxury RevPAR trends from the largest group.",
+  "draft_note": "Held back 2 Nov by the daily-posts thread: still a preview without the Q3 figures. Set back to ready once the figures from the Marriott release are in."
 }

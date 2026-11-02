@@ -3,10 +3,49 @@
   "day": "Sunday",
   "first_comment": "Sources: La Revue des Hôtels, 30 Oct 2026 — https://larevuedeshotels.com/hotel-cap-eden-roc-camille-guilbaud-championne-monde-degustation ; Journal des Palaces, 30 Oct 2026 — https://www.journaldespalaces.com/communique-79936-france-recompenses-remises-de-prix-concours-gastronomie-dimitri-nalin-remporte-l-edition-francaise-du-ruinart-sommelier-challenge-2026.html",
   "format": "The List",
+  "note": "Written 31 Oct by the daily watch. Mentions: no LinkedIn profile verified, names kept in plain text.",
   "order": 10,
+  "photo_brief": {
+    "credit": "To confirm: La Revue du vin de France / Oetker Hotels",
+    "what": "Photo of Camille Guilbaud (or the French duo) at the championship, or failing that an official photo of Hôtel du Cap-Eden-Roc / its wine cellar",
+    "where_url": "https://larevuedeshotels.com/hotel-cap-eden-roc-camille-guilbaud-championne-monde-degustation"
+  },
+  "post_text": "Camille Guilbaud, 30, sommelier at Hôtel du Cap-Eden-Roc, is now a world champion of blind tasting.\n\nWith her teammate Candy Sangare, founder of Art de Vivre by Candy, she won the 14th World Blind Tasting Championship for France, in Avignon on 17 October. The pair scored 189 points, ahead of Japan on 181 and Brazil on 159. The decider was the twelfth wine, a Sercial Madeira that Japan took for a Boal.\n\nIt is France's fifth world title, its second in a row, and the first won by an all-female French team. Guilbaud joined the Oetker hotel about three years ago. Its cellar holds more than 5,000 references.\n\nA second title went to a Paris palace. Dimitri Nalin, head sommelier at Hôtel Barrière Fouquet's Paris, won the French edition of the Ruinart Sommelier Challenge 2026 on 26 October, at Cheval Blanc Paris. Ruinart cellar master Caroline Fiot and sommelier Estelle Touzet sat on the jury.\n\nThe signal: in a palace, the wine team is now a reason to book, not a back-office skill. A titled sommelier is a story guests, critics and future recruits all hear.\n\nWhich sommelier changed the way you remember a hotel?\n\nRead the full article: https://hospitality-signals.com/the-list/2026-10-30-palace-sommeliers-titles/\n\n#LuxuryHospitality #Sommelier #Palace",
   "publish_date": "2026-11-01",
   "slot": "evening",
   "status": "ready",
+  "tags": [
+    {
+      "linkedin_url": "",
+      "name": "Camille Guilbaud",
+      "role": "Sommelier, Hôtel du Cap-Eden-Roc",
+      "source_url": "https://larevuedeshotels.com/hotel-cap-eden-roc-camille-guilbaud-championne-monde-degustation"
+    },
+    {
+      "linkedin_url": "",
+      "name": "Candy Sangare",
+      "role": "Founder, Art de Vivre by Candy",
+      "source_url": "https://larevuedeshotels.com/hotel-cap-eden-roc-camille-guilbaud-championne-monde-degustation"
+    },
+    {
+      "linkedin_url": "",
+      "name": "Dimitri Nalin",
+      "role": "Head sommelier, Hôtel Barrière Fouquet's Paris",
+      "source_url": "https://www.journaldespalaces.com/communique-79936-france-recompenses-remises-de-prix-concours-gastronomie-dimitri-nalin-remporte-l-edition-francaise-du-ruinart-sommelier-challenge-2026.html"
+    },
+    {
+      "linkedin_url": "",
+      "name": "Caroline Fiot",
+      "role": "Cellar master, Maison Ruinart",
+      "source_url": "https://www.journaldespalaces.com/communique-79936-france-recompenses-remises-de-prix-concours-gastronomie-dimitri-nalin-remporte-l-edition-francaise-du-ruinart-sommelier-challenge-2026.html"
+    },
+    {
+      "linkedin_url": "",
+      "name": "Estelle Touzet",
+      "role": "Sommelier, jury member",
+      "source_url": "https://www.journaldespalaces.com/communique-79936-france-recompenses-remises-de-prix-concours-gastronomie-dimitri-nalin-remporte-l-edition-francaise-du-ruinart-sommelier-challenge-2026.html"
+    }
+  ],
   "visual_text": {
     "kicker": "The list",
     "lead": "Camille Guilbaud",
@@ -14,6 +53,5 @@
     "strap": "Hôtel du Cap-Eden-Roc, Antibes · October 2026"
   },
   "visuals_ready": false,
-  "week": "2026-10-26",
-  "post_text": "Camille Guilbaud, 30, sommelier at Hôtel du Cap-Eden-Roc, is now a world champion of blind tasting.\n\nWith her teammate Candy Sangare, founder of Art de Vivre by Candy, she won the 14th World Blind Tasting Championship for France, in Avignon on 17 October. The pair scored 189 points, ahead of Japan on 181 and Brazil on 159. The decider was the twelfth wine, a Sercial Madeira that Japan took for a Boal.\n\nIt is France's fifth world title, its second in a row, and the first won by an all-female French team. Guilbaud joined the Oetker hotel about three years ago. Its cellar holds more than 5,000 references.\n\nA second title went to a Paris palace. Dimitri Nalin, head sommelier at Hôtel Barrière Fouquet's Paris, won the French edition of the Ruinart Sommelier Challenge 2026 on 26 October, at Cheval Blanc Paris. Ruinart cellar master Caroline Fiot and sommelier Estelle Touzet sat on the jury.\n\nThe signal: in a palace, the wine team is now a reason to book, not a back-office skill. A titled sommelier is a story guests, critics and future recruits all hear.\n\nWhich sommelier changed the way you remember a hotel?\n\nRead the full article: https://hospitality-signals.com/the-list/2026-10-30-palace-sommeliers-titles/\n\n#LuxuryHospitality #Sommelier #Palace"
+  "week": "2026-10-26"
 }

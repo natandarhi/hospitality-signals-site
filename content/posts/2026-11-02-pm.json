@@ -1,20 +1,45 @@
 {
-  "article_id": "2026-10-18-france-33-palaces",
+  "article_id": "2026-11-02-marriott-q3-results",
   "day": "Monday",
-  "dropped_note": "Removed 2026-10-28: not fresh or not top-tier (Natan)",
-  "first_comment": "Source: La Tribune de l'Hôtellerie, 18 Oct 2026 — https://latribunedelhotellerie.com/palaces-france-2026-liste-33-hotels-six-nouveaux/",
-  "format": "The List",
-  "order": 2,
-  "post_text": "France now counts 33 Palace hotels, including six new names in 2026.\n\nThe newcomers:\n\n– Bvlgari Hotel Paris\n– @Cheval Blanc Paris\n– Fouquet's Paris\n– Four Seasons Resort Megève\n– Hôtel Martinez, Cannes\n– Royal Champagne Hôtel & Spa, Champillon\n\nThe State grants the distinction for three years, after an assessment led by @Atout France, the agency headed by @Adam Oubuih. Twenty-seven hotels kept their title.\n\nParis alone holds 13 Palaces. With the Riviera and the Alps, it accounts for 29 of the 33.\n\nThe signal: the title is spreading beyond Paris and Courchevel, to Champagne and the Croisette. It remains the clearest marker of the top tier in France.\n\nWhich hotel do you see joining the list next?\n\nRead the full article: https://hospitality-signals.com/the-list/2026-10-18-france-33-palaces/\n\n#LuxuryHospitality #Palace #France",
+  "first_comment": "Source: Marriott International press release, 2 Nov 2026 — [URL of the Q3 2026 release on marriott.gcs-web.com]",
+  "format": "Signal of the Week",
+  "note": "Written 1 Nov by the daily watch, BEFORE the results (out 2 Nov ~7am ET / 13:00 Paris). Every [bracket] must be filled from the Marriott release before posting; article 2026-11-02-marriott-q3-results also needs its figures.",
+  "order": 12,
+  "photo_brief": {
+    "credit": "© Marriott International",
+    "what": "Photo already in the library for this article (The St. Regis Rome, low resolution): an HD Marriott press image of a luxury property would be better.",
+    "where_url": "https://news.marriott.com/"
+  },
+  "post_text": "@Marriott International grew worldwide RevPAR by [X.X]% in the third quarter of 2026, with luxury at [X.X]%.\n\nThe results, published on 2 November, show [RevPAR US & Canada +X.X%], [RevPAR international +X.X%], gross fees of [$X.X billion] and adjusted EBITDA of [$X.X billion].\n\nThe development pipeline now stands at [about X rooms]. The group [raised / maintained] its full-year outlook, to [X–X%] RevPAR growth.\n\n@Anthony Capuano, President and Chief Executive Officer, presented the quarter to analysts with Jennifer Mason, Chief Financial Officer. [One line on what he highlighted, in our words.]\n\nThe luxury story was also visible on the ground this autumn: The Cape Town EDITION opened as the brand's first hotel in Africa, and The St. Regis Dubai, The Palm reopened on 1 November after six months of works.\n\nThe signal: Marriott runs the industry's largest luxury portfolio, from Ritz-Carlton and St. Regis to Bulgari and EDITION. After Accor, IHG, Hilton and Hyatt, its figures close the third-quarter season and give the clearest read on luxury demand going into 2027. [Adjust to the figures.]\n\nIs luxury still the engine of growth for the big hotel groups?\n\nRead the full article: https://hospitality-signals.com/signal-of-the-week/2026-11-02-marriott-q3-results/\n\n#LuxuryHospitality #HotelResults #Marriott",
   "publish_date": "2026-11-02",
   "slot": "evening",
-  "status": "dropped",
+  "status": "ready",
+  "tags": [
+    {
+      "linkedin_url": "https://www.linkedin.com/in/anthonycapuano/",
+      "name": "Anthony Capuano",
+      "role": "President and Chief Executive Officer, Marriott International",
+      "source_url": "https://marriott.gcs-web.com/node/37666"
+    },
+    {
+      "linkedin_url": "",
+      "name": "Jennifer Mason",
+      "role": "EVP and Chief Financial Officer, Marriott International",
+      "source_url": "https://marriott.gcs-web.com/node/37666"
+    },
+    {
+      "linkedin_url": "https://www.linkedin.com/company/marriott-international",
+      "name": "Marriott International",
+      "role": "Company page",
+      "source_url": "https://marriott.gcs-web.com/node/37666"
+    }
+  ],
   "visual_text": {
-    "kicker": "The list",
-    "lead": "France",
-    "rest": "now counts 33 Palaces, with six new names in 2026.",
-    "strap": "Cheval Blanc Paris · Palace distinction 2026"
+    "kicker": "Signal of the week",
+    "lead": "Marriott International",
+    "rest": "reports its third-quarter 2026 results.",
+    "strap": "Marriott International · 2 November 2026"
   },
-  "visuals_ready": true,
+  "visuals_ready": false,
   "week": "2026-11-02"
 }
