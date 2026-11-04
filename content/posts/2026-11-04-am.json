@@ -1,20 +1,59 @@
 {
-  "article_id": "2026-11-04-alps-winter-openings",
+  "article_id": "2026-10-19-cheval-blanc-courchevel-chalets",
   "day": "Wednesday",
-  "dropped_note": "Removed 2026-10-28: not fresh or not top-tier (Natan)",
-  "first_comment": "Sources: Yonder, 23 Oct 2026 — https://www.yonder.fr/news/hotels/saint-roch-courchevel-1850-maisons-pariente-prunier ; Luxury.it, checked 11 Oct 2026 — https://luxury.it/new-luxury-hotels-europe-opening-dates-2026-2027/",
-  "format": "The List",
-  "order": 5,
-  "post_text": "Three new luxury hotels open in the Alps in December:\n\n– The First Cortina, Cortina d'Ampezzo: 76 rooms and suites, by Pavilions Hotels and Resorts, on 4 December\n– Saint Roch, Courchevel 1850: 37 keys on the Bellecôte piste, by @Maisons Pariente, on 18 December\n– Bourbon Hotel, Courchevel 1850: 31 rooms, on 18 December\n\nSaint Roch is the fifth Maisons Pariente hotel and its second in the Alps, after Le Coucou in Méribel. Interiors are by the studio Friedmann & Versace, and the restaurant is run by the Parisian caviar house @Prunier Caviar.\n\nThe signal: the Alps' newest luxury beds are small, between 31 and 76 rooms. Family groups and independents, not only the big brands, are betting on short, high-yield winter seasons.\n\nWhich opening are you most curious about this winter?\n\nRead the full article: https://hospitality-signals.com/the-list/2026-11-04-alps-winter-openings/\n\n#LuxuryHospitality #HotelOpenings #Courchevel",
+  "first_comment": "Source: A&E Magazine, 19 Oct 2026 — https://aeworld.com/lifestyle/travel/cheval-blanc-courchevel-to-unveil-two-new-luxury-chalets-in-december-2026/",
+  "format": "Signal of the Week",
+  "photo_brief": {
+    "what": "un chalet de Cheval Blanc Courchevel (photo presse LVMH / Cheval Blanc)."
+  },
+  "post_text": "@Cheval Blanc Courchevel will open two private chalets in December, which can be joined into a single 2,400-square-metre retreat.\n\nThe five-bedroom chalet covers 900 square metres. The nine-bedroom one spans 1,500 square metres, with a double-height pool, a dining room and a private wine cellar. Both face the original Maison in the Jardin Alpin of Courchevel 1850, with direct access to the slopes.\n\nPeter Marino designed the common spaces and the Brazilian artist Vik Muniz painted the frescoes. Fifteen butlers and a private culinary team will look after guests, a few steps from Le 1947, the Maison's table led by @Yannick Alléno.\n\nThe chalets open under @Mathieu Hellec, General Manager of Cheval Blanc Courchevel since October 2024. It is also the first winter for @Vincent Billiard, named Chief Operating Officer of Cheval Blanc on 5 October, in the leadership team of @Olivier Lefebvre, Chairman and CEO of Cheval Blanc.\n\nThe signal: in the Alps, the most exclusive product is no longer a suite but a private house with palace service. @LVMH Hotel Management is building art-filled homes around its Maisons.\n\nWould your guests choose a chalet over the best suite in the house?\n\nRead the full article: https://hospitality-signals.com/signal-of-the-week/2026-10-19-cheval-blanc-courchevel-chalets/\n\n#LuxuryHospitality #Courchevel #Alps",
   "publish_date": "2026-11-04",
   "slot": "morning",
-  "status": "dropped",
+  "status": "ready",
+  "tags": [
+    {
+      "linkedin_url": "",
+      "name": "Mathieu Hellec",
+      "role": "General Manager, Cheval Blanc Courchevel (since 1 Oct 2024)",
+      "source_url": "https://www.tourmag.com/Mathieu-Hellec-nomme-au-poste-de-Directeur-General-de-Cheval-Blanc-Courchevel_a124210.html"
+    },
+    {
+      "linkedin_url": "",
+      "name": "Vincent Billiard",
+      "role": "Chief Operating Officer, Cheval Blanc (from 5 Oct 2026)",
+      "source_url": "https://aucoeurduchr.fr/decision-business/vincent-billiard-nomme-coo-cheval-blanc-5-octobre-2026/"
+    },
+    {
+      "linkedin_url": "",
+      "name": "Olivier Lefebvre",
+      "role": "Chairman and CEO, Cheval Blanc",
+      "source_url": "https://aucoeurduchr.fr/decision-business/vincent-billiard-nomme-coo-cheval-blanc-5-octobre-2026/"
+    },
+    {
+      "linkedin_url": "",
+      "name": "Yannick Alléno",
+      "role": "Chef, Le 1947 à Cheval Blanc",
+      "source_url": "https://www.chevalblanc.com/en/maison/courchevel/restaurants-and-bars/le-1947-cheval-blanc"
+    },
+    {
+      "linkedin_url": "",
+      "name": "Cheval Blanc",
+      "role": "Company page",
+      "source_url": ""
+    },
+    {
+      "linkedin_url": "",
+      "name": "LVMH Hotel Management",
+      "role": "Company page",
+      "source_url": ""
+    }
+  ],
   "visual_text": {
-    "kicker": "The list",
-    "lead": "Three new hotels",
-    "rest": "open in the Alps this December.",
-    "strap": "Courchevel and Cortina · December 2026"
+    "kicker": "Signal of the week",
+    "lead": "Cheval Blanc Courchevel",
+    "rest": "opens two private chalets in December, up to 2,400 square metres.",
+    "strap": "Cheval Blanc Courchevel · December 2026"
   },
-  "visuals_ready": true,
+  "visuals_ready": false,
   "week": "2026-11-02"
 }

@@ -1,20 +1,71 @@
 {
-  "article_id": "2026-10-27-worldhotels-rebrand",
+  "article_id": "2026-11-04-four-seasons-megeve-palace-winter",
   "day": "Wednesday",
-  "dropped_note": "Removed 2026-10-28: not fresh or not top-tier (Natan)",
-  "first_comment": "Source: La Tribune de l'Hôtellerie, 27 Oct 2026 — https://latribunedelhotellerie.com/bwh-hotels-devient-worldhotels-strategie-fidelite-2027/",
+  "first_comment": "Sources: Yonder, 21 Sep 2026 — https://www.yonder.fr/news/hotels/four-seasons-megeve-palace-2026 ; Four Seasons, 2 Jun 2026 — https://press.fourseasons.com/megeve/hotel-news/2026/french-palace-hotel",
   "format": "Signal of the Week",
-  "order": 6,
-  "post_text": "BWH Hotels, the parent of @Best Western Hotels & Resorts, renamed itself @WorldHotels on 27 October.\n\nThe change concerns the group, not its hotels: Best Western and SureStay keep their names. The group counts about 4,000 hotels, 18 brands and some 70 million loyalty members in more than 100 countries.\n\nA single programme, WorldHotels Rewards, will replace Best Western Rewards on 5 January 2027, with three status tiers. Members keep their status and points.\n\nWorldHotels was the independent collection the group bought in 2019. Under President and CEO @Larry Cuculic, its name now leads the whole portfolio.\n\nThe signal: groups now sell themselves to travellers through their most upmarket name. The loyalty programme, not the logo on the door, is what they really want to unify.\n\nShould a group lead with its most upscale brand?\n\nRead the full article: https://hospitality-signals.com/signal-of-the-week/2026-10-27-worldhotels-rebrand/\n\n#LuxuryHospitality #HotelLoyalty #HotelBrands",
+  "photo_brief": {
+    "what": "Four Seasons Resort Megève sous la neige (photo presse Four Seasons)."
+  },
+  "post_text": "Four Seasons Resort Megève reopens on 16 December for its first winter as a Palace, the first hotel in Megève to hold the distinction.\n\nAtout France granted the title in June. The resort at Mont d'Arbois has 55 rooms and suites with direct access to the slopes, and three restaurants: La Brasserie Benjamin, Kaito and Idéal 1850 on the mountaintop.\n\nGeneral Manager @Joachim Jacob, who joined the resort in 2019 and rose from director of operations, leads the team. In the kitchens, @Armando Acquaviva signs the Brasserie Benjamin menu and executive pastry chef @Jonathan Chapuy the desserts. At Kaito, chef @Stylianos Chysollari works with sommelier @Ruggero Testori and restaurant manager @Lorenza Vigna.\n\nThe novelty this winter is in the 900-square-metre spa. It now offers myBlend treatments by Clarins and says it is the first in France to use the CellSynergy2 device. Chapuy even created the sweet finale of one treatment.\n\nThe signal: the Palace label is no longer only a Paris or Riviera story. @Four Seasons Hotels and Resorts now holds it in a ski village, with an estate created for @Edmond de Rothschild, and is using its spa to give returning skiers a reason to book again.\n\nWhich ski resort should get the next Palace?\n\nRead the full article: https://hospitality-signals.com/signal-of-the-week/2026-11-04-four-seasons-megeve-palace-winter/\n\n#LuxuryHospitality #Megeve #Alps",
   "publish_date": "2026-11-04",
   "slot": "evening",
-  "status": "dropped",
+  "status": "ready",
+  "tags": [
+    {
+      "linkedin_url": "",
+      "name": "Joachim Jacob",
+      "role": "General Manager, Four Seasons Megève (since 2023; director of operations from 2019)",
+      "source_url": "https://aucoeurduchr.fr/article/nominations-et-mouvements/joachim-jacob-promut-directeur-general-du-four-seasons-megeve/"
+    },
+    {
+      "linkedin_url": "",
+      "name": "Armando Acquaviva",
+      "role": "Chef, La Brasserie Benjamin",
+      "source_url": "https://press.fourseasons.com/megeve/hotel-facts/"
+    },
+    {
+      "linkedin_url": "",
+      "name": "Jonathan Chapuy",
+      "role": "Executive Pastry Chef",
+      "source_url": "https://press.fourseasons.com/megeve/hotel-news/2026/expanded-spa-offering/"
+    },
+    {
+      "linkedin_url": "",
+      "name": "Stylianos Chysollari",
+      "role": "Chef, Kaito (Jan 2025, to be confirmed for 2026-27)",
+      "source_url": "https://www.gillespudlowski.com/390163/restaurants/megeve-fusion-et-delices-chez-kaito"
+    },
+    {
+      "linkedin_url": "",
+      "name": "Ruggero Testori",
+      "role": "Sommelier, Kaito (Jan 2025, to be confirmed)",
+      "source_url": "https://www.gillespudlowski.com/390163/restaurants/megeve-fusion-et-delices-chez-kaito"
+    },
+    {
+      "linkedin_url": "",
+      "name": "Lorenza Vigna",
+      "role": "Restaurant manager, Kaito (Jan 2025, to be confirmed)",
+      "source_url": "https://www.gillespudlowski.com/390163/restaurants/megeve-fusion-et-delices-chez-kaito"
+    },
+    {
+      "linkedin_url": "",
+      "name": "Four Seasons Hotels and Resorts",
+      "role": "Company page",
+      "source_url": ""
+    },
+    {
+      "linkedin_url": "",
+      "name": "Edmond de Rothschild",
+      "role": "Company page",
+      "source_url": ""
+    }
+  ],
   "visual_text": {
     "kicker": "Signal of the week",
-    "lead": "BWH Hotels",
-    "rest": "becomes WorldHotels, with about 4,000 hotels worldwide.",
-    "strap": "WorldHotels · 27 October 2026"
+    "lead": "Four Seasons Resort Megève",
+    "rest": "reopens on 16 December for its first winter as a Palace.",
+    "strap": "Mont d'Arbois, Megève · 16 December 2026"
   },
-  "visuals_ready": true,
+  "visuals_ready": false,
   "week": "2026-11-02"
 }

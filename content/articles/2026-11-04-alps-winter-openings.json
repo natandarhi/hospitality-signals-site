@@ -1,6 +1,6 @@
 {
   "added_at": "2026-10-28",
-  "body_long": "Six new luxury hotels are due to open in the Alps in December 2026, ahead of the winter season.\n\n## The openings\n\n- Fouquet's Gstaad, by Barrière: 33 rooms, including 11 suites and 6 apartments, opening on 4 December.\n- The First Cortina, Cortina d'Ampezzo: 76 rooms and suites, operated by The Pavilions group and designed by Studio Marincola Architects, opening on 4 December.\n- Bârma, Courchevel La Tania: 75 rooms and suites for La French Collection, with a spa by Susanne Kaufmann, opening on 5 December.\n- Le Graal Cortina: 30 rooms including 13 suites, interiors by Achille Salvagni and cuisine by chef Giovanni Guarneri, bookable from 8 December.\n- Saint Roch, Courchevel 1850: 37 rooms and suites on the Bellecôte piste, by Maisons Pariente, opening on 18 December.\n- Bourbon Hotel, Courchevel 1850: 31 rooms including 3 suites, by Chapitre Six, with chef Simone Zanoni, first night bookable on 18 December.\n\n## Saint Roch\n\nSaint Roch is the fifth Maisons Pariente address in France and the group's second in the Alps, after Le Coucou in Méribel. The interiors are by the studio Friedmann & Versace, founded by Virginie Friedmann and Delphine Versace, drawing on the imagery of the Russian dacha. The restaurant is run by Prunier, the Parisian caviar house.\n\n## The signal\n\nThe newest luxury addresses in the Alps are small, between 30 and 76 rooms. Family groups and independents, not only the large brands, are betting on short, high-yield winter seasons, with dining and wellness as key parts of the offer.",
+  "body_long": "Six new luxury hotels are due to open in the Alps in December 2026, ahead of the winter season.\n\n## The openings\n\n- Fouquet's Gstaad, by Barrière: 33 rooms, including 11 suites and 6 apartments, opening on 4 December, led by Marie-Cécile Bouchet-Pichon, General Manager of the hotel and chalet from November 2026.\n- The First Cortina, Cortina d'Ampezzo: 76 rooms and suites, operated by The Pavilions group and designed by Studio Marincola Architects, opening on 4 December.\n- Bârma, Courchevel La Tania: 75 rooms and suites for La French Collection, with a spa by Susanne Kaufmann, opening on 5 December.\n- Le Graal Cortina: 30 rooms including 13 suites, interiors by Achille Salvagni and cuisine by chef Giovanni Guarneri, bookable from 8 December.\n- Saint Roch, Courchevel 1850: 37 rooms and suites on the Bellecôte piste, by Maisons Pariente, opening on 18 December.\n- Bourbon Hotel, Courchevel 1850: 31 rooms including 3 suites, by Chapitre Six, with chef Simone Zanoni, first night bookable on 18 December.\n\n## Saint Roch\n\nSaint Roch is the fifth Maisons Pariente address in France and the group's second in the Alps, after Le Coucou in Méribel. The interiors are by the studio Friedmann & Versace, founded by Virginie Friedmann and Delphine Versace, drawing on the imagery of the Russian dacha. The restaurant is run by Prunier, the Parisian caviar house.\n\n## The signal\n\nThe newest luxury addresses in the Alps are small, between 30 and 76 rooms. Family groups and independents, not only the large brands, are betting on short, high-yield winter seasons, with dining and wellness as key parts of the offer.",
   "category": "Ranking",
   "date": "2 Nov 2026",
   "date_iso": "2026-11-02",
@@ -22,6 +22,10 @@
     {
       "name": "La Revue des Hôtels, 26 Oct 2026",
       "url": "https://larevuedeshotels.com/en/new-luxury-ski-hotels-winter-2026-2027-9-openings-alps-dolomites"
+    },
+    {
+      "name": "La Tribune de l'Hôtellerie, 4 Nov 2026",
+      "url": "https://latribunedelhotellerie.com/marie-cecile-bouchet-pichon-fouquets-gstaad/"
     }
   ],
   "status": "ready",
@@ -29,16 +33,16 @@
   "title": "Six new luxury hotels open in the Alps this December",
   "visual_text": {
     "kicker": "The list",
-    "lead": "Three new hotels",
+    "lead": "Six new luxury hotels",
     "rest": "open in the Alps this December.",
-    "strap": "Courchevel and Cortina · December 2026"
+    "strap": "Gstaad, Cortina and Courchevel · December 2026"
   },
   "visuals": {
-    "linkedin_4x5": "19185d559d4c3a007fb6fca206a64724",
-    "site_16x9": "a4de178b8d8da35124aa6992e21d26a4"
+    "linkedin_4x5": "04b857214647b7837508455599dea61f",
+    "site_16x9": "e917cc304bcf39908924d633033e8290"
   },
   "visuals_made_at": "2026-10-28T21:10:00Z",
-  "visuals_note": "Photo of a bedroom; the hotel it shows is not confirmed, so the strap stays neutral.",
+  "visuals_note": "Re-rendered 4 Nov: six hotels (was three). Photo: Saint Roch room, credit Maisons Pariente.",
   "visuals_status": "done",
   "week": "2026-11-02",
   "why": "Small hotels from family groups and independents are betting on the winter season."
