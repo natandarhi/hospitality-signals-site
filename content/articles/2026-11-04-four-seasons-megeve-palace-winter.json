@@ -4,6 +4,7 @@
   "category": "Opening",
   "date": "4 Nov 2026",
   "date_iso": "2026-11-04",
+  "skip_reason": "Removed from the site at Natan's request, 2026-11-06",
   "sources": [
     {
       "name": "Yonder, 21 Sep 2026",
@@ -14,7 +15,7 @@
       "url": "https://press.fourseasons.com/megeve/hotel-news/2026/french-palace-hotel"
     }
   ],
-  "status": "ready",
+  "status": "skip",
   "summary": "Four Seasons Resort Megève, the first hotel in Megève to hold the Palace distinction, reopens on 16 December with a spa offering myBlend treatments and the CellSynergy2 device.",
   "title": "Four Seasons Megève reopens on 16 December for its first winter as a Palace",
   "visual_text": {
