@@ -1,0 +1,41 @@
+{
+  "week": "2026-11-09",
+  "date": "6 Nov 2026",
+  "date_iso": "2026-11-06",
+  "category": "Opening",
+  "title": "Aman announces Amantaru, its first hotel and residences in Puerto Rico",
+  "summary": "Aman will open Amantaru, a hotel with branded residences designed by Amangiri architect Marwan Al-Sayed, in Cabo Rojo within the Esencia estate, alongside Rosewood and Mandarin Oriental. No opening date yet.",
+  "why": "Ultra-luxury brands now arrive together on one estate, with branded residences at the heart of the offer.",
+  "sources": [
+    {
+      "name": "The Hospitality Tribune, 6 Nov 2026",
+      "url": "https://thehospitalitytribune.com/aman-amantaru-puerto-rico-esencia/"
+    },
+    {
+      "name": "The Points Guy, 7 Nov 2026",
+      "url": "https://thepointsguy.com/news/aman-puerto-rico-wyndham-luxury-hotels"
+    },
+    {
+      "name": "Centro de Periodismo Investigativo, Jul 2025",
+      "url": "https://periodismoinvestigativo.com/2025/07/esencia-project-puerto-rico-environmental-damage/"
+    }
+  ],
+  "status": "ready",
+  "added_at": "2026-11-08",
+  "body_long": "Aman has announced Amantaru, its first destination in Puerto Rico and its fourth in the Caribbean. The Hospitality Tribune published the press release on 6 November 2026, and The Points Guy reported it the next day.\n\n## The project\n\nAmantaru will combine a hotel with branded residences in Cabo Rojo, on Puerto Rico's south-west coast. The hotel is set on a hillside overlooking a beach and bordering a protected nature reserve. Plans include an Aman Spa, a wellness centre, a beach club, racquet sports courts and several restaurants. The residences will have three to eight bedrooms, with access to the hotel's services.\n\nThe number of rooms and residences, the investment and the opening date have not been disclosed.\n\n## The architect\n\nThe design is by Marwan Al-Sayed, founder of MASASTUDIO, who also designed the residences. It is his second project with Aman after Amangiri in Utah. The design draws on Puerto Rico's historic fortifications and coastal landscapes.\n\n## Esencia\n\nAmantaru sits within Esencia, a private community of more than 800 hectares developed by Three Rules Capital in partnership with Reuben Brothers. Mandarin Oriental and Rosewood Hotels & Resorts are also part of the programme. Esencia was approved in summer 2026, with more than $2 billion of announced private investment; the developers say about 75% of the land will remain green space. The project has also drawn criticism: in July 2025, the Centro de Periodismo Investigativo reported environmental and community disputes around the developers' earlier projects.\n\nAccording to the Hospitality Tribune, Aman's chairman and CEO Vlad Doronin highlighted the value of offering Aman hospitality and branded residences together, for the first time in Puerto Rico. Amantaru joins a pipeline in the Americas that includes Amanvari in Los Cabos, Aman Miami Beach, Aman Beverly Hills and Amancaya in the Exumas.\n\n## The signal\n\nUltra-luxury brands now arrive together. In Esencia, Aman, Rosewood and Mandarin Oriental share one estate, and branded residences sit at the heart of the offer, well before any opening date is set.",
+  "visuals_status": "done",
+  "visual_text": {
+    "kicker": "Signal of the week",
+    "lead": "Aman",
+    "rest": "announces Amantaru, its first hotel and residences in Puerto Rico.",
+    "strap": "Cabo Rojo, Puerto Rico · 6 November 2026"
+  },
+  "photo_asset": "2026-11-06-aman-amantaru-puerto-rico-photo",
+  "photo_credit": "Renderings © Aman",
+  "visuals": {
+    "linkedin_4x5": "2026-11-06-aman-amantaru-puerto-rico-4x5",
+    "site_16x9": "2026-11-06-aman-amantaru-puerto-rico-16x9"
+  },
+  "visuals_made_at": "2026-11-08T21:15:00Z",
+  "visuals_note": "Montage of two Amantaru renderings sent by Natan 8 Nov. Images live in the repo content/images, not as library assets."
+}
