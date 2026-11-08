@@ -71,8 +71,6 @@ def credit_ok(a):
 
 def image_for(a, kind):
     """Path of a site image, or None. kind: photo | cover_wide | cover_tall."""
-    if not credit_ok(a):
-        return None
     key = {"photo": a.get("photo_asset"),
            "cover_wide": (a.get("visuals") or {}).get("site_16x9"),
            "cover_tall": (a.get("visuals") or {}).get("linkedin_4x5")}[kind]
@@ -90,7 +88,7 @@ def load():
         a = json.load(open(os.path.join(d, f), encoding="utf-8"))
         if a.get("status") not in PUBLIC_STATUS:
             continue
-        # no article before its date, and none without a cleared photo
+        # no article before its date, and none without a photo (credit line shown only when confirmed)
         if (a.get("date_iso") or "") > date.today().isoformat() or not image_for(a, "photo"):
             continue
         a["id"] = f[:-5]
@@ -264,7 +262,7 @@ def sources_html(a):
         elif s.get("name"):
             items.append(e(s["name"]))
     src = " · ".join(items) or "To be confirmed"
-    credit = f'<p class="muted">Photograph: {e(a["photo_credit"])}</p>' if image_for(a, "photo") or image_for(a, "cover_wide") else ""
+    credit = f'<p class="muted">Photograph: {e(a["photo_credit"])}</p>' if credit_ok(a) and (image_for(a, "photo") or image_for(a, "cover_wide")) else ""
     return f'''<aside class="source">
       <p class="label">Source</p>
       <p>{src}</p>

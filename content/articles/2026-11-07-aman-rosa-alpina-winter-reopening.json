@@ -4,7 +4,7 @@
   "category": "Opening",
   "date": "7 Nov 2026",
   "date_iso": "2026-11-07",
-  "photo_asset": "",
+  "photo_asset": "2026-11-07-aman-rosa-alpina-winter-reopening-photo",
   "photo_credit": "© Aman",
   "sources": [
     {
@@ -20,7 +20,7 @@
       "url": "https://hotelsmag.com/news/aman-details-amantaru-on-puerto-rico-southwest-coast"
     }
   ],
-  "status": "draft",
+  "status": "ready",
   "summary": "Aman Rosa Alpina reopens on 4 December 2026 in San Cassiano for its second winter as an Aman, with 51 rooms and suites, a 1,684 m² spa and a 20-metre heated outdoor pool. The season runs to 28 March 2027.",
   "title": "Aman Rosa Alpina reopens in the Dolomites on 4 December",
   "visual_text": {
@@ -29,7 +29,10 @@
     "rest": "reopens on 4 December with a 20-metre pool under the snow.",
     "strap": "San Cassiano, Dolomites · From 4 December 2026"
   },
-  "visuals": {},
+  "visuals": {
+    "linkedin_4x5": "2026-11-07-aman-rosa-alpina-winter-reopening-4x5",
+    "site_16x9": "2026-11-07-aman-rosa-alpina-winter-reopening-16x9"
+  },
   "visuals_status": "waiting_hd_photo",
   "visuals_note": "Photos sent below 1350 px (1024x768, 998x1247)",
   "week": "2026-11-02",
