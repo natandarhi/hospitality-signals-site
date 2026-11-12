@@ -7,21 +7,43 @@
   "photo_asset": "2026-11-10-aman-atma-miami-djokovic-photo",
   "photo_credit": "© Aman Group",
   "sources": [
-    {"name": "Skift, 10 Nov 2026", "url": "https://skift.com/2026/11/10/aman-confirms-its-secret-third-brand-is-atma-opening-in-miami-in-2031/"},
-    {"name": "HOTELS, 10 Nov 2026", "url": "https://hotelsmag.com/news/aman-is-building-a-new-ultra-luxury-brand-alongside-tennis-great-novak-djokovic/"},
-    {"name": "The Real Deal, 10 Nov 2026", "url": "https://therealdeal.com/miami/2026/11/10/aman-launches-atma-with-novak-djokovic-to-debut-in-miami/"},
-    {"name": "The Caterer, 11 Nov 2026", "url": "https://www.thecaterer.com/news/news/aman-group-launches-performance-living-hotel-brand-with-novak-djokovic"},
-    {"name": "Business Traveller, 30 Aug 2024 (global wellness advisor)", "url": "https://www.businesstraveller.com/business-travel/2024/08/30/aman-appoints-novak-djokovic-as-global-wellness-advisor/"}
+    {
+      "name": "Skift, 10 Nov 2026",
+      "url": "https://skift.com/2026/11/10/aman-confirms-its-secret-third-brand-is-atma-opening-in-miami-in-2031/"
+    },
+    {
+      "name": "HOTELS, 10 Nov 2026",
+      "url": "https://hotelsmag.com/news/aman-is-building-a-new-ultra-luxury-brand-alongside-tennis-great-novak-djokovic/"
+    },
+    {
+      "name": "The Real Deal, 10 Nov 2026",
+      "url": "https://therealdeal.com/miami/2026/11/10/aman-launches-atma-with-novak-djokovic-to-debut-in-miami/"
+    },
+    {
+      "name": "The Caterer, 11 Nov 2026",
+      "url": "https://www.thecaterer.com/news/news/aman-group-launches-performance-living-hotel-brand-with-novak-djokovic"
+    },
+    {
+      "name": "Business Traveller, 30 Aug 2024 (global wellness advisor)",
+      "url": "https://www.businesstraveller.com/business-travel/2024/08/30/aman-appoints-novak-djokovic-as-global-wellness-advisor/"
+    }
   ],
   "status": "ready",
   "summary": "Aman Group launches Atma, its third brand after Aman and Janu, with Novak Djokovic as global partner. The first address, Atma Miami, is a 1,049-foot Brickell tower due in 2031, with a 120,000 sq ft spa and wellness centre, indoor tennis and padel courts and a private racquet club.",
   "title": "Aman launches Atma, its third brand, with Novak Djokovic",
   "visual_text": {
     "kicker": "Signal of the week",
-    "lead": "Aman × Novak Djokovic",
-    "rest": "launch Atma, the group's third brand.",
-    "strap": "Brickell, Miami · opening 2031"
+    "lead": "Aman",
+    "rest": "launches Atma, its third brand, with Novak Djokovic.",
+    "strap": "Brickell, Miami · Opening 2031"
   },
   "week": "2026-11-09",
-  "why": "Aman turns wellness and racquet sports into a brand of its own, with Djokovic at its centre."
+  "why": "Aman turns wellness and racquet sports into a brand of its own, with Djokovic at its centre.",
+  "visuals": {
+    "linkedin_4x5": "2026-11-10-aman-atma-miami-djokovic-4x5",
+    "site_16x9": "2026-11-10-aman-atma-miami-djokovic-16x9"
+  },
+  "visuals_status": "done",
+  "visuals_made_at": "2026-11-12T14:45:00Z",
+  "visuals_note": "Photo (875x1189) sent by Natan on 12 Nov: Djokovic on court with the Aman logo. Images are in the site repo content/images under these names."
 }
