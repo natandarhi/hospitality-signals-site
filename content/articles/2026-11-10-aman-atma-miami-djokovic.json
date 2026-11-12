@@ -28,7 +28,7 @@
       "url": "https://www.businesstraveller.com/business-travel/2024/08/30/aman-appoints-novak-djokovic-as-global-wellness-advisor/"
     }
   ],
-  "status": "ready",
+  "status": "skip",
   "summary": "Aman Group launches Atma, its third brand after Aman and Janu, with Novak Djokovic as global partner. The first address, Atma Miami, is a 1,049-foot Brickell tower due in 2031, with a 120,000 sq ft spa and wellness centre, indoor tennis and padel courts and a private racquet club.",
   "title": "Aman launches Atma, its third brand, with Novak Djokovic",
   "visual_text": {
@@ -45,5 +45,6 @@
   },
   "visuals_status": "done",
   "visuals_made_at": "2026-11-12T14:45:00Z",
-  "visuals_note": "Photo (875x1189) sent by Natan on 12 Nov: Djokovic on court with the Aman logo. Images are in the site repo content/images under these names."
+  "visuals_note": "Photo (875x1189) sent by Natan on 12 Nov: Djokovic on court with the Aman logo. Images are in the site repo content/images under these names.",
+  "skip_reason": "Natan 12 Nov: already seen on LinkedIn, dropped"
 }
