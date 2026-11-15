@@ -6,7 +6,9 @@
                                                      and a test email; nothing is sent
                                                      to subscribers.
     python3 newsletter.py schedule [YYYY-MM-DD]   -> same, scheduled in Brevo for that
-                                                     Monday 07:00 UTC, test email first.
+                                                     Monday 07:00 UTC, test email first,
+                                                     only if content/newsletter/<monday>.json
+                                                     has "status": "ready"; else a draft.
     python3 newsletter.py draft-welcome           -> the welcome email as a Brevo campaign
                                                      DRAFT for the whole list (for the
                                                      subscribers imported by hand).
@@ -213,7 +215,7 @@ def welcome():
     inner += heading("You are on the list")
     inner += para("Thank you for subscribing. Hospitality Signals follows luxury hotels and the people who run them: "
                   "the openings, the appointments, the rankings and the figures that show where the industry is heading.")
-    inner += para("Every Monday morning, one short letter: the week's programme, every article in order. "
+    inner += para("Every Monday morning, one short letter: the week's news in luxury hospitality, what to expect, and our articles. "
                   "No advertising, and nothing else.")
     inner += label("Four formats", "28px 40px 4px")
     for k in build.ORDER:
@@ -228,12 +230,12 @@ def welcome():
     inner += '  <tr><td style="padding:20px 0 0;"></td></tr>\n' + button("Read Hospitality Signals", f"{SITE}/")
     note = ("You are receiving this email because you subscribed at hospitality-signals.com. "
             "Every Monday letter carries a one-click unsubscribe link.")
-    html_out = shell(WELCOME_SUBJECT, "Every Monday, the week's programme on luxury hotels and the people who run them.", inner, note)
+    html_out = shell(WELCOME_SUBJECT, "Every Monday, the week's news on luxury hotels and the people who run them.", inner, note)
 
     text = ["HOSPITALITY SIGNALS", "", "YOU ARE ON THE LIST", "",
             "Thank you for subscribing. Hospitality Signals follows luxury hotels and the people who run them: "
             "the openings, the appointments, the rankings and the figures that show where the industry is heading.", "",
-            "Every Monday morning, one short letter: the week's programme, every article in order. No advertising, and nothing else.", "",
+            "Every Monday morning, one short letter: the week's news in luxury hospitality, what to expect, and our articles. No advertising, and nothing else.", "",
             "FOUR FORMATS"]
     for k in build.ORDER:
         text += [f"- {FORMATS[k]['name']}: {FORMATS[k]['desc']}"]
@@ -245,63 +247,96 @@ def welcome():
     return WELCOME_SUBJECT, html_out, to_text(text)
 
 
+NEWSLETTER = os.path.join(CONTENT, "newsletter")
+
+
+def letter_for(monday):
+    """content/newsletter/<monday>.json: the week's editorial (written and sourced by
+    hand each week), what is expected, 3 or 4 picks, and posts coming up. None if absent."""
+    f = os.path.join(NEWSLETTER, monday.isoformat() + ".json")
+    return json.load(open(f, encoding="utf-8")) if os.path.exists(f) else None
+
+
+def md_links(text, html=True):
+    """[label](url) -> a link (html) or "label (url)" (text). The rest is escaped."""
+    import re
+    out, pos = [], 0
+    for m in re.finditer(r"\[([^\]]+)\]\((https?://[^)\s]+)\)", text):
+        out.append(e(text[pos:m.start()]) if html else text[pos:m.start()])
+        out.append(f'<a href="{e(m.group(2))}" style="color:{GREY};">{e(m.group(1))}</a>' if html
+                   else f"{m.group(1)} ({m.group(2)})")
+        pos = m.end()
+    out.append(e(text[pos:]) if html else text[pos:])
+    return "".join(out)
+
+
 def weekly(monday):
-    """The Monday letter sent on `monday`: the programme of the week that has just
-    ended (every article, in order, all online) and, when the site already holds
-    articles dated in the new week, a short "Coming up" list. Articles are written
-    day by day from fresh news, so the recap is what fills the letter; a "Coming up"
-    item is linked only if it is already online on Monday."""
+    """The Monday letter sent on `monday`.
+
+    With content/newsletter/<monday>.json: a short editorial on last week's luxury
+    hospitality news, what is expected this week, 3 or 4 of last week's articles
+    (linked) and, if listed, what is coming up on Hospitality Signals.
+    Without it: last week's articles only (the workflow then makes a draft, never
+    a scheduled send). Returns (subject, html, text, status)."""
     monday, _ = week_of(monday)
     last_mon, last_sun = week_of(monday - timedelta(days=7))
-    sunday = monday + timedelta(days=6)
-    every = articles()
-    past = sorted((a for a in every if last_mon.isoformat() <= a["date_iso"] <= last_sun.isoformat()),
-                  key=lambda a: (a["date_iso"], a["id"]))
-    ahead = sorted((a for a in every if monday.isoformat() <= a["date_iso"] <= sunday.isoformat()),
-                   key=lambda a: (a["date_iso"], a["id"]))
     when = span(last_mon, last_sun)
-    subject = f"The week in luxury hospitality: {when.rsplit(' ', 1)[0]}"
-    if not past and not ahead:
-        return subject, None, None
+    every = {a["id"]: a for a in articles()}
+    past = sorted((a for a in every.values() if last_mon.isoformat() <= a["date_iso"] <= last_sun.isoformat()),
+                  key=lambda a: (a["date_iso"], a["id"]))
+    spec = letter_for(monday) or {}
+    status = spec.get("status", "auto")
+    picks = [every[i] for i in spec.get("picks", []) if i in every] or past
+    subject = spec.get("subject") or f"The week in luxury hospitality: {when.rsplit(' ', 1)[0]}"
+    if not picks and not spec.get("intro"):
+        return subject, None, None, status
 
     def kicker(a):
         d = date.fromisoformat(a["date_iso"])
         return f'{DAYS[d.weekday()]} {d.day} {d.strftime("%B")} &middot; {e(FORMATS[a["fmt"]]["name"])}'
 
-    live = lambda a: a["date_iso"] <= monday.isoformat()
-    n = len(past)
-    inner = label("The week&rsquo;s programme")
-    inner += heading(when)
-    if past:
-        inner += para(f'{"One article" if n == 1 else f"{n} articles"} on hospitality-signals.com last week, '
-                      "in the order they came out.", "0 40px 4px", GREY)
-        inner += lead_item(past[0], kicker(past[0]), True)
-        for a in past[1:]:
+    inner = label(f"The week &middot; {e(when)}")
+    inner += heading(spec.get("headline") or when)
+    for p in spec.get("intro", []):
+        inner += para(md_links(p))
+    if spec.get("expected"):
+        inner += label("Expected", "28px 40px 4px")
+        for x in spec["expected"]:
+            txt = e(x["text"])
+            if x.get("url"):
+                txt += f' <a href="{e(x["url"])}" style="color:{GREY};">Source</a>'
+            inner += (f'  <tr><td class="px" style="padding:12px 40px 0;font-family:{SANS};font-size:15px;line-height:1.5;color:{INK};">'
+                      f'<span style="{CAPS}font-size:11px;color:{GREY};">{e(x["when"])}</span><br>{txt}</td></tr>\n')
+    if picks:
+        inner += label("Last week on Hospitality Signals", "44px 40px 0")
+        inner += lead_item(picks[0], kicker(picks[0]), True)
+        for a in picks[1:]:
             inner += row_item(a, kicker(a), True)
-    if ahead:
-        inner += label("Coming up this week", "44px 40px 0")
-        for a in ahead:
-            inner += row_item(a, kicker(a), live(a))
-    inner += '  <tr><td style="padding:20px 0 0;"></td></tr>\n' + button("Read Hospitality Signals", f"{SITE}/")
+    if spec.get("coming_up"):
+        inner += label("Coming up on Hospitality Signals", "44px 40px 4px")
+        for c in spec["coming_up"]:
+            inner += para(e(c), "8px 40px 0")
+    inner += '  <tr><td style="padding:28px 0 0;"></td></tr>\n' + button("Read Hospitality Signals", f"{SITE}/")
     note = ('You are receiving this letter because you subscribed at hospitality-signals.com. '
             f'<a href="{{{{ unsubscribe }}}}" style="color:{GREY};">Unsubscribe</a>.')
-    preheader = " · ".join(a["title"] for a in (past or ahead)[:2])
+    preheader = spec.get("headline") or " · ".join(a["title"] for a in picks[:2])
     html_out = shell(subject, preheader, inner, note)
 
-    def text_item(a, link):
-        d = date.fromisoformat(a["date_iso"])
-        return [f"{DAYS[d.weekday()]} {d.day} {d.strftime('%B')} · {FORMATS[a['fmt']]['name']}", a["title"],
-                a.get("summary") or "", a["url"] if link else f"Online {DAYS[d.weekday()]}", ""]
-
-    text = ["HOSPITALITY SIGNALS", "", "THE WEEK'S PROGRAMME", when.upper(), ""]
-    for a in past:
-        text += text_item(a, True)
-    if ahead:
-        text += ["COMING UP THIS WEEK", ""]
-        for a in ahead:
-            text += text_item(a, live(a))
+    text = ["HOSPITALITY SIGNALS", "", f"THE WEEK · {when.upper()}", (spec.get("headline") or when).upper(), ""]
+    for p in spec.get("intro", []):
+        text += [md_links(p, html=False), ""]
+    if spec.get("expected"):
+        text += ["EXPECTED", ""]
+        for x in spec["expected"]:
+            text += [f"{x['when']}: {x['text']}" + (f" ({x['url']})" if x.get("url") else ""), ""]
+    if picks:
+        text += ["LAST WEEK ON HOSPITALITY SIGNALS", ""]
+        for a in picks:
+            text += [a["title"], a.get("summary") or "", a["url"], ""]
+    if spec.get("coming_up"):
+        text += ["COMING UP ON HOSPITALITY SIGNALS", ""] + list(spec["coming_up"]) + [""]
     text += [f"{SITE}/", f"LinkedIn: {LINKEDIN}", "", "Unsubscribe: {{ unsubscribe }}"]
-    return subject, html_out, to_text(text)
+    return subject, html_out, to_text(text), status
 
 
 # ---------- output ----------
@@ -370,7 +405,7 @@ def main(argv):
         return
     monday = date.fromisoformat(argv[2]) if len(argv) > 2 else next_monday()
     monday, _ = week_of(monday)
-    subject, h, t = weekly(monday)
+    subject, h, t, status = weekly(monday)
     if h is None:
         print(f"No article dated in the week of {monday}: no letter.")
         return
@@ -378,6 +413,10 @@ def main(argv):
     save(f"week-{monday.isoformat()}", h, t)
     if cmd == "draft":
         draft(f"Week {monday.isoformat()}", subject, h)
+    elif cmd == "schedule" and status != "ready":
+        # The editorial for this Monday is missing or not validated: draft only.
+        print(f"Letter status is '{status}', not 'ready': Brevo draft only, nothing scheduled.")
+        draft(f"Week {monday.isoformat()} (to validate)", subject, h)
     elif cmd == "schedule":
         # Monday 07:00 UTC = 08:00 in Paris in winter, 09:00 in summer. If the
         # scheduled job runs late (GitHub can delay it by hours), send in 10 minutes.

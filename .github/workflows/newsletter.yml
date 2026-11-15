@@ -3,11 +3,11 @@
 # 1. Every day at 04:30 UTC: rebuild the site through a Netlify build hook, so an
 #    article dated today goes online in the morning even without a push. The
 #    Monday letter promises "online Wednesday": this keeps the promise.
-# 2. Every Sunday at 17:00 UTC: write the Monday letter (the programme of the
-#    week just ended, plus anything already dated in the new week), create it in
-#    Brevo SCHEDULED for Monday 07:00 UTC (08:00 in Paris in winter) and send
-#    Natan a test. It goes to the list on its own; to stop it, Natan cancels or
-#    edits the campaign in Brevo before Monday morning.
+# 2. Every Sunday at 17:00 UTC: build the Monday letter from
+#    content/newsletter/<monday>.json (editorial, what is expected, 3-4 of last
+#    week's articles). If that file is validated ("status": "ready"), the Brevo
+#    campaign is SCHEDULED for Monday 07:00 UTC (08:00 in Paris in winter);
+#    otherwise it stays a draft. A test goes to Natan either way.
 #
 # Repository secrets: NETLIFY_BUILD_HOOK, BREVO_API_KEY, BREVO_LIST_ID,
 # NEWSLETTER_FROM, NEWSLETTER_REPLY_TO, NEWSLETTER_TEST_TO.
