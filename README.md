@@ -13,5 +13,5 @@ Build locally: `python3 build.py`, then open `public/index.html` through any sta
 ## Newsletter
 
 - Sign-ups: the `newsletter` Netlify form. `netlify/functions/submission-created.mjs` adds each new address to the Brevo list and sends the welcome email (`/email/welcome.html`, written by `newsletter.py` at build time).
-- Monday letter: `python3 newsletter.py weekly [monday]` writes `emails/week-<monday>.html`. The GitHub workflow `newsletter.yml` drafts it in Brevo every Sunday at 17:00 UTC and sends a test; subscribers get it only when Natan presses Send in Brevo. Articles already online on Monday get a link; the others show the day they go online.
+- Monday letter: `python3 newsletter.py weekly [monday]` writes `emails/week-<monday>.html`: the programme of the week just ended (every article, in order, linked) and a "Coming up this week" list when articles are already dated in the new week. The GitHub workflow `newsletter.yml` runs `newsletter.py schedule` every Sunday at 17:00 UTC: the campaign is created in Brevo scheduled for Monday 07:00 UTC (08:00 in Paris in winter) and a test goes to Natan. To stop or change a letter, cancel or edit it in Brevo before Monday morning. `newsletter.py draft` still makes a draft only.
 - The same workflow rebuilds the site every morning (Netlify build hook) so each dated article goes online on its day.

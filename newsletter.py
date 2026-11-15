@@ -5,6 +5,8 @@
     python3 newsletter.py draft  [YYYY-MM-DD]     -> same, then a Brevo campaign DRAFT
                                                      and a test email; nothing is sent
                                                      to subscribers.
+    python3 newsletter.py schedule [YYYY-MM-DD]   -> same, scheduled in Brevo for that
+                                                     Monday 07:00 UTC, test email first.
     python3 newsletter.py draft-welcome           -> the welcome email as a Brevo campaign
                                                      DRAFT for the whole list (for the
                                                      subscribers imported by hand).
@@ -21,7 +23,7 @@ import json
 import os
 import sys
 import urllib.request
-from datetime import date, timedelta
+from datetime import date, datetime, time, timedelta, timezone
 
 import build
 from build import CONTENT, FORMATS, SITE, e, fmt_of, image_for
@@ -211,7 +213,7 @@ def welcome():
     inner += heading("You are on the list")
     inner += para("Thank you for subscribing. Hospitality Signals follows luxury hotels and the people who run them: "
                   "the openings, the appointments, the rankings and the figures that show where the industry is heading.")
-    inner += para("Every Monday morning, one short letter: the articles coming out that week, in order. "
+    inner += para("Every Monday morning, one short letter: the week's programme, every article in order. "
                   "No advertising, and nothing else.")
     inner += label("Four formats", "28px 40px 4px")
     for k in build.ORDER:
@@ -226,12 +228,12 @@ def welcome():
     inner += '  <tr><td style="padding:20px 0 0;"></td></tr>\n' + button("Read Hospitality Signals", f"{SITE}/")
     note = ("You are receiving this email because you subscribed at hospitality-signals.com. "
             "Every Monday letter carries a one-click unsubscribe link.")
-    html_out = shell(WELCOME_SUBJECT, "Every Monday, the week's articles on luxury hotels and the people who run them.", inner, note)
+    html_out = shell(WELCOME_SUBJECT, "Every Monday, the week's programme on luxury hotels and the people who run them.", inner, note)
 
     text = ["HOSPITALITY SIGNALS", "", "YOU ARE ON THE LIST", "",
             "Thank you for subscribing. Hospitality Signals follows luxury hotels and the people who run them: "
             "the openings, the appointments, the rankings and the figures that show where the industry is heading.", "",
-            "Every Monday morning, one short letter: the articles coming out that week, in order. No advertising, and nothing else.", "",
+            "Every Monday morning, one short letter: the week's programme, every article in order. No advertising, and nothing else.", "",
             "FOUR FORMATS"]
     for k in build.ORDER:
         text += [f"- {FORMATS[k]['name']}: {FORMATS[k]['desc']}"]
@@ -244,15 +246,22 @@ def welcome():
 
 
 def weekly(monday):
-    """The Monday letter for the week starting on `monday`. Articles already
-    online on the send day (Monday) get a link; the others say which day they
-    go online, so the letter never carries a link to a page that is not live yet."""
-    monday, sunday = week_of(monday)
-    week = [a for a in articles() if monday.isoformat() <= a["date_iso"] <= sunday.isoformat()]
-    week.sort(key=lambda a: (a["date_iso"], a["id"]))
-    when = span(monday, sunday)
-    subject = f"The week ahead: {when.rsplit(' ', 1)[0]}"
-    if not week:
+    """The Monday letter sent on `monday`: the programme of the week that has just
+    ended (every article, in order, all online) and, when the site already holds
+    articles dated in the new week, a short "Coming up" list. Articles are written
+    day by day from fresh news, so the recap is what fills the letter; a "Coming up"
+    item is linked only if it is already online on Monday."""
+    monday, _ = week_of(monday)
+    last_mon, last_sun = week_of(monday - timedelta(days=7))
+    sunday = monday + timedelta(days=6)
+    every = articles()
+    past = sorted((a for a in every if last_mon.isoformat() <= a["date_iso"] <= last_sun.isoformat()),
+                  key=lambda a: (a["date_iso"], a["id"]))
+    ahead = sorted((a for a in every if monday.isoformat() <= a["date_iso"] <= sunday.isoformat()),
+                   key=lambda a: (a["date_iso"], a["id"]))
+    when = span(last_mon, last_sun)
+    subject = f"The week in luxury hospitality: {when.rsplit(' ', 1)[0]}"
+    if not past and not ahead:
         return subject, None, None
 
     def kicker(a):
@@ -260,25 +269,37 @@ def weekly(monday):
         return f'{DAYS[d.weekday()]} {d.day} {d.strftime("%B")} &middot; {e(FORMATS[a["fmt"]]["name"])}'
 
     live = lambda a: a["date_iso"] <= monday.isoformat()
-    n = len(week)
-    inner = label("The week ahead")
+    n = len(past)
+    inner = label("The week&rsquo;s programme")
     inner += heading(when)
-    inner += para(f'{"One article" if n == 1 else f"{n} articles"} on hospitality-signals.com this week. '
-                  "Each one goes online on its day; follow along here or on LinkedIn.", "0 40px 4px", GREY)
-    inner += lead_item(week[0], kicker(week[0]), live(week[0]))
-    for a in week[1:]:
-        inner += row_item(a, kicker(a), live(a))
+    if past:
+        inner += para(f'{"One article" if n == 1 else f"{n} articles"} on hospitality-signals.com last week, '
+                      "in the order they came out.", "0 40px 4px", GREY)
+        inner += lead_item(past[0], kicker(past[0]), True)
+        for a in past[1:]:
+            inner += row_item(a, kicker(a), True)
+    if ahead:
+        inner += label("Coming up this week", "44px 40px 0")
+        for a in ahead:
+            inner += row_item(a, kicker(a), live(a))
     inner += '  <tr><td style="padding:20px 0 0;"></td></tr>\n' + button("Read Hospitality Signals", f"{SITE}/")
     note = ('You are receiving this letter because you subscribed at hospitality-signals.com. '
             f'<a href="{{{{ unsubscribe }}}}" style="color:{GREY};">Unsubscribe</a>.')
-    preheader = " · ".join(a["title"] for a in week[:2])
+    preheader = " · ".join(a["title"] for a in (past or ahead)[:2])
     html_out = shell(subject, preheader, inner, note)
 
-    text = ["HOSPITALITY SIGNALS", "", "THE WEEK AHEAD", when.upper(), ""]
-    for a in week:
+    def text_item(a, link):
         d = date.fromisoformat(a["date_iso"])
-        text += [f"{DAYS[d.weekday()]} {d.day} {d.strftime('%B')} · {FORMATS[a['fmt']]['name']}", a["title"], a.get("summary") or ""]
-        text += [a["url"] if live(a) else f"Online {DAYS[d.weekday()]}", ""]
+        return [f"{DAYS[d.weekday()]} {d.day} {d.strftime('%B')} · {FORMATS[a['fmt']]['name']}", a["title"],
+                a.get("summary") or "", a["url"] if link else f"Online {DAYS[d.weekday()]}", ""]
+
+    text = ["HOSPITALITY SIGNALS", "", "THE WEEK'S PROGRAMME", when.upper(), ""]
+    for a in past:
+        text += text_item(a, True)
+    if ahead:
+        text += ["COMING UP THIS WEEK", ""]
+        for a in ahead:
+            text += text_item(a, live(a))
     text += [f"{SITE}/", f"LinkedIn: {LINKEDIN}", "", "Unsubscribe: {{ unsubscribe }}"]
     return subject, html_out, to_text(text)
 
@@ -312,19 +333,24 @@ def brevo(path, payload):
         return json.loads(body) if body else {}
 
 
-def draft(name, subject, html_out):
-    """A campaign draft in Brevo plus a test email to NEWSLETTER_TEST_TO.
-    Subscribers get nothing until Natan presses Send (or schedules it) in Brevo."""
+def draft(name, subject, html_out, send_at=None):
+    """A campaign in Brevo plus a test email to NEWSLETTER_TEST_TO.
+    Without send_at it stays a draft: subscribers get nothing until Natan presses
+    Send. With send_at (UTC datetime) Brevo sends it to the list at that time,
+    unless Natan cancels or edits it in Brevo after reading the test."""
     env = os.environ
-    camp = brevo("/emailCampaigns", {
+    payload = {
         "name": name,
         "subject": subject,
         "sender": {"name": "Hospitality Signals", "email": env["NEWSLETTER_FROM"]},
         "replyTo": env.get("NEWSLETTER_REPLY_TO") or env["NEWSLETTER_FROM"],
         "htmlContent": html_out,
         "recipients": {"listIds": [int(env["BREVO_LIST_ID"])]},
-    })
-    print(f"Brevo draft campaign {camp.get('id')} created")
+    }
+    if send_at:
+        payload["scheduledAt"] = send_at.strftime("%Y-%m-%dT%H:%M:%S.000Z")
+    camp = brevo("/emailCampaigns", payload)
+    print(f"Brevo campaign {camp.get('id')} created" + (f", scheduled for {payload['scheduledAt']}" if send_at else " as a draft"))
     tests = [t.strip() for t in env.get("NEWSLETTER_TEST_TO", "").split(",") if t.strip()]
     if tests:
         brevo(f"/emailCampaigns/{camp['id']}/sendTest", {"emailTo": tests})
@@ -351,7 +377,13 @@ def main(argv):
     print(subject)
     save(f"week-{monday.isoformat()}", h, t)
     if cmd == "draft":
-        draft(f"Week ahead {monday.isoformat()}", subject, h)
+        draft(f"Week {monday.isoformat()}", subject, h)
+    elif cmd == "schedule":
+        # Monday 07:00 UTC = 08:00 in Paris in winter, 09:00 in summer. If the
+        # scheduled job runs late (GitHub can delay it by hours), send in 10 minutes.
+        send_at = datetime.combine(monday, time(7, 0), tzinfo=timezone.utc)
+        send_at = max(send_at, datetime.now(timezone.utc) + timedelta(minutes=10))
+        draft(f"Week {monday.isoformat()}", subject, h, send_at)
 
 
 if __name__ == "__main__":
