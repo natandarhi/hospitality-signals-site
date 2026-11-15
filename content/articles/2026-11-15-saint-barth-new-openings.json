@@ -60,9 +60,17 @@
   "visual_text": {
     "kicker": "Signal of the week",
     "lead": "Saint-Barth",
-    "rest": "five new names for the 2026–27 season.",
-    "strap": "Airelles · Le Sereno · Langosteria · Loulou · Zuma"
+    "rest": "welcomes five new names for the 2026–27 season.",
+    "strap": "Saint-Barth, Caribbean · November 2026"
   },
   "week": "2026-11-09",
-  "why": "This season's new names on Saint-Barth do not build: they take over a hotel or a table inside one."
+  "why": "This season's new names on Saint-Barth do not build: they take over a hotel or a table inside one.",
+  "photo_asset": "2026-11-15-saint-barth-new-openings-photo",
+  "photo_credit": "to confirm",
+  "visuals": {
+    "linkedin_4x5": "2026-11-15-saint-barth-new-openings-4x5",
+    "site_16x9": "2026-11-15-saint-barth-new-openings-16x9"
+  },
+  "visuals_status": "done",
+  "visuals_made_at": "2026-11-15T10:15:00Z"
 }
