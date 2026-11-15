@@ -28,6 +28,9 @@ on:
       monday:
         description: "Weekly only: Monday of the week (YYYY-MM-DD); empty = next Monday"
         required: false
+      test_to:
+        description: "Send the test to this address instead of the usual one (draft only, nothing scheduled)"
+        required: false
 
 jobs:
   rebuild:
@@ -55,9 +58,13 @@ jobs:
           BREVO_LIST_ID: ${{ secrets.BREVO_LIST_ID }}
           NEWSLETTER_FROM: ${{ secrets.NEWSLETTER_FROM }}
           NEWSLETTER_REPLY_TO: ${{ secrets.NEWSLETTER_REPLY_TO }}
-          NEWSLETTER_TEST_TO: ${{ secrets.NEWSLETTER_TEST_TO }}
+          NEWSLETTER_TEST_TO: ${{ github.event.inputs.test_to || secrets.NEWSLETTER_TEST_TO }}
+          TEST_OVERRIDE: ${{ github.event.inputs.test_to }}
         run: |
-          case "${{ github.event.inputs.letter }}" in
+          letter="${{ github.event.inputs.letter }}"
+          # a test to another address never schedules a send to the list
+          if [ -n "$TEST_OVERRIDE" ] && [ "$letter" = "weekly" ]; then letter=weekly-draft; fi
+          case "$letter" in
             welcome) python3 newsletter.py draft-welcome ;;
             weekly-draft) python3 newsletter.py draft ${{ github.event.inputs.monday }} ;;
             *) python3 newsletter.py schedule ${{ github.event.inputs.monday }} ;;
