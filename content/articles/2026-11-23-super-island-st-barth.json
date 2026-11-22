@@ -5,7 +5,7 @@
  "date": "23 Nov 2026",
  "date_iso": "2026-11-23",
  "photo_asset": "2026-11-23-super-island-st-barth-photo",
- "photo_credit": "to be confirmed",
+ "photo_credit": "© Indie Beach & Gyp Sea",
  "sources": [
   {
    "name": "Presse Agence, 27 Oct 2026",
@@ -45,11 +45,16 @@
  "title": "Indie Group brings Super Island, seven nights of music, to Saint-Barth",
  "visual_text": {
   "kicker": "Signal of the week",
-  "lead": "Super Island:",
-  "rest": "seven nights of music on Saint-Barth, from 27 December.",
-  "strap": "Indie Beach × Gyp Sea · Saint-Jean Bay"
+  "lead": "Indie Group",
+  "rest": "brings Super Island, seven nights of music, to Saint-Barth.",
+  "strap": "Gyp Sea Beach, Saint-Jean · 27 Dec – 2 Jan"
  },
- "visuals_status": "pending",
+ "visuals_status": "done",
  "week": "2026-11-23",
- "why": "On Saint-Barth, the season is now sold as an event."
+ "why": "On Saint-Barth, the season is now sold as an event.",
+ "visuals": {
+  "linkedin_4x5": "2026-11-23-super-island-st-barth-4x5",
+  "site_16x9": "2026-11-23-super-island-st-barth-16x9"
+ },
+ "visuals_made_at": "2026-11-22T19:50:00Z"
 }
