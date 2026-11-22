@@ -1,0 +1,44 @@
+{
+  "status": "draft",
+  "monday": "2026-11-16",
+  "subject": "The week in luxury hospitality: by sea, by air, to the Gulf",
+  "headline": "By sea, by air, to the Gulf",
+  "intro": [
+    "Good morning. Last week, luxury travel took to the sea and the sky. Four Seasons unveiled its 2028 Private Jet journey, from San Francisco to Zanzibar, with a last stop on the Riviera at the Grand-Hôtel du Cap-Ferrat ([PR Newswire, 10 Nov](https://www.prnewswire.com/news-releases/four-seasons-announces-new-2028-private-jet-experience-itinerary-coastlines--culture-featuring-first-time-destinations-302933914.html)). At sea, Alan Leibman became CEO of The Ritz-Carlton Yacht Collection ([Journal des Palaces, 10 Nov](https://www.journaldespalaces.com/pressrelease-80027-united-states-appointments-global-luxury-leader-alan-leibman-appointed-ceo-of-the-ritz-carlton-yacht-collection-tatiana-ferreira-appointed-president.html)), and Four Seasons Yachts named Christian Le Squer, of Le Cinq in Paris, culinary ambassador of its restaurant Sedna for 2027 ([Travel Market Report, 12 Nov](https://www.travelmarketreport.com/cruises/articles/four-seasons-yachts-names-chef-christian-le-squer-as-culinary-ambassador)).",
+    "On land, Hyatt opened Thompson Seville in the La Gavidia building on Plaza de la Concordia ([Hyatt, 9 Nov](https://newsroom.hyatt.com/ThompsonSevilleNowOpen)). The Gulf kept signing Parisian and Japanese names: Paris Society, the group behind Gigi, announced four openings in Dubai, Ras Al Khaimah and Abu Dhabi ([Journal des Palaces, 12 Nov](https://www.journaldespalaces.com/en/pressrelease-80049-united-arab-emirates-hotel-opening-paris-society-announces-new-openings-across-dubai-ras-al-khaimah-and-abu-dhabi.html)), and Nobu signed for a hotel, a restaurant and residences on Reef Island, in Bahrain ([PR Newswire, 12 Nov](https://www.newswire.ca/news-releases/nobu-announces-partnership-with-infracorp-to-bring-a-nobu-hotel-restaurant-and-residences-to-bahrain-826900180.html)). In Piacenza, the Michelin Guide presented its 2027 selection for Italy on 12 November ([Scatti di Gusto](https://www.scattidigusto.it/guida-michelin-2027-le-nuove-stelle-a-piacenza-il-12-novembre))."
+  ],
+  "expected": [
+    {
+      "when": "16 to 18 November",
+      "text": "Athens hosts the Resort & Residential Hospitality Forum, at the Divani Apollon Palace & Thalasso.",
+      "url": "https://www.hospitalitynet.org/events"
+    },
+    {
+      "when": "17 to 18 November",
+      "text": "Dubai hosts the HSMAI Commercial Strategy Conference for the Middle East and Africa, at Conrad Dubai.",
+      "url": "https://www.hospitalitynet.org/events"
+    },
+    {
+      "when": "17 to 19 November",
+      "text": "The Phocuswright Conference, the travel industry's technology meeting, in Hollywood, Florida.",
+      "url": "https://www.hospitalitynet.org/events"
+    },
+    {
+      "when": "25 November",
+      "text": "Claridge's unveils its Christmas tree, designed by Anya Hindmarch.",
+      "url": "https://www.timeout.com/london/news/claridges-christmas-tree-2026-anya-hindmarch-110426"
+    },
+    {
+      "when": "1 to 3 December",
+      "text": "ILTM, the luxury travel market, returns to the Palais des Festivals in Cannes.",
+      "url": "https://en.palaisdesfestivals.com/offers/iltm-cannes-en-3657199/"
+    }
+  ],
+  "picks": [
+    "2026-11-10-four-seasons-private-jet-2028",
+    "2026-11-12-paris-society-uae-openings",
+    "2026-11-12-mathieu-hellec-cheval-blanc-courchevel",
+    "2026-11-10-alan-leibman-ritz-carlton-yacht-collection"
+  ],
+  "coming_up": []
+}

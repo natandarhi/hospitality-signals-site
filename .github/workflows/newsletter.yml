@@ -3,9 +3,11 @@
 # 1. Every day at 04:30 UTC: rebuild the site through a Netlify build hook, so an
 #    article dated today goes online in the morning even without a push. The
 #    Monday letter promises "online Wednesday": this keeps the promise.
-# 2. Every Sunday at 17:00 UTC: write next week's letter and create it in Brevo
-#    as a DRAFT, with a test email to Natan. Nothing reaches subscribers until
-#    Natan presses Send (or schedules it) in Brevo.
+# 2. Every Sunday at 17:00 UTC: build the Monday letter from
+#    content/newsletter/<monday>.json (editorial, what is expected, 3-4 of last
+#    week's articles). If that file is validated ("status": "ready"), the Brevo
+#    campaign is SCHEDULED for Monday 07:00 UTC (08:00 in Paris in winter);
+#    otherwise it stays a draft. A test goes to Natan either way.
 #
 # Repository secrets: NETLIFY_BUILD_HOOK, BREVO_API_KEY, BREVO_LIST_ID,
 # NEWSLETTER_FROM, NEWSLETTER_REPLY_TO, NEWSLETTER_TEST_TO.
@@ -18,12 +20,16 @@ on:
   workflow_dispatch:
     inputs:
       letter:
-        description: "Which letter to draft in Brevo"
+        description: "Which letter to create in Brevo"
         type: choice
-        options: [weekly, welcome]
+        options: [weekly, weekly-draft, welcome]
         default: weekly
+        # weekly = scheduled for Monday 07:00 UTC; weekly-draft = draft only
       monday:
         description: "Weekly only: Monday of the week (YYYY-MM-DD); empty = next Monday"
+        required: false
+      test_to:
+        description: "Send the test to this address instead of the usual one (draft only, nothing scheduled)"
         required: false
 
 jobs:
@@ -46,19 +52,23 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Draft the Monday letter in Brevo
+      - name: Schedule the Monday letter in Brevo
         env:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
           BREVO_LIST_ID: ${{ secrets.BREVO_LIST_ID }}
           NEWSLETTER_FROM: ${{ secrets.NEWSLETTER_FROM }}
           NEWSLETTER_REPLY_TO: ${{ secrets.NEWSLETTER_REPLY_TO }}
-          NEWSLETTER_TEST_TO: ${{ secrets.NEWSLETTER_TEST_TO }}
+          NEWSLETTER_TEST_TO: ${{ github.event.inputs.test_to || secrets.NEWSLETTER_TEST_TO }}
+          TEST_OVERRIDE: ${{ github.event.inputs.test_to }}
         run: |
-          if [ "${{ github.event.inputs.letter }}" = "welcome" ]; then
-            python3 newsletter.py draft-welcome
-          else
-            python3 newsletter.py draft ${{ github.event.inputs.monday }}
-          fi
+          letter="${{ github.event.inputs.letter }}"
+          # a test to another address never schedules a send to the list
+          if [ -n "$TEST_OVERRIDE" ] && [ "$letter" = "weekly" ]; then letter=weekly-draft; fi
+          case "$letter" in
+            welcome) python3 newsletter.py draft-welcome ;;
+            weekly-draft) python3 newsletter.py draft ${{ github.event.inputs.monday }} ;;
+            *) python3 newsletter.py schedule ${{ github.event.inputs.monday }} ;;
+          esac
       - uses: actions/upload-artifact@v4
         with:
           name: letter
