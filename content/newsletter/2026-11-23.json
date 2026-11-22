@@ -1,0 +1,44 @@
+{
+  "status": "draft",
+  "monday": "2026-11-23",
+  "subject": "The week in luxury hospitality: Gstaad, Merano, Paris",
+  "headline": "The Alps open the season",
+  "intro": [
+    "Good morning. Last week, the Alps set the tone. In Gstaad, Dona Bertarelli is reported to have sold The Park Gstaad to George Prokopiou, ahead of its reopening as a Four Seasons in mid-2027; the sale has not been confirmed ([Billionaires.Africa, 21 Nov](https://www.billionaires.africa/2026/11/21/swiss-billionaire-dona-bertarelli-reportedly-sells-gstaad-hotel-for-up-to-500-million/)). A few streets away, the Gstaad Palace prepares its 114th winter season from 15 December, after around €6.9 million of works ([La Revue des Hôtels](https://larevuedeshotels.com/en/gstaad-palace-hotel-switzerland-reopens-15-december-after-6-9-million)). In South Tyrol, the city of Merano honoured Zinédine Zidane, a guest of Palace Merano since 1996, for the hotel's 120th anniversary ([il Dolomiti](https://www.ildolomiti.it/cronaca/2026/arriva-zinedine-zidane-la-leggenda-del-calcio-incontra-calciatrici-e-calciatori-delle-squadre-locali-e-la-citta-di-merano-omaggia-zizou)).",
+    "In Paris, Rosewood's Hôtel de Crillon named Édouard Delavaux managing director ([eTurboNews, 21 Nov](https://eturbonews.com/global-hotel-hospitality-news-november-15-21-2026/)), and Ennismore signed the first Hyde hotel in France, on the Seine ([Journal des Palaces](https://www.journaldespalaces.com/en/pressrelease-80143-france-hotel-opening-ennismore-makes-its-mark-on-the-seine-by-signing-the-first-hyde-hotel-in-france.html)). In Dubai, LPM is getting ready to open LPM-Sur-Mer, its first beach concept, at Jumeirah Beach Hotel on 28 November ([What's On](https://whatson.ae/2026/11/an-lpm-beach-concept-is-opening-in-dubai-this-november/))."
+  ],
+  "expected": [
+    {
+      "when": "23 November",
+      "text": "The Hospitality Awards honour hotel groups and brands at the InterContinental Paris Le Grand.",
+      "url": "https://hospitality-on.com/en/event/hospitality-awards-2026"
+    },
+    {
+      "when": "25 November",
+      "text": "Claridge's unveils its Christmas tree, designed by Anya Hindmarch.",
+      "url": "https://www.timeout.com/london/news/claridges-christmas-tree-2026-anya-hindmarch-110426"
+    },
+    {
+      "when": "26 November",
+      "text": "AHEAD Europe, the hospitality design awards, in London.",
+      "url": "https://www.hospitalitynet.org/event/3007214/ahead-europe-2026"
+    },
+    {
+      "when": "28 November",
+      "text": "LPM-Sur-Mer opens at Jumeirah Beach Hotel, Dubai.",
+      "url": "https://whatson.ae/2026/11/an-lpm-beach-concept-is-opening-in-dubai-this-november/"
+    },
+    {
+      "when": "1 to 3 December",
+      "text": "ILTM, the luxury travel market, returns to the Palais des Festivals in Cannes.",
+      "url": "https://en.palaisdesfestivals.com/offers/iltm-cannes-en-3657199/"
+    }
+  ],
+  "picks": [
+    "2026-11-21-park-gstaad-sale",
+    "2026-11-21-zidane-palace-merano",
+    "2026-11-21-gstaad-palace-reopening",
+    "2026-11-21-christian-zandonella-danieli"
+  ],
+  "coming_up": []
+}
